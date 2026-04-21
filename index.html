@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KONEKSI DatArk - 분산 스토리지 기반 데이터 재해복구(DR) 솔루션. 파일 및 DB 단위 자동 백업, 재해복구, 데이터 보호로 비즈니스 연속성을 보장합니다.">
+    <meta name="keywords" content="DR솔루션, 데이터복구, KONEKSI, DatArk, 재해복구, 데이터백업, 분산스토리지, 비즈니스연속성">
+    <meta name="author" content="KONEKSI">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / 소셜 미디어 공유 -->
+    <meta property="og:title" content="KONEKSI | Data Flows with Trust">
+    <meta property="og:description" content="분산 스토리지 기반 데이터 재해복구(DR) 솔루션 DatArk. 파일 및 DB 단위 자동 백업과 복구로 비즈니스 연속성을 보장합니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://koneksi.io/">
+    <meta property="og:image" content="https://koneksi.io/assets/og-image.jpg">
+    <meta property="og:site_name" content="KONEKSI">
+    <meta property="og:locale" content="ko_KR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@koneksi_tech">
+    <meta name="twitter:title" content="KONEKSI | Data Flows with Trust">
+    <meta name="twitter:description" content="분산 스토리지 기반 데이터 재해복구(DR) 솔루션 DatArk. 파일 및 DB 단위 자동 백업과 복구로 비즈니스 연속성을 보장합니다.">
+    <meta name="twitter:image" content="https://koneksi.io/assets/og-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://koneksi.io/">
+    <title>KONEKSI | Data Flows with Trust</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- 아이콘 베리에이션: 세밀하고 깨끗한 ph-light 위주 -->
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <link rel="stylesheet" href="assets/style.css">
+
+    <!-- 구조화 데이터 (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "KONEKSI",
+        "url": "https://koneksi.io",
+        "logo": "https://koneksi.io/assets/logo.svg",
+        "description": "DatArk - 분산 스토리지 기반 데이터 재해복구 솔루션. 파일 및 DB 단위 자동 백업과 복구로 비즈니스 연속성을 보장합니다.",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "sales",
+            "email": "sales@koneksi.io",
+            "areaServed": "KR",
+            "availableLanguage": ["Korean", "English"]
+        },
+        "sameAs": [
+            "https://twitter.com/koneksi_tech"
+        ],
+        "offers": {
+            "@type": "AggregateOffer",
+            "name": "DatArk DR Solution",
+            "description": "분산 스토리지 기반 데이터 재해복구(DR) 솔루션",
+            "url": "https://koneksi.io/product"
+        }
+    }
+    </script>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     LOADING SCREEN
+═══════════════════════════════════════════════ -->
+<div id="loading-screen" aria-hidden="true">
+    <div class="loading-inner">
+        <img src="assets/logo.svg" alt="KONEKSI" class="loading-logo">
+        <div class="loading-bar-wrap">
+            <div class="loading-bar"></div>
+        </div>
+        <p class="loading-label">Data Flows with Trust</p>
+    </div>
+</div>
+
+<a href="#main-content" class="skip-nav">본문으로 바로가기</a>
+
+<header id="main-header">
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+            <img src="assets/logo.svg" alt="KONEKSI Logo" style="height: 40px; width: auto; object-fit: contain;">
+        </a>
+        <nav aria-label="주 네비게이션">
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="product.html">Products <i class="ph-light ph-caret-down" style="font-size: 0.8rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="product.html"><i class="ph-light ph-layout"></i> DatArk 개요</a></li>
+                        <li><a href="product-filedr.html"><i class="ph-light ph-files"></i> DatArk File DR</a></li>
+                        <li><a href="product-dbdr.html"><i class="ph-light ph-database"></i> DatArk DB DR</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Pricing <i class="ph-light ph-caret-down" style="font-size: 0.8rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pricing-cloud.html"><i class="ph-light ph-cloud"></i> 클라우드형</a></li>
+                        <li><a href="pricing-enterprise.html"><i class="ph-light ph-buildings"></i> 온프레미스형</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="blog.html">Blog <i class="ph-light ph-caret-down" style="font-size: 0.8rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="blog.html"><i class="ph-light ph-article"></i> 블로그 홈</a></li>
+                        <li><a href="blog-release.html"><i class="ph-light ph-rocket-launch"></i> 릴리즈 업데이트</a></li>
+                        <li><a href="blog-guide.html"><i class="ph-light ph-book-open"></i> 사용 가이드</a></li>
+                    </ul>
+                </li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="download.html">Download</a></li>
+            </ul>
+        </nav>
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-nav-panel" aria-haspopup="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="header-actions" style="display: flex; align-items: center; gap: 1rem;">
+            <div class="dropdown lang-switcher">
+                <a href="#" style="color: var(--text-muted); font-size: 0.95rem; font-weight: 500;"><i class="ph-light ph-globe" style="font-size: 1.1rem; margin-right: 0.2rem;"></i> KO <i class="ph-light ph-caret-down" style="font-size: 0.7rem; margin-left: 0.1rem;"></i></a>
+                <ul class="dropdown-menu" style="min-width: 130px; padding: 0.5rem; text-align: left;">
+                    <li><a href="#"><span style="font-size: 1.1em;">🇰🇷</span> Korean</a></li>
+                    <li><a href="#"><span style="font-size: 1.1em;">🇺🇸</span> English</a></li>
+                </ul>
+            </div>
+            <a href="support.html" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;" aria-label="도입 문의 페이지로 이동">도입 문의</a>
+        </div>
+    </div>
+</header>
+<!-- Mobile Nav Overlay -->
+<div id="mobile-nav-overlay" class="mobile-nav-overlay" aria-hidden="true"></div>
+
+<!-- Mobile Nav Panel -->
+<nav id="mobile-nav-panel" class="mobile-nav-panel" aria-label="모바일 네비게이션">
+  <p class="mobile-nav-heading">제품</p>
+  <a href="product.html"><i class="ph-light ph-layout" aria-hidden="true"></i> DatArk 개요</a>
+  <a href="product-filedr.html"><i class="ph-light ph-files" aria-hidden="true"></i> DatArk File DR</a>
+  <a href="product-dbdr.html"><i class="ph-light ph-database" aria-hidden="true"></i> DatArk DB DR</a>
+  <p class="mobile-nav-heading">가격</p>
+  <a href="pricing-cloud.html"><i class="ph-light ph-cloud" aria-hidden="true"></i> 클라우드형</a>
+  <a href="pricing-enterprise.html"><i class="ph-light ph-buildings" aria-hidden="true"></i> 온프레미스형</a>
+  <p class="mobile-nav-heading">정보</p>
+  <a href="blog.html"><i class="ph-light ph-newspaper" aria-hidden="true"></i> Blog</a>
+  <a href="support.html"><i class="ph-light ph-headset" aria-hidden="true"></i> Support</a>
+  <a href="download.html"><i class="ph-light ph-download-simple" aria-hidden="true"></i> Download</a>
+  <div class="mobile-nav-cta">
+    <a href="support.html" class="btn btn-primary">도입 문의</a>
+  </div>
+</nav>
+
+
+<main id="main-content">
+<!-- ═══════════════════════════════════════════════
+     HERO WITH CANVAS PARTICLE BACKGROUND
+═══════════════════════════════════════════════ -->
+<div class="hero-wrapper" style="position:relative; overflow:hidden;">
+<canvas id="particles-canvas" aria-hidden="true"></canvas>
+<section class="section-padding split-layout container">
+    <div class="hero-content animate-fade-up stagger-1">
+        <span class="badge"><i class="ph-light ph-arrows-counter-clockwise"></i> Enterprise DR & File Trust</span>
+        <h1 id="typing-headline" data-typing-full="복구됩니다">데이터는 언제나 <br><span class="text-gradient" id="typing-target"></span><span class="typing-cursor" aria-hidden="true">|</span></h1>
+        <p class="mb-4">
+            단순 백업을 넘어선 파일 및 블록 단위의 완벽한 신뢰.<br>
+            가장 앞선 DR 기술로 어떤 상황에서도 비즈니스의 연속성을 지킵니다.
+        </p>
+        <div style="display: flex; gap: 0.75rem; margin-top: 2rem;">
+            <a href="download.html" class="btn btn-primary">
+                무료 기술 진단 신청
+            </a>
+            <a href="product.html" class="btn btn-outline">
+                <i class="ph-light ph-play-circle"></i> 솔루션 보기
+            </a>
+        </div>
+    </div>
+    
+    <div class="hero-visual animate-fade-up stagger-2" style="display:flex; align-items:center; justify-content:center; padding-bottom: 0px;">
+        <div style="position:relative; width:100%; max-width:400px; display:flex; align-items:center; justify-content:center;">
+            <div style="position:absolute; width:130%; aspect-ratio:1/1; background:radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, transparent 68%); filter:blur(50px); z-index:0;"></div>
+            <img src="logo/datark-logo-white-vertical.png" alt="DatArk Symbol" style="width:100%; height:auto; position:relative; z-index:1; filter: drop-shadow(0 25px 50px rgba(0,0,0,0.35)) drop-shadow(0 0 15px rgba(59,130,246,0.15)); animation: float 5s ease-in-out infinite alternate;" loading="lazy">
+        </div>
+    </div>
+</section>
+</div><!-- /hero-wrapper -->
+
+<section class="section-padding container">
+    <div class="text-center mb-4 animate-fade-up">
+        <h2>데이터를 지키는 <span class="text-gradient">세 가지 핵심 기술</span></h2>
+        <p style="max-width: 620px; margin: 0 auto; color: var(--text-muted);">DatArk는 수학적 증명과 분산 아키텍처로 데이터의 기밀성, 무결성, 가용성을 동시에 보장합니다.</p>
+    </div>
+    
+    <div class="card-grid">
+        <div class="glass-card animate-fade-up stagger-1">
+            <div class="card-icon"><i class="ph-light ph-lock-key"></i></div>
+            <h3>Zero-Knowledge 암호화</h3>
+            <p>AES-256 / ChaCha20으로 고객 서버에서 암호화 완료 후 전송합니다. KONEKSI 서버에서도 데이터 내용을 열람할 수 없는 완전한 데이터 주권 구조입니다.</p>
+        </div>
+        <div class="glass-card animate-fade-up stagger-2">
+            <div class="card-icon"><i class="ph-light ph-fingerprint"></i></div>
+            <h3>CID 기반 무결성 증명</h3>
+            <p>SHA-256 해시로 생성된 CID(Content Identifier)가 곧 데이터의 주소입니다. 1비트라도 변조되면 CID가 완전히 달라져 위변조를 즉각 감지합니다.</p>
+        </div>
+        <div class="glass-card animate-fade-up stagger-3">
+            <div class="card-icon"><i class="ph-light ph-heartbeat"></i></div>
+            <h3>자가치유 클러스터</h3>
+            <p>클러스터 노드가 상호 데이터를 대조(Data Scrubbing)하여 손상을 사전 감지하고, 정상 노드의 복사본으로 자동 복원(Re-pinning)합니다. 99.999% 보존율.</p>
+        </div>
+    </div>
+</section>
+
+<section style="background: rgba(10, 15, 28, 0.5); border-top: 1px solid var(--glass-border); padding: 6rem 0; position: relative;">
+    <div class="container text-center animate-fade-up">
+        <span class="badge">Measured Performance</span>
+        <h2 class="mb-4">실측으로 증명된 <span class="text-gradient">성능</span></h2>
+        
+        <div class="card-grid" style="text-align: left; margin-top: 4rem;">
+            <div class="glass-card" style="padding: 2.5rem;">
+                <h3 style="font-size: 2.5rem; letter-spacing: -0.04em; color: #fff; margin-bottom: 0.5rem; display: flex; align-items: baseline; gap: 0.25rem;">4~10<span style="font-size: 1.25rem; color: var(--text-muted);">초</span></h3>
+                <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem; color: #fff;">RPO — 사실상 실시간</h4>
+                <p style="font-size: 0.95rem; line-height: 1.5; color: var(--text-muted);">WAL 실시간 스트리밍으로 사고 발생 시 최대 4~10초 전 데이터까지 복구합니다. Durable-Ack 프로토콜로 유실 0%를 보장합니다.</p>
+            </div>
+            <div class="glass-card" style="padding: 2.5rem;">
+                <h3 style="font-size: 2.5rem; letter-spacing: -0.04em; color: #fff; margin-bottom: 0.5rem; display: flex; align-items: baseline; gap: 0.25rem;">15<span style="font-size: 1.25rem; color: var(--text-muted);">분 이내</span></h3>
+                <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem; color: #fff;">RTO — 100GB 기준</h4>
+                <p style="font-size: 0.95rem; line-height: 1.5; color: var(--text-muted);">8채널 병렬 다운로드와 매니페스트 기반 복구로 100GB 데이터를 15분 이내에 완전 복원합니다.</p>
+            </div>
+            <div class="glass-card" style="padding: 2.5rem;">
+                <h3 style="font-size: 2.5rem; letter-spacing: -0.04em; background: linear-gradient(to right, #fff, var(--secondary-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem; display: flex; align-items: baseline; gap: 0.25rem;">19.8<span style="font-size: 1.25rem; color: var(--secondary-color); -webkit-text-fill-color: var(--secondary-color);">배</span></h3>
+                <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem; color: #fff;">압축 효율 — 94% 절감</h4>
+                <p style="font-size: 0.95rem; line-height: 1.5; color: var(--text-muted);">gzip 압축과 중복 제거로 100GB 원본이 5.23GiB로 저장됩니다. 스토리지 비용을 최대 94% 절감합니다.</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- Section: Zero-Touch Installation -->
+<section class="section-padding container animate-fade-up">
+    <div class="text-center mb-4">
+        <span class="badge"><i class="ph-light ph-rocket-launch"></i> Zero-Touch Installation</span>
+        <h2>기존 시스템 그대로, <span class="text-gradient">6분이면 완료</span></h2>
+        <p style="max-width: 700px; margin: 0 auto; color: var(--text-muted);">
+            DB를 재시작할 필요도, 서비스를 중단할 필요도 없습니다. 16MB 단일 실행 파일 하나로 즉시 보호가 시작됩니다.
+        </p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3rem;" class="zero-touch-grid">
+        <!-- Step 1 -->
+        <div class="glass-card" style="padding: 2rem; position: relative; overflow: hidden;">
+            <div style="position: absolute; top: 1rem; right: 1.2rem; font-size: 3.5rem; font-weight: 800; color: rgba(59,130,246,0.08); line-height: 1;">01</div>
+            <div style="width: 44px; height: 44px; border-radius: 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.25); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: #60A5FA; margin-bottom: 1.2rem;">
+                <i class="ph-light ph-download-simple"></i>
+            </div>
+            <h4 style="color: #fff; font-size: 1rem; margin-bottom: 0.5rem;">바이너리 복사</h4>
+            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem;">16MB 단일 Go 실행 파일을 서버에 전송합니다. 외부 라이브러리 의존성이 없습니다.</p>
+            <span style="font-size: 0.8rem; color: #60A5FA; font-weight: 600;"><i class="ph-light ph-clock"></i> 약 1분</span>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="glass-card" style="padding: 2rem; position: relative; overflow: hidden;">
+            <div style="position: absolute; top: 1rem; right: 1.2rem; font-size: 3.5rem; font-weight: 800; color: rgba(59,130,246,0.08); line-height: 1;">02</div>
+            <div style="width: 44px; height: 44px; border-radius: 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.25); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: #60A5FA; margin-bottom: 1.2rem;">
+                <i class="ph-light ph-shield-check"></i>
+            </div>
+            <h4 style="color: #fff; font-size: 1rem; margin-bottom: 0.5rem;">최소 권한 설정</h4>
+            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem;">백업 전용 사용자에 REPLICATION 권한만 부여합니다. 데이터 조회·수정은 원천 차단됩니다.</p>
+            <span style="font-size: 0.8rem; color: #60A5FA; font-weight: 600;"><i class="ph-light ph-clock"></i> 약 2분</span>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="glass-card" style="padding: 2rem; position: relative; overflow: hidden;">
+            <div style="position: absolute; top: 1rem; right: 1.2rem; font-size: 3.5rem; font-weight: 800; color: rgba(59,130,246,0.08); line-height: 1;">03</div>
+            <div style="width: 44px; height: 44px; border-radius: 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.25); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: #60A5FA; margin-bottom: 1.2rem;">
+                <i class="ph-light ph-file-code"></i>
+            </div>
+            <h4 style="color: #fff; font-size: 1rem; margin-bottom: 0.5rem;">설정 파일 작성</h4>
+            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem;">config.yaml에 클러스터 주소와 인증 토큰만 입력합니다. 메모장 수준의 편집으로 충분합니다.</p>
+            <span style="font-size: 0.8rem; color: #60A5FA; font-weight: 600;"><i class="ph-light ph-clock"></i> 약 2분</span>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="glass-card" style="padding: 2rem; position: relative; overflow: hidden; border-color: rgba(16,185,129,0.2);">
+            <div style="position: absolute; top: 1rem; right: 1.2rem; font-size: 3.5rem; font-weight: 800; color: rgba(16,185,129,0.08); line-height: 1;">04</div>
+            <div style="width: 44px; height: 44px; border-radius: 14px; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.25); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: #10b981; margin-bottom: 1.2rem;">
+                <i class="ph-light ph-play-circle"></i>
+            </div>
+            <h4 style="color: #fff; font-size: 1rem; margin-bottom: 0.5rem;">서비스 시작</h4>
+            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem;">시스템 서비스로 등록하면 즉시 보호가 시작됩니다. DB 재시작이 필요 없습니다.</p>
+            <span style="font-size: 0.8rem; color: #10b981; font-weight: 600;"><i class="ph-light ph-clock"></i> 약 1분</span>
+        </div>
+    </div>
+
+    <div style="margin-top: 2.5rem; padding: 1.5rem 2rem; background: rgba(59,130,246,0.04); border: 1px solid rgba(59,130,246,0.12); border-radius: 16px; display: flex; align-items: center; gap: 1.5rem;" class="animate-fade-up">
+        <div style="width: 48px; height: 48px; min-width: 48px; border-radius: 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.25); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #60A5FA;">
+            <i class="ph-light ph-info"></i>
+        </div>
+        <div>
+            <div style="color: #fff; font-weight: 600; margin-bottom: 0.25rem; font-size: 0.95rem;">서비스 중단 0초 — DB 무중단 설치</div>
+            <div style="color: var(--text-muted); font-size: 0.85rem;">현관문에 스마트 도어락만 다는 것처럼, 기존 인프라를 전혀 건드리지 않고 보안만 강화합니다. 설치 총 소요 시간 약 6분, 서비스 중단 시간 0초.</div>
+        </div>
+    </div>
+</section>
+
+<style>
+    @media (max-width: 1024px) { .zero-touch-grid { grid-template-columns: repeat(2, 1fr) !important; } }
+    @media (max-width: 600px) { .zero-touch-grid { grid-template-columns: 1fr !important; } }
+</style>
+
+
+
+
+
+<!-- Section 6: Social Proof -->
+<section id="section-social-proof" style="padding:7rem 0;background:rgba(6,12,24,0.97);border-top:1px solid var(--glass-border);overflow:hidden;position:relative;">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 50% 60% at 80% 50%,rgba(99,102,241,0.06) 0%,transparent 70%);pointer-events:none;"></div>
+    <div class="container">
+        <div class="text-center mb-4 animate-fade-up" style="margin-bottom:3.5rem;">
+            <span class="badge" style="margin-bottom:1.2rem;"><i class="ph-light ph-users-three"></i> Social Proof</span>
+            <h2 style="font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.2;margin-bottom:1rem;">파트너의 가치를 <span class="text-gradient">데이터로 지킵니다.</span></h2>
+            <p style="color:var(--text-muted);font-size:1.05rem;">시장을 리드하는 기업들이 KONEKSI를 선택한 이유.</p>
+        </div>
+
+        <!-- Infinite Logo Slider -->
+        <div class="animate-fade-up" style="margin-bottom:5rem;overflow:hidden;position:relative;">
+            <div style="position:absolute;left:0;top:0;bottom:0;width:80px;background:linear-gradient(to right,rgba(6,12,24,0.97),transparent);z-index:2;pointer-events:none;"></div>
+            <div style="position:absolute;right:0;top:0;bottom:0;width:80px;background:linear-gradient(to left,rgba(6,12,24,0.97),transparent);z-index:2;pointer-events:none;"></div>
+            <div class="logo-slider-track">
+                <div class="logo-slider-inner">
+                    <!-- logos repeated twice for seamless loop -->
+                    <div class="logo-slide-item">공공기관 A</div>
+                    <div class="logo-slide-item">국민은행</div>
+                    <div class="logo-slide-item">카카오엔터프라이즈</div>
+                    <div class="logo-slide-item">한국전력</div>
+                    <div class="logo-slide-item">네이버클라우드</div>
+                    <div class="logo-slide-item">우리금융그룹</div>
+                    <div class="logo-slide-item">LG CNS</div>
+                    <div class="logo-slide-item">국방부</div>
+                    <!-- duplicate for seamless -->
+                    <div class="logo-slide-item">공공기관 A</div>
+                    <div class="logo-slide-item">국민은행</div>
+                    <div class="logo-slide-item">카카오엔터프라이즈</div>
+                    <div class="logo-slide-item">한국전력</div>
+                    <div class="logo-slide-item">네이버클라우드</div>
+                    <div class="logo-slide-item">우리금융그룹</div>
+                    <div class="logo-slide-item">LG CNS</div>
+                    <div class="logo-slide-item">국방부</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial -->
+        <div class="animate-fade-up" style="max-width:800px;margin:0 auto 3rem;">
+            <div class="glass-card" style="padding:2.5rem 3rem;position:relative;">
+                <i class="ph-light ph-quotes" style="font-size:3rem;color:var(--primary-color);opacity:0.3;position:absolute;top:1.5rem;left:2rem;"></i>
+                <p style="font-size:1.15rem;line-height:1.8;color:rgba(255,255,255,0.88);margin-bottom:1.5rem;padding-top:1rem;">기존 스토리지의 한계를 KONEKSI의 분산 구조로 완벽히 해결했습니다. 도입 이후 단 한 건의 데이터 손실도 발생하지 않았습니다.</p>
+                <div style="display:flex;align-items:center;gap:1rem;">
+                    <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem;font-weight:700;color:#fff;">A</div>
+                    <div>
+                        <p style="font-size:0.95rem;color:#fff;font-weight:600;margin:0;">CTO, A사</p>
+                        <p style="font-size:0.82rem;color:var(--text-muted);margin:0;">대형 금융 IT 기업</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p class="animate-fade-up" style="text-align:center;color:var(--text-muted);font-size:1rem;">이미 수많은 엔터프라이즈 환경에서 데이터의 흐름을 KONEKSI에게 맡기고 있습니다.</p>
+    </div>
+</section>
+
+<!-- Section 7: Conversion CTA -->
+<section id="section-cta" style="padding:8rem 0;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(37,99,235,0.18) 0%,rgba(79,70,229,0.15) 40%,rgba(8,18,40,0.98) 100%);z-index:0;"></div>
+    <div style="position:absolute;top:-30%;left:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(59,130,246,0.12) 0%,transparent 70%);pointer-events:none;"></div>
+    <div style="position:absolute;bottom:-20%;right:-5%;width:500px;height:500px;background:radial-gradient(circle,rgba(139,92,246,0.1) 0%,transparent 70%);pointer-events:none;"></div>
+    <div class="container" style="position:relative;z-index:1;">
+        <div style="max-width:680px;margin:0 auto;text-align:center;" class="animate-fade-up">
+            <span class="badge" style="margin-bottom:1.5rem;"><i class="ph-light ph-rocket-launch"></i> 무료 기술 진단</span>
+            <h2 style="font-size:clamp(1.8rem,4vw,2.9rem);line-height:1.25;margin-bottom:1.25rem;">당신의 기업 데이터, <br><span class="text-gradient">내일도 안전하다고 확신하십니까?</span></h2>
+            <p style="color:var(--text-muted);font-size:1.05rem;line-height:1.75;margin-bottom:3rem;">보안 사고는 일어난 뒤에 대처하면 늦습니다. KONEKSI와 함께 가장 완벽한 예방책을 구축하십시오.</p>
+
+            <!-- Contact Form -->
+            <form id="cta-form" name="cta-form" data-netlify="true" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:24px;padding:2.5rem;backdrop-filter:blur(12px);" onsubmit="handleCtaSubmit(event)">
+                <input type="hidden" name="form-name" value="cta-form">
+                <p class="hidden" style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+                <div style="display:grid;gap:1rem;margin-bottom:1.25rem;">
+                    <div style="position:relative;">
+                        <i class="ph-light ph-buildings" style="position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:var(--text-muted);font-size:1.1rem;pointer-events:none;"></i>
+                        <input id="cta-company" name="company" type="text" placeholder="기업명을 입력해 주세요" required
+                            style="width:100%;padding:1rem 1rem 1rem 3rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;color:#fff;font-size:0.95rem;font-family:inherit;outline:none;transition:border-color 0.2s;box-sizing:border-box;"
+                            onfocus="this.style.borderColor='var(--primary-color)'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'">
+                    </div>
+                    <div style="position:relative;">
+                        <i class="ph-light ph-phone" style="position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:var(--text-muted);font-size:1.1rem;pointer-events:none;"></i>
+                        <input id="cta-contact" name="phone" type="tel" placeholder="담당자 연락처 (예: 010-0000-0000)" required
+                            style="width:100%;padding:1rem 1rem 1rem 3rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;color:#fff;font-size:0.95rem;font-family:inherit;outline:none;transition:border-color 0.2s;box-sizing:border-box;"
+                            onfocus="this.style.borderColor='var(--primary-color)'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'">
+                    </div>
+                    <div style="position:relative;">
+                        <i class="ph-light ph-list-bullets" style="position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:var(--text-muted);font-size:1.1rem;pointer-events:none;"></i>
+                        <select id="cta-interest" name="interest" required
+                            style="width:100%;padding:1rem 1rem 1rem 3rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;color:rgba(255,255,255,0.7);font-size:0.95rem;font-family:inherit;outline:none;transition:border-color 0.2s;box-sizing:border-box;appearance:none;cursor:pointer;"
+                            onfocus="this.style.borderColor='var(--primary-color)'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'">
+                            <option value="" disabled selected style="background:#0a0f1c;">관심 분야를 선택해 주세요</option>
+                            <option value="file-dr" style="background:#0a0f1c;">DatArk File DR (파일 재해복구)</option>
+                            <option value="db-dr" style="background:#0a0f1c;">DatArk DB DR (데이터베이스 재해복구)</option>
+                            <option value="cloud" style="background:#0a0f1c;">클라우드형 플랜</option>
+                            <option value="enterprise" style="background:#0a0f1c;">온프레미스형 플랜</option>
+                            <option value="consult" style="background:#0a0f1c;">전체 솔루션 컨설팅</option>
+                        </select>
+                    </div>
+                </div>
+                <button id="cta-submit-btn" type="submit" class="btn btn-primary" style="width:100%;padding:1.1rem;font-size:1rem;font-weight:600;border-radius:12px;cursor:pointer;border:none;letter-spacing:0.01em;">
+                    <i class="ph-light ph-paper-plane-tilt" style="margin-right:0.5rem;"></i> 지금 무료 기술 진단 신청하기
+                </button>
+            </form>
+
+            <p class="animate-fade-up" style="margin-top:2rem;font-size:0.9rem;color:var(--text-muted);line-height:1.6;font-style:italic;">설명서만 보지 마세요. 당신의 실제 데이터 환경에서 KONEKSI의 차이를 직접 경험해 보세요.</p>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer class="premium-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo footer-heading" style="margin-bottom: 1rem; font-size: 1.25rem; display: flex; align-items: center; gap: 0.8rem; color: #ffffff;">
+                    <img src="assets/logo.svg" alt="KONEKSI Logo" style="height: 32px; width: auto; object-fit: contain;" loading="lazy">
+                        </div>
+                <p style="font-size: 0.9rem; margin-bottom: 1.5rem; max-width: 250px; line-height: 1.6;">
+                    완전한 분산 저장 구조와 CID 기반 데이터 무결성 철학을 구현하는 차세대 스토리지 스택.
+                </p>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/company/koneksi" class="social-icon" target="_blank" rel="noopener"><i class="ph-light ph-linkedin-logo"></i></a>
+                    <a href="https://github.com/koneksi-tech" class="social-icon" target="_blank" rel="noopener"><i class="ph-light ph-github-logo"></i></a>
+                    <a href="https://x.com/koneksi_tech" class="social-icon" target="_blank" rel="noopener"><i class="ph-light ph-x-logo"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Platform</h4>
+                <ul class="footer-list">
+                    <li><a href="product.html">DatArk 개요</a></li>
+                    <li><a href="product-filedr.html">DatArk File DR</a></li>
+                    <li><a href="product-dbdr.html">DatArk DB DR</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Resources</h4>
+                <ul class="footer-list">
+                    <li><a href="support.html">Contact Sales</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="download.html">Downloads</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col" style="min-width: max-content;">
+                <h4 class="footer-heading">Contact</h4>
+                <ul class="footer-list">
+                    <li style="display: flex; gap: 0.5rem; color: var(--text-muted); line-height: 1.5;">
+                        <i class="ph-light ph-map-pin" style="margin-top: 0.2rem; min-width: 16px;"></i>
+                        서울 송파구 중대로 135<br>IT벤처타워 서관 10층
+                    </li>
+                    <li style="display: flex; gap: 0.5rem; margin-top: 1rem; color: var(--text-muted);">
+                        <i class="ph-light ph-phone"></i> 070-7626-1020
+                    </li>
+                    <li style="display: flex; gap: 0.5rem; margin-top: 0.5rem; color: var(--text-muted);">
+                        <i class="ph-light ph-envelope-simple"></i> info@koneksi.co.kr
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom-flex">
+            <p>&copy; 2026 Koneksi Inc.</p>
+            <div style="display: flex; gap: 1.5rem;">
+                <a href="terms.html">Terms of Service</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    /* Logo Slider */
+    .logo-slider-track { overflow: hidden; }
+    .logo-slider-inner {
+        display: flex;
+        width: max-content;
+        animation: logoScroll 28s linear infinite;
+        gap: 0;
+    }
+    .logo-slider-inner:hover { animation-play-state: paused; }
+    .logo-slide-item {
+        flex-shrink: 0;
+        padding: 1rem 2.5rem;
+        margin: 0 0.75rem;
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.09);
+        border-radius: 14px;
+        color: rgba(255,255,255,0.55);
+        font-size: 0.92rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        white-space: nowrap;
+        transition: color 0.25s, border-color 0.25s, background 0.25s;
+        cursor: default;
+    }
+    .logo-slide-item:hover {
+        color: #fff;
+        border-color: rgba(59,130,246,0.35);
+        background: rgba(59,130,246,0.08);
+    }
+
+
+    @keyframes logoScroll {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+
+    /* CTA Form placeholder color */
+    #cta-form input::placeholder,
+    #cta-form select { color: rgba(255,255,255,0.4); }
+    #cta-form select option { color: rgba(255,255,255,0.9); }
+</style>
+
+<script>
+    function handleCtaSubmit(e) {
+        e.preventDefault();
+        const form = document.getElementById('cta-form');
+        const btn  = document.getElementById('cta-submit-btn');
+        btn.disabled = true;
+        btn.innerHTML = '<i class="ph-light ph-circle-notch" style="margin-right:0.5rem;animation:spin 1s linear infinite;"></i> 접수 중...';
+        setTimeout(() => {
+            form.innerHTML = `
+                <div style="padding:3rem 1rem;text-align:center;">
+                    <div style="width:64px;height:64px;border-radius:50%;background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.3);display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;">
+                        <i class="ph-light ph-check" style="font-size:2rem;color:#10b981;"></i>
+                    </div>
+                    <h3 style="color:#fff;margin-bottom:0.75rem;font-size:1.4rem;">신청이 완료되었습니다!</h3>
+                    <p style="color:var(--text-muted);line-height:1.7;">빠른 시일 내에 담당자가 연락드리겠습니다.<br>KONEKSI와 함께 더 안전한 데이터 환경을 만들어 보세요.</p>
+                </div>`;
+        }, 1200);
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate-fade-up').forEach((el) => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+        
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            if(window.scrollY > 10) {
+                header.style.background = 'rgba(10, 15, 28, 0.8)';
+                header.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
+            } else {
+                header.style.background = 'rgba(10, 15, 28, 0.5)';
+                header.style.borderBottom = '1px solid rgba(255,255,255,0.06)';
+            }
+        });
+    });
+</script>
+
+
+<script>
+(function() {
+  // ── Mobile Navigation ──────────────────────────────────────
+  const hamburger = document.getElementById('hamburger-btn');
+  const mobilePanel = document.getElementById('mobile-nav-panel');
+  const overlay = document.getElementById('mobile-nav-overlay');
+  const mainHeader = document.getElementById('main-header');
+
+  function openMenu() {
+    hamburger.classList.add('is-open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    hamburger.setAttribute('aria-label', '메뉴 닫기');
+    mobilePanel.classList.add('is-open');
+    overlay.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    // Trap focus: move to first link in panel
+    const firstLink = mobilePanel.querySelector('a');
+    if (firstLink) firstLink.focus();
+  }
+
+  function closeMenu() {
+    hamburger.classList.remove('is-open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('aria-label', '메뉴 열기');
+    mobilePanel.classList.remove('is-open');
+    overlay.classList.remove('is-open');
+    document.body.style.overflow = '';
+    hamburger.focus();
+  }
+
+  hamburger.addEventListener('click', function() {
+    if (hamburger.classList.contains('is-open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  overlay.addEventListener('click', closeMenu);
+
+  // Close on Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && mobilePanel.classList.contains('is-open')) {
+      closeMenu();
+    }
+  });
+
+  // Close menu on link click (navigation)
+  mobilePanel.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      closeMenu();
+    });
+  });
+
+  // ── Scroll-aware Header ────────────────────────────────────
+  window.addEventListener('scroll', function() {
+    if (!mainHeader) return;
+    if (window.scrollY > 10) {
+      mainHeader.style.background = 'rgba(10, 15, 28, 0.8)';
+      mainHeader.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
+    } else {
+      mainHeader.style.background = 'rgba(10, 15, 28, 0.5)';
+      mainHeader.style.borderBottom = '1px solid rgba(255,255,255,0.06)';
+    }
+  });
+
+  // ── Intersection Observer for animations ──────────────────
+  document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-fade-up').forEach(function(el) {
+      el.style.animationPlayState = 'paused';
+      observer.observe(el);
+    });
+  });
+})();
+</script>
+
+
+<!-- ═══════════════════════════════════════════════
+     KONEKSI VISUAL EFFECTS — Pure JS, No Libraries
+═══════════════════════════════════════════════ -->
+<script>
+(function() {
+'use strict';
+
+/* ──────────────────────────────────────────────
+   1. LOADING SCREEN
+────────────────────────────────────────────── */
+const loadingScreen = document.getElementById('loading-screen');
+if (loadingScreen) {
+    // Prevent scroll during loading
+    document.body.style.overflow = 'hidden';
+    const bar = loadingScreen.querySelector('.loading-bar');
+    if (bar) {
+        // Animate bar to 100%
+        let w = 0;
+        const barInterval = setInterval(function() {
+            w = Math.min(w + Math.random() * 18 + 4, 95);
+            bar.style.width = w + '%';
+        }, 80);
+        setTimeout(function() {
+            clearInterval(barInterval);
+            bar.style.width = '100%';
+        }, 1200);
+    }
+    setTimeout(function() {
+        loadingScreen.classList.add('hide');
+        document.body.style.overflow = '';
+        setTimeout(function() {
+            loadingScreen.style.display = 'none';
+        }, 600);
+    }, 1500);
+}
+
+/* ──────────────────────────────────────────────
+   2. CANVAS PARTICLE NETWORK (Hero background)
+────────────────────────────────────────────── */
+(function initParticles() {
+    var canvas = document.getElementById('particles-canvas');
+    if (!canvas) return;
+    var ctx = canvas.getContext('2d');
+    var wrapper = canvas.parentElement;
+    var particles = [];
+    var mouse = { x: -9999, y: -9999 };
+    var animFrame;
+
+    var CONFIG = {
+        count: 65,
+        minR: 1.5,
+        maxR: 3.5,
+        speed: 0.45,
+        connectDist: 140,
+        mouseInfluence: 100,
+        colors: ['#3B82F6', '#60A5FA', '#0EA5E9', '#38BDF8', '#93C5FD']
+    };
+
+    function resize() {
+        canvas.width  = wrapper.offsetWidth;
+        canvas.height = wrapper.offsetHeight;
+    }
+
+    function randomParticle() {
+        var color = CONFIG.colors[Math.floor(Math.random() * CONFIG.colors.length)];
+        return {
+            x:  Math.random() * canvas.width,
+            y:  Math.random() * canvas.height,
+            vx: (Math.random() - 0.5) * CONFIG.speed * 2,
+            vy: (Math.random() - 0.5) * CONFIG.speed * 2,
+            r:  CONFIG.minR + Math.random() * (CONFIG.maxR - CONFIG.minR),
+            color: color,
+            alpha: 0.3 + Math.random() * 0.5
+        };
+    }
+
+    function init() {
+        resize();
+        particles = [];
+        for (var i = 0; i < CONFIG.count; i++) {
+            particles.push(randomParticle());
+        }
+    }
+
+    function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Update & draw nodes
+        for (var i = 0; i < particles.length; i++) {
+            var p = particles[i];
+            p.x += p.vx;
+            p.y += p.vy;
+
+            // Mouse repulsion (gentle)
+            var dx = p.x - mouse.x;
+            var dy = p.y - mouse.y;
+            var dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < CONFIG.mouseInfluence) {
+                var force = (CONFIG.mouseInfluence - dist) / CONFIG.mouseInfluence * 0.5;
+                p.vx += (dx / dist) * force;
+                p.vy += (dy / dist) * force;
+            }
+
+            // Dampen velocity
+            p.vx *= 0.995;
+            p.vy *= 0.995;
+
+            // Bounce edges
+            if (p.x < 0 || p.x > canvas.width)  p.vx *= -1;
+            if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+            p.x = Math.max(0, Math.min(canvas.width,  p.x));
+            p.y = Math.max(0, Math.min(canvas.height, p.y));
+
+            // Draw node
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = p.color;
+            ctx.globalAlpha = p.alpha;
+            ctx.fill();
+        }
+
+        // Draw connections
+        ctx.globalAlpha = 1;
+        for (var i = 0; i < particles.length; i++) {
+            for (var j = i + 1; j < particles.length; j++) {
+                var a = particles[i], b = particles[j];
+                var dx = a.x - b.x, dy = a.y - b.y;
+                var d = Math.sqrt(dx * dx + dy * dy);
+                if (d < CONFIG.connectDist) {
+                    var alpha = (1 - d / CONFIG.connectDist) * 0.35;
+                    ctx.beginPath();
+                    ctx.moveTo(a.x, a.y);
+                    ctx.lineTo(b.x, b.y);
+                    ctx.strokeStyle = 'rgba(59, 130, 246, ' + alpha + ')';
+                    ctx.lineWidth = 0.8;
+                    ctx.stroke();
+                }
+            }
+        }
+        animFrame = requestAnimationFrame(draw);
+    }
+
+    canvas.addEventListener('mousemove', function(e) {
+        var rect = canvas.getBoundingClientRect();
+        mouse.x = e.clientX - rect.left;
+        mouse.y = e.clientY - rect.top;
+    });
+    canvas.addEventListener('mouseleave', function() {
+        mouse.x = -9999; mouse.y = -9999;
+    });
+
+    var resizeTimer;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function() {
+            init();
+        }, 200);
+    });
+
+    init();
+    draw();
+})();
+
+/* ──────────────────────────────────────────────
+   3. TYPING ANIMATION
+────────────────────────────────────────────── */
+(function initTyping() {
+    var target  = document.getElementById('typing-target');
+    var cursor  = document.querySelector('.typing-cursor');
+    var headline = document.getElementById('typing-headline');
+    if (!target || !headline) return;
+
+    var fullText = headline.getAttribute('data-typing-full') || '복구됩니다';
+    var idx = 0;
+    var started = false;
+
+    function type() {
+        if (idx <= fullText.length) {
+            target.textContent = fullText.slice(0, idx);
+            idx++;
+            setTimeout(type, 80 + Math.random() * 40);
+        } else {
+            // Blink then stop cursor after done
+            setTimeout(function() {
+                if (cursor) cursor.style.animationIterationCount = '3';
+            }, 2000);
+        }
+    }
+
+    // Start after loading screen
+    setTimeout(function() {
+        type();
+    }, 1600);
+})();
+
+/* ──────────────────────────────────────────────
+   4. SCROLL FADE-UP (Intersection Observer)
+────────────────────────────────────────────── */
+(function initFadeUp() {
+    var fadeEls = document.querySelectorAll('.fade-up-trigger, .glass-card, .comparison-section, h2, .text-center');
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-up-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    fadeEls.forEach(function(el) {
+        // Only sections below the fold
+        if (el.getBoundingClientRect().top > window.innerHeight * 0.9) {
+            el.classList.add('fade-up-hidden');
+            observer.observe(el);
+        }
+    });
+})();
+
+/* ──────────────────────────────────────────────
+   5. KPI NUMBER COUNTER
+────────────────────────────────────────────── */
+(function initCounters() {
+    var counters = document.querySelectorAll('.kpi-counter');
+    if (!counters.length) return;
+
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting && !entry.target.dataset.counted) {
+                entry.target.dataset.counted = '1';
+                animateCounter(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    counters.forEach(function(el) { observer.observe(el); });
+
+    function animateCounter(el) {
+        var target   = parseFloat(el.getAttribute('data-target'));
+        var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        var duration = 1800;
+        var start    = null;
+
+        function step(ts) {
+            if (!start) start = ts;
+            var progress = Math.min((ts - start) / duration, 1);
+            // Ease-out cubic
+            var eased = 1 - Math.pow(1 - progress, 3);
+            var current = eased * target;
+            el.textContent = current.toFixed(decimals);
+            if (progress < 1) {
+                requestAnimationFrame(step);
+            } else {
+                el.textContent = target.toFixed(decimals);
+            }
+        }
+        requestAnimationFrame(step);
+    }
+})();
+
+/* ──────────────────────────────────────────────
+   6. CARD 3D TILT EFFECT
+────────────────────────────────────────────── */
+(function initTilt() {
+    var cards = document.querySelectorAll('.glass-card');
+    var MAX_TILT = 10; // degrees
+
+    cards.forEach(function(card) {
+        card.addEventListener('mousemove', function(e) {
+            var rect = card.getBoundingClientRect();
+            var cx = rect.left + rect.width  / 2;
+            var cy = rect.top  + rect.height / 2;
+            var dx = (e.clientX - cx) / (rect.width  / 2);
+            var dy = (e.clientY - cy) / (rect.height / 2);
+            var rotateX = -dy * MAX_TILT;
+            var rotateY =  dx * MAX_TILT;
+            card.style.transform = 'perspective(900px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) scale3d(1.03, 1.03, 1.03)';
+            card.style.transition = 'transform 0.05s ease-out';
+        });
+
+        card.addEventListener('mouseleave', function() {
+            card.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+            card.style.transition = 'transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1)';
+        });
+
+        card.addEventListener('mouseenter', function() {
+            card.style.transition = 'transform 0.05s ease-out';
+        });
+    });
+})();
+
+})(); // End IIFE
+</script>
+
+</body>
+</html>

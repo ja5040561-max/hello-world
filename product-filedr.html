@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DatArk File DR - 파일 단위 보안 백업 및 재해복구 모듈. 분산 스토리지 기술로 중요 파일을 안전하게 보호하고 빠르게 복구합니다.">
+    <meta name="keywords" content="DR솔루션, 데이터복구, KONEKSI, DatArk, 재해복구, 분산스토리지">
+    <meta name="author" content="KONEKSI">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / 소셜 미디어 공유 -->
+    <meta property="og:title" content="DatArk File DR | KONEKSI">
+    <meta property="og:description" content="파일 단위 보안 백업 및 재해복구 솔루션 DatArk File DR. KONEKSI의 분산 스토리지 기술로 중요 파일을 완벽하게 보호합니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://koneksi-datark.netlify.app/product-filedr">
+    <meta property="og:image" content="https://koneksi-datark.netlify.app/assets/logo.svg">
+    <meta property="og:site_name" content="KONEKSI">
+    <meta property="og:locale" content="ko_KR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@koneksi_tech">
+    <meta name="twitter:title" content="DatArk File DR | KONEKSI">
+    <meta name="twitter:description" content="파일 단위 보안 백업 및 재해복구 솔루션 DatArk File DR. KONEKSI의 분산 스토리지 기술로 중요 파일을 완벽하게 보호합니다.">
+    <meta name="twitter:image" content="https://koneksi.io/assets/og-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://koneksi-datark.netlify.app/product-filedr">
+    <title>DatArk File DR | KONEKSI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        .feature-item {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        .feature-item:hover {
+            background: rgba(59, 130, 246, 0.04);
+            border-color: rgba(59, 130, 246, 0.2);
+            transform: translateY(-3px);
+        }
+        .feature-item-icon {
+            width: 48px; height: 48px;
+            border-radius: 14px;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.2rem;
+        }
+        .spec-table { width: 100%; border-collapse: collapse; }
+        .spec-table tr { border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .spec-table tr:last-child { border-bottom: none; }
+        .spec-table td { padding: 1rem 1.2rem; font-size: 0.95rem; vertical-align: top; }
+        .spec-table td:first-child { color: var(--text-muted); width: 35%; font-weight: 500; }
+        .spec-table td:last-child { color: var(--text-main); }
+        .arch-node {
+            display: flex; align-items: center; gap: 1rem;
+            padding: 1rem 1.5rem;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 14px; margin-bottom: 0.75rem;
+        }
+        .arch-node-icon {
+            width: 40px; height: 40px; min-width: 40px;
+            border-radius: 10px;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.2rem; color: var(--secondary-color);
+        }
+        @media (max-width: 1024px) { .feature-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .feature-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<a href="#main-content" class="skip-nav">본문으로 바로가기</a>
+
+<header id="main-header">
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+            <img loading="lazy" src="assets/logo.svg" alt="KONEKSI Logo" style="height: 40px; width: auto; object-fit: contain;">
+        </a>
+        <nav aria-label="주 네비게이션">
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="product.html" class="active">Products <i class="ph-light ph-caret-down" style="font-size: 0.8rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="product.html"><i class="ph-light ph-layout"></i> DatArk 개요</a></li>
+                        <li><a href="product-filedr.html"><i class="ph-light ph-files"></i> DatArk File DR</a></li>
+                        <li><a href="product-dbdr.html"><i class="ph-light ph-database"></i> DatArk DB DR</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Pricing <i class="ph-light ph-caret-down" style="font-size: 0.8rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pricing-cloud.html"><i class="ph-light ph-cloud"></i> 클라우드형</a></li>
+                        <li><a href="pricing-enterprise.html"><i class="ph-light ph-buildings"></i> 온프레미스형</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="blog.html">Blog <i class="ph-light ph-caret-down" style="font-size: 0.8rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="blog.html"><i class="ph-light ph-article"></i> 블로그 홈</a></li>
+                        <li><a href="blog-release.html"><i class="ph-light ph-rocket-launch"></i> 릴리즈 업데이트</a></li>
+                        <li><a href="blog-guide.html"><i class="ph-light ph-book-open"></i> 사용 가이드</a></li>
+                    </ul>
+                </li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="download.html">Download</a></li>
+            </ul>
+        </nav>
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-nav-panel" aria-haspopup="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="header-actions" style="display: flex; align-items: center; gap: 1rem;">
+            <div class="dropdown lang-switcher">
+                <a href="#" style="color: var(--text-muted); font-size: 0.95rem; font-weight: 500;"><i class="ph-light ph-globe" style="font-size: 1.1rem; margin-right: 0.2rem;"></i> KO <i class="ph-light ph-caret-down" style="font-size: 0.7rem; margin-left: 0.1rem;"></i></a>
+                <ul class="dropdown-menu" style="min-width: 130px; padding: 0.5rem; text-align: left;">
+                    <li><a href="#"><span style="font-size: 1.1em;">🇰🇷</span> Korean</a></li>
+                    <li><a href="#"><span style="font-size: 1.1em;">🇺🇸</span> English</a></li>
+                </ul>
+            </div>
+            <a href="support.html" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;" aria-label="도입 문의 페이지로 이동">도입 문의</a>
+        </div>
+    </div>
+</header>
+<!-- Mobile Nav Overlay -->
+<div id="mobile-nav-overlay" class="mobile-nav-overlay" aria-hidden="true"></div>
+
+<!-- Mobile Nav Panel -->
+<nav id="mobile-nav-panel" class="mobile-nav-panel" aria-label="모바일 네비게이션">
+  <p class="mobile-nav-heading">제품</p>
+  <a href="product.html"><i class="ph-light ph-layout" aria-hidden="true"></i> DatArk 개요</a>
+  <a href="product-filedr.html"><i class="ph-light ph-files" aria-hidden="true"></i> DatArk File DR</a>
+  <a href="product-dbdr.html"><i class="ph-light ph-database" aria-hidden="true"></i> DatArk DB DR</a>
+  <p class="mobile-nav-heading">가격</p>
+  <a href="pricing-cloud.html"><i class="ph-light ph-cloud" aria-hidden="true"></i> 클라우드형</a>
+  <a href="pricing-enterprise.html"><i class="ph-light ph-buildings" aria-hidden="true"></i> 온프레미스형</a>
+  <p class="mobile-nav-heading">정보</p>
+  <a href="blog.html"><i class="ph-light ph-newspaper" aria-hidden="true"></i> Blog</a>
+  <a href="support.html"><i class="ph-light ph-headset" aria-hidden="true"></i> Support</a>
+  <a href="download.html"><i class="ph-light ph-download-simple" aria-hidden="true"></i> Download</a>
+  <div class="mobile-nav-cta">
+    <a href="support.html" class="btn btn-primary">도입 문의</a>
+  </div>
+</nav>
+
+
+<main id="main-content">
+
+<!-- Hero Section -->
+<section class="section-padding container animate-fade-up">
+    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;">
+        <span class="badge" style="margin-bottom: 0;"><i class="ph-light ph-files"></i> File DR Module</span>
+        <span style="color: var(--text-muted); font-size: 0.85rem;">DatArk 시리즈</span>
+    </div>
+
+    <div class="split-layout" style="gap: 5rem; align-items: flex-start;">
+        <div>
+            <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">DatArk <span class="text-gradient">File DR</span></h1>
+            <h3 style="font-size: 1.25rem; color: var(--text-muted); font-weight: 400; letter-spacing: -0.01em; margin-bottom: 2rem;">
+                파일 단위 보안 백업 및 재해 복구 모듈
+            </h3>
+            <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.75; margin-bottom: 2rem;">
+                대용량 문서, 미디어 등 <strong style="color: #fff;">비정형 데이터의 랜섬웨어 원천 방어 및 실시간 복원</strong>에 특화된 모듈입니다.
+                문서 중앙화 시스템 고도화 및 파일 원본 증명이 필요한 전 산업군 환경에 최적화된 포지셔닝을 제공합니다.
+            </p>
+
+            <ul style="display: flex; flex-direction: column; gap: 1rem; color: var(--text-light);">
+                <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                    <i class="ph-light ph-check-circle" style="color: var(--secondary-color); font-size: 1.2rem; margin-top: 0.1rem; min-width: 1.2rem;"></i>
+                    <div><strong style="color: #fff;">실시간 블록 동기화:</strong> 변경된 파일의 블록 단위만 즉각 동기화하여 네트워크 트래픽 부하 최소화</div>
+                </li>
+                <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                    <i class="ph-light ph-check-circle" style="color: var(--secondary-color); font-size: 1.2rem; margin-top: 0.1rem; min-width: 1.2rem;"></i>
+                    <div><strong style="color: #fff;">초고속 단일 파일 복원:</strong> 테라바이트급 유실 상황 발생 시에도 원하는 파일만 선별하여 즉각 복구 지원</div>
+                </li>
+                <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                    <i class="ph-light ph-check-circle" style="color: var(--secondary-color); font-size: 1.2rem; margin-top: 0.1rem; min-width: 1.2rem;"></i>
+                    <div><strong style="color: #fff;">파일 무결성 증명:</strong> 분산 해시 기반으로 원본 파일 변조 여부를 수식 없이 감지 및 보고</div>
+                </li>
+                <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                    <i class="ph-light ph-check-circle" style="color: var(--secondary-color); font-size: 1.2rem; margin-top: 0.1rem; min-width: 1.2rem;"></i>
+                    <div><strong style="color: #fff;">랜섬웨어 원천 차단:</strong> 암호화 공격 감지 즉시 쓰기 차단 → 클린 스냅샷 자동 복원</div>
+                </li>
+            </ul>
+
+            <div style="display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap;">
+                <a href="pricing-cloud.html" class="btn btn-primary"><i class="ph-light ph-cloud"></i> Cloud 요금 안내</a>
+                <a href="support.html" class="btn btn-outline"><i class="ph-light ph-chat-circle-dots"></i> 도입 문의</a>
+            </div>
+        </div>
+
+        <div style="display:flex; align-items:center; justify-content:center; background: rgba(59, 130, 246, 0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 24px; aspect-ratio: 1; position: relative; overflow: hidden; min-width: 320px;">
+            <i class="ph-light ph-files" style="font-size: 14rem; color: rgba(255,255,255,0.02); position: absolute;"></i>
+            <div style="z-index: 1; text-align: center; padding: 2rem;">
+                <div style="position: relative; width: 120px; margin: 0 auto 1.5rem;">
+                    <div style="width: 90px; height: 110px; background: rgba(59,130,246,0.06); border: 1px solid rgba(59,130,246,0.15); border-radius: 12px; position: absolute; top: 10px; left: 15px; transform: rotate(6deg);"></div>
+                    <div style="width: 90px; height: 110px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.25); border-radius: 12px; position: absolute; top: 5px; left: 10px; transform: rotate(2deg);"></div>
+                    <div style="width: 100px; height: 120px; background: rgba(15,23,42,0.9); border: 1px solid rgba(59,130,246,0.4); border-radius: 12px; position: relative; display: flex; flex-direction: column; align-items: flex-start; padding: 1rem; box-shadow: 0 10px 40px rgba(59,130,246,0.15);">
+                        <i class="ph-light ph-file-text" style="font-size: 1.8rem; color: var(--secondary-color); margin-bottom: 0.5rem;"></i>
+                        <div style="width: 60%; height: 4px; background: rgba(255,255,255,0.1); border-radius: 4px; margin-bottom: 0.4rem;"></div>
+                        <div style="width: 80%; height: 4px; background: rgba(255,255,255,0.06); border-radius: 4px; margin-bottom: 0.4rem;"></div>
+                        <div style="width: 50%; height: 4px; background: rgba(255,255,255,0.06); border-radius: 4px;"></div>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                    <div style="width: 8px; height: 8px; background: #10b981; border-radius: 50%; box-shadow: 0 0 8px #10b981;"></div>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 500;">Protected &amp; Syncing</span>
+                </div>
+                <p style="font-size: 0.75rem; color: rgba(255,255,255,0.25); font-weight: 500; letter-spacing: 2px;">UNSTRUCTURED DATA</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Grid -->
+<section style="padding: 4rem 0; border-top: 1px solid rgba(255,255,255,0.04);">
+    <div class="container">
+        <div style="margin-bottom: 1rem;">
+            <span class="badge"><i class="ph-light ph-star"></i> 핵심 기능</span>
+        </div>
+        <h2 style="font-size: 2.2rem; margin-bottom: 0.5rem;">File DR 핵심 기능 상세</h2>
+        <p style="color: var(--text-muted);">비정형 파일 데이터의 전주기 보호를 위한 기능 모음</p>
+
+        <div class="feature-grid">
+            <div class="feature-item">
+                <div class="feature-item-icon"><i class="ph-light ph-arrows-clockwise"></i></div>
+                <h4 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.05rem;">실시간 블록 증분 동기화</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">파일 전체 전송이 아닌 변경된 블록만 추출하여 전송. 네트워크 대역폭 최대 90% 절감.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-item-icon"><i class="ph-light ph-clock-counter-clockwise"></i></div>
+                <h4 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.05rem;">시점 복구 (Point-in-Time)</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">공격 발생 이전 임의의 시점으로 파일 상태를 정확히 롤백. 분 단위 RPO 달성 가능.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-item-icon"><i class="ph-light ph-shield-warning"></i></div>
+                <h4 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.05rem;">랜섬웨어 자동 감지·차단</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">엔트로피 기반 이상 쓰기 패턴 분석으로 랜섬웨어 감지 즉시 쓰기 권한 격리 및 복원 개시.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-item-icon"><i class="ph-light ph-fingerprint"></i></div>
+                <h4 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.05rem;">파일 원본 무결성 증명</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">분산 해시 트리 구조로 저장된 각 파일의 위변조 여부를 언제든 법적 증빙 수준으로 제출 가능.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-item-icon"><i class="ph-light ph-file-magnifying-glass"></i></div>
+                <h4 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.05rem;">단일 파일 선택 복원</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">TB급 데이터 손실 환경에서도 필요한 파일만 골라 수초 내 복원. 전체 복구 불필요.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-item-icon"><i class="ph-light ph-folder-lock"></i></div>
+                <h4 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.05rem;">저장 중 데이터 암호화</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">모든 파일은 분산 노드에 암호화된 샤드(Shard) 형태로 보관. 단일 노드 탈취로 원본 복구 불가.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Step-by-step Flow Visualization -->
+<section style="padding: 4rem 0; border-top: 1px solid rgba(255,255,255,0.04);">
+    <div class="container">
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <span class="badge"><i class="ph-light ph-steps"></i> 동작 방식</span>
+            <h2 style="font-size: 2.2rem; margin-top: 1rem;">File DR <span class="text-gradient">3단계 보호</span> 프로세스</h2>
+            <p style="color: var(--text-muted); max-width: 520px; margin: 1rem auto 0;">파일 변경 감지부터 복원까지 완전 자동화된 보호 파이프라인</p>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr; align-items: start; gap: 0; margin-top: 2rem;">
+            <!-- Step 1 -->
+            <div style="text-align: center; padding: 0 1rem;">
+                <div style="width: 64px; height: 64px; border-radius: 20px; background: rgba(59,130,246,0.12); border: 1px solid rgba(59,130,246,0.35); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: #60A5FA; margin: 0 auto 1.2rem; box-shadow: 0 0 30px rgba(59,130,246,0.1);">
+                    <i class="ph-light ph-eye"></i>
+                </div>
+                <div style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; background: rgba(59,130,246,0.2); border-radius: 50%; font-size: 0.75rem; font-weight: 700; color: #60A5FA; margin-bottom: 0.75rem;">1</div>
+                <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 0.5rem; font-weight: 600;">감지</h4>
+                <p style="color: var(--text-muted); font-size: 0.82rem; line-height: 1.6;">파일시스템 이벤트(inotify/FSEvents)로 모든 파일 변경을 밀리초 단위로 감지</p>
+            </div>
+            <!-- Arrow -->
+            <div style="display: flex; align-items: center; padding-top: 3rem;">
+                <svg width="40" height="20" viewBox="0 0 40 20"><defs><marker id="a1" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto"><polygon points="0 0, 6 2.5, 0 5" fill="rgba(59,130,246,0.5)"/></marker></defs><line x1="0" y1="10" x2="34" y2="10" stroke="rgba(59,130,246,0.3)" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#a1)"/></svg>
+            </div>
+            <!-- Step 2 -->
+            <div style="text-align: center; padding: 0 1rem;">
+                <div style="width: 64px; height: 64px; border-radius: 20px; background: rgba(59,130,246,0.12); border: 1px solid rgba(59,130,246,0.35); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: #60A5FA; margin: 0 auto 1.2rem; box-shadow: 0 0 30px rgba(59,130,246,0.1);">
+                    <i class="ph-light ph-puzzle-piece"></i>
+                </div>
+                <div style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; background: rgba(59,130,246,0.2); border-radius: 50%; font-size: 0.75rem; font-weight: 700; color: #60A5FA; margin-bottom: 0.75rem;">2</div>
+                <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 0.5rem; font-weight: 600;">블록 추출 & 암호화</h4>
+                <p style="color: var(--text-muted); font-size: 0.82rem; line-height: 1.6;">변경된 블록만 추출 → AES-256/ChaCha20 Zero-Knowledge 암호화 → CID(SHA-256) 생성 → 16MB Chunk 분할</p>
+            </div>
+            <!-- Arrow -->
+            <div style="display: flex; align-items: center; padding-top: 3rem;">
+                <svg width="40" height="20" viewBox="0 0 40 20"><defs><marker id="a2" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto"><polygon points="0 0, 6 2.5, 0 5" fill="rgba(59,130,246,0.5)"/></marker></defs><line x1="0" y1="10" x2="34" y2="10" stroke="rgba(59,130,246,0.3)" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#a2)"/></svg>
+            </div>
+            <!-- Step 3 -->
+            <div style="text-align: center; padding: 0 1rem;">
+                <div style="width: 64px; height: 64px; border-radius: 20px; background: rgba(59,130,246,0.12); border: 1px solid rgba(59,130,246,0.35); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: #60A5FA; margin: 0 auto 1.2rem; box-shadow: 0 0 30px rgba(59,130,246,0.1);">
+                    <i class="ph-light ph-network"></i>
+                </div>
+                <div style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; background: rgba(59,130,246,0.2); border-radius: 50%; font-size: 0.75rem; font-weight: 700; color: #60A5FA; margin-bottom: 0.75rem;">3</div>
+                <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 0.5rem; font-weight: 600;">분산 저장</h4>
+                <p style="color: var(--text-muted); font-size: 0.82rem; line-height: 1.6;">N+K 이중화로 샤드를 복수 노드에 분산 저장. 단일 노드 탈취 시 복원 불가</p>
+            </div>
+            <!-- Arrow -->
+            <div style="display: flex; align-items: center; padding-top: 3rem;">
+                <svg width="40" height="20" viewBox="0 0 40 20"><defs><marker id="a3" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto"><polygon points="0 0, 6 2.5, 0 5" fill="rgba(16,185,129,0.6)"/></marker></defs><line x1="0" y1="10" x2="34" y2="10" stroke="rgba(16,185,129,0.4)" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#a3)"/></svg>
+            </div>
+            <!-- Step 4 (Recovery) -->
+            <div style="text-align: center; padding: 0 1rem;">
+                <div style="width: 64px; height: 64px; border-radius: 20px; background: rgba(16,185,129,0.12); border: 1px solid rgba(16,185,129,0.4); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: #10b981; margin: 0 auto 1.2rem; box-shadow: 0 0 30px rgba(16,185,129,0.1);">
+                    <i class="ph-light ph-shield-check"></i>
+                </div>
+                <div style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; background: rgba(16,185,129,0.2); border-radius: 50%; font-size: 0.75rem; font-weight: 700; color: #10b981; margin-bottom: 0.75rem;">4</div>
+                <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 0.5rem; font-weight: 600;">즉각 복원</h4>
+                <p style="color: var(--text-muted); font-size: 0.82rem; line-height: 1.6;">공격/유실 자동 감지 → 샤드 재조합 → 원본 파일 재구성 → 서비스 정상화</p>
+            </div>
+        </div>
+
+        <!-- Ransomware detection note -->
+        <div style="margin-top: 3rem; padding: 1.5rem 2rem; background: rgba(239,68,68,0.04); border: 1px solid rgba(239,68,68,0.15); border-radius: 16px; display: flex; align-items: center; gap: 1.5rem;">
+            <div style="width: 44px; height: 44px; min-width: 44px; border-radius: 12px; background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.2); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: #EF4444;">
+                <i class="ph-light ph-shield-warning"></i>
+            </div>
+            <div>
+                <div style="color: #fff; font-weight: 600; margin-bottom: 0.25rem; font-size: 0.95rem;">랜섬웨어 자동 감지 인터셉트</div>
+                <div style="color: var(--text-muted); font-size: 0.85rem;">엔트로피 기반 이상 쓰기 패턴이 감지되면 즉시 파일시스템 쓰기를 차단하고, 가장 최근의 클린 스냅샷으로 자동 복원을 개시합니다. 관리자 개입 없이 완전 자동화됩니다.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Supported File Formats Icon Grid -->
+<section style="padding: 4rem 0; border-top: 1px solid rgba(255,255,255,0.04);">
+    <div class="container">
+        <div style="margin-bottom: 2rem;">
+            <span class="badge"><i class="ph-light ph-files"></i> 지원 형식</span>
+            <h2 style="font-size: 2rem; margin-top: 1rem; margin-bottom: 0.5rem;">모든 비정형 파일 형식 지원</h2>
+            <p style="color: var(--text-muted);">형식에 관계없이 모든 비정형 파일을 동일한 수준으로 보호합니다</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem; margin-top: 2rem;">
+            <!-- Documents -->
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 1.25rem; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(59,130,246,0.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.06)'">
+                <i class="ph-light ph-file-doc" style="font-size: 2rem; color: #2B7CD3; display: block; margin-bottom: 0.6rem;"></i>
+                <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">DOC / DOCX</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 1.25rem; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(59,130,246,0.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.06)'">
+                <i class="ph-light ph-file-xls" style="font-size: 2rem; color: #1D6F42; display: block; margin-bottom: 0.6rem;"></i>
+                <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">XLS / XLSX</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 1.25rem; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(59,130,246,0.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.06)'">
+                <i class="ph-light ph-file-pdf" style="font-size: 2rem; color: #E74C3C; display: block; margin-bottom: 0.6rem;"></i>
+                <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">PDF</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 1.25rem; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(59,130,246,0.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.06)'">
+                <i class="ph-light ph-file-image" style="font-size: 2rem; color: #60A5FA; display: block; margin-bottom: 0.6rem;"></i>
+                <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">PNG / JPG / TIFF</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 1.25rem; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(59,130,246,0.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.06)'">
+                <i class="ph-light ph-file-video" style="font-size: 2rem; color: #EC4899; display: block; margin-bottom: 0.6rem;"></i>
+                <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">MP4 / MOV / AVI</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 1.25rem; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(59,130,246,0.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.06)'">
+                <i class="ph-light ph-file-code" style="font-size: 2rem; color: #F59E0B; display: block; margin-bottom: 0.6rem;"></i>
+                <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">CAD / DWG / DXF</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 1.25rem; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(59,130,246,0.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.06)'">
+                <i class="ph-light ph-file-audio" style="font-size: 2rem; color: #8B5CF6; display: block; margin-bottom: 0.6rem;"></i>
+                <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">MP3 / WAV / FLAC</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 1.25rem; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(59,130,246,0.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.06)'">
+                <i class="ph-light ph-file-zip" style="font-size: 2rem; color: #94A3B8; display: block; margin-bottom: 0.6rem;"></i>
+                <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">ZIP / TAR / GZ</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 1.25rem; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(59,130,246,0.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.06)'">
+                <i class="ph-light ph-file-text" style="font-size: 2rem; color: #6EE7B7; display: block; margin-bottom: 0.6rem;"></i>
+                <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">TXT / CSV / LOG</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 1.25rem; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(59,130,246,0.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.06)'">
+                <i class="ph-light ph-file-html" style="font-size: 2rem; color: #F97316; display: block; margin-bottom: 0.6rem;"></i>
+                <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">HTML / XML / JSON</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 1.25rem; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(59,130,246,0.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.06)'">
+                <i class="ph-light ph-presentation" style="font-size: 2rem; color: #FB923C; display: block; margin-bottom: 0.6rem;"></i>
+                <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">PPT / PPTX</div>
+            </div>
+            <div style="background: rgba(59,130,246,0.04); border: 1px solid rgba(59,130,246,0.15); border-radius: 16px; padding: 1.25rem; text-align: center;">
+                <i class="ph-light ph-dots-three-circle" style="font-size: 2rem; color: rgba(59,130,246,0.5); display: block; margin-bottom: 0.6rem;"></i>
+                <div style="font-size: 0.8rem; color: #60A5FA; font-weight: 600;">모든 형식 지원</div>
+            </div>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 1.5rem; text-align: center;">
+            <i class="ph-light ph-info" style="margin-right: 0.3rem;"></i>
+            파일 형식에 무관하게 OS 레벨에서 동작하므로 어떤 확장자든 동일하게 보호됩니다
+        </p>
+    </div>
+</section>
+
+<!-- Benchmark Visualization -->
+<section style="padding: 4rem 0; border-top: 1px solid rgba(255,255,255,0.04);" id="benchmark-section">
+    <div class="container">
+        <div style="margin-bottom: 2rem;">
+            <span class="badge"><i class="ph-light ph-chart-bar"></i> 성능 벤치마크</span>
+            <h2 style="font-size: 2rem; margin-top: 1rem; margin-bottom: 0.5rem;">실측 성능 데이터</h2>
+            <p style="color: var(--text-muted);">엔터프라이즈 환경 기준 측정된 실제 성능 지표</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem;">
+            <!-- Recovery Time -->
+            <div class="glass-card" style="padding: 2rem;">
+                <h4 style="color: #fff; font-size: 0.9rem; font-weight: 600; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                    <i class="ph-light ph-clock-counter-clockwise" style="color: #60A5FA;"></i> 단일 파일 복구 시간
+                </h4>
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                            <span style="font-size: 0.8rem; color: #60A5FA; font-weight: 600; display: flex; align-items: center; gap: 0.3rem;"><i class="ph-light ph-star" style="font-size: 0.75rem;"></i> DatArk</span>
+                            <span style="font-size: 0.8rem; color: #fff; font-weight: 700;">3초</span>
+                        </div>
+                        <div style="height: 7px; background: rgba(255,255,255,0.05); border-radius: 10px; overflow: hidden;">
+                            <div class="bench-bar" data-w="12" style="height: 100%; width: 12%; background: linear-gradient(90deg, #3B82F6, #60A5FA); border-radius: 10px; box-shadow: 0 0 10px rgba(59,130,246,0.4); transition: width 1.5s ease;"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                            <span style="font-size: 0.8rem; color: var(--text-muted);">전통 백업 A</span>
+                            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">45분</span>
+                        </div>
+                        <div style="height: 7px; background: rgba(255,255,255,0.05); border-radius: 10px; overflow: hidden;">
+                            <div class="bench-bar" data-w="75" style="height: 100%; width: 75%; background: rgba(148,163,184,0.3); border-radius: 10px; transition: width 1.5s ease;"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                            <span style="font-size: 0.8rem; color: var(--text-muted);">전통 백업 B</span>
+                            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">120분+</span>
+                        </div>
+                        <div style="height: 7px; background: rgba(255,255,255,0.05); border-radius: 10px; overflow: hidden;">
+                            <div class="bench-bar" data-w="98" style="height: 100%; width: 98%; background: rgba(148,163,184,0.15); border-radius: 10px; transition: width 1.5s ease;"></div>
+                        </div>
+                    </div>
+                </div>
+                <p style="color: rgba(16,185,129,0.8); font-size: 0.78rem; margin-top: 1.2rem; font-weight: 600;">↓ 최대 900x 빠른 복구</p>
+            </div>
+
+            <!-- Network Bandwidth Usage -->
+            <div class="glass-card" style="padding: 2rem;">
+                <h4 style="color: #fff; font-size: 0.9rem; font-weight: 600; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                    <i class="ph-light ph-wifi-high" style="color: #60A5FA;"></i> 동기화 대역폭 사용률
+                </h4>
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                            <span style="font-size: 0.8rem; color: #60A5FA; font-weight: 600; display: flex; align-items: center; gap: 0.3rem;"><i class="ph-light ph-star" style="font-size: 0.75rem;"></i> DatArk (블록 증분)</span>
+                            <span style="font-size: 0.8rem; color: #fff; font-weight: 700;">10%</span>
+                        </div>
+                        <div style="height: 7px; background: rgba(255,255,255,0.05); border-radius: 10px; overflow: hidden;">
+                            <div class="bench-bar" data-w="10" style="height: 100%; width: 10%; background: linear-gradient(90deg, #3B82F6, #60A5FA); border-radius: 10px; box-shadow: 0 0 10px rgba(59,130,246,0.4); transition: width 1.5s ease;"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                            <span style="font-size: 0.8rem; color: var(--text-muted);">전통 백업 (전체 전송)</span>
+                            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">100%</span>
+                        </div>
+                        <div style="height: 7px; background: rgba(255,255,255,0.05); border-radius: 10px; overflow: hidden;">
+                            <div class="bench-bar" data-w="100" style="height: 100%; width: 100%; background: rgba(148,163,184,0.3); border-radius: 10px; transition: width 1.5s ease;"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                            <span style="font-size: 0.8rem; color: var(--text-muted);">경쟁사 증분 방식</span>
+                            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">35%</span>
+                        </div>
+                        <div style="height: 7px; background: rgba(255,255,255,0.05); border-radius: 10px; overflow: hidden;">
+                            <div class="bench-bar" data-w="35" style="height: 100%; width: 35%; background: rgba(148,163,184,0.2); border-radius: 10px; transition: width 1.5s ease;"></div>
+                        </div>
+                    </div>
+                </div>
+                <p style="color: rgba(16,185,129,0.8); font-size: 0.78rem; margin-top: 1.2rem; font-weight: 600;">↓ 대역폭 최대 90% 절감</p>
+            </div>
+
+            <!-- Compression Rate -->
+            <div class="glass-card" style="padding: 2rem;">
+                <h4 style="color: #fff; font-size: 0.9rem; font-weight: 600; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                    <i class="ph-light ph-file-zip" style="color: #60A5FA;"></i> 스토리지 효율 (압축률)
+                </h4>
+                <div style="display: flex; justify-content: space-around; align-items: flex-end; height: 130px; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.06);">
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+                        <div style="width: 52px; background: linear-gradient(180deg, #60A5FA, #3B82F6); border-radius: 8px 8px 0 0; height: 100px; position: relative; box-shadow: 0 0 20px rgba(59,130,246,0.3);">
+                            <span style="position: absolute; top: -1.4rem; left: 50%; transform: translateX(-50%); font-size: 0.78rem; font-weight: 700; color: #60A5FA; white-space: nowrap;">75%</span>
+                        </div>
+                        <span style="font-size: 0.75rem; color: #60A5FA; font-weight: 600; text-align: center;">DatArk</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+                        <div style="width: 52px; background: rgba(148,163,184,0.3); border-radius: 8px 8px 0 0; height: 52px; position: relative;">
+                            <span style="position: absolute; top: -1.4rem; left: 50%; transform: translateX(-50%); font-size: 0.78rem; font-weight: 600; color: var(--text-muted); white-space: nowrap;">40%</span>
+                        </div>
+                        <span style="font-size: 0.75rem; color: var(--text-muted); text-align: center;">경쟁사 A</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+                        <div style="width: 52px; background: rgba(148,163,184,0.15); border-radius: 8px 8px 0 0; height: 30px; position: relative;">
+                            <span style="position: absolute; top: -1.4rem; left: 50%; transform: translateX(-50%); font-size: 0.78rem; font-weight: 600; color: var(--text-muted); white-space: nowrap;">23%</span>
+                        </div>
+                        <span style="font-size: 0.75rem; color: var(--text-muted); text-align: center;">전통 방식</span>
+                    </div>
+                </div>
+                <p style="color: rgba(16,185,129,0.8); font-size: 0.78rem; margin-top: 1.2rem; font-weight: 600;">↑ 스토리지 비용 최대 75% 절감</p>
+            </div>
+        </div>
+        <p style="color: rgba(255,255,255,0.2); font-size: 0.75rem; text-align: center; margin-top: 1.5rem;">* 1TB 혼합 파일 환경 기준, 내부 테스트 결과. 실제 환경에 따라 다를 수 있습니다.</p>
+    </div>
+</section>
+
+<!-- Spec + Architecture -->
+<section style="padding: 4rem 0; border-top: 1px solid rgba(255,255,255,0.04);">
+    <div class="container">
+        <div class="split-layout" style="gap: 4rem; align-items: flex-start;">
+            <div>
+                <div style="margin-bottom: 1rem;"><span class="badge"><i class="ph-light ph-list"></i> 제품 사양</span></div>
+                <h2 style="font-size: 2rem; margin-bottom: 2rem;">기술 스펙</h2>
+                <div class="glass-card" style="padding: 0; overflow: hidden; border-radius: 20px;">
+                    <table class="spec-table">
+                        <tr><td>지원 데이터 유형</td><td>모든 비정형 파일 (문서, 이미지, 영상, CAD 등)</td></tr>
+                        <tr><td>동기화 방식</td><td>블록 단위 실시간 증분 동기화 (Rsync 계열)</td></tr>
+                        <tr><td>RPO 목표</td><td>≤ 1분 (실시간 백업 기준)</td></tr>
+                        <tr><td>RTO 목표</td><td>단일 파일 기준 수초, 전체 복구 환경/용량 의존</td></tr>
+                        <tr><td>암호화</td><td>AES-256 / ChaCha20 Zero-Knowledge (클라이언트 측 암호화)</td></tr>
+                        <tr><td>복구 보존 기간</td><td>플랜 별 상이 (Basic 7일 ~ Enterprise 무제한)</td></tr>
+                        <tr><td>OS 지원</td><td>Windows / Linux / macOS (에이전트 설치)</td></tr>
+                        <tr><td>배포 형태</td><td>클라우드형 / 온프레미스형</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <div>
+                <div style="margin-bottom: 1rem;"><span class="badge"><i class="ph-light ph-flow-arrow"></i> 작동 구조</span></div>
+                <h2 style="font-size: 2rem; margin-bottom: 2rem;">File DR 동작 흐름</h2>
+
+                <div class="arch-node">
+                    <div class="arch-node-icon"><i class="ph-light ph-desktop"></i></div>
+                    <div>
+                        <div style="color: #fff; font-weight: 600; font-size: 0.95rem;">① 클라이언트 에이전트</div>
+                        <div style="color: var(--text-muted); font-size: 0.85rem;">파일시스템 변경 감지(inotify/FSEvents) → 블록 추출</div>
+                    </div>
+                </div>
+                <div style="text-align: left; padding-left: 1.25rem; margin-bottom: 0.75rem;"><i class="ph-light ph-arrow-down" style="color: rgba(59,130,246,0.5);"></i></div>
+
+                <div class="arch-node">
+                    <div class="arch-node-icon"><i class="ph-light ph-cpu"></i></div>
+                    <div>
+                        <div style="color: #fff; font-weight: 600; font-size: 0.95rem;">② DatArk Core 엔진</div>
+                        <div style="color: var(--text-muted); font-size: 0.85rem;">블록 암호화 → 분산 해시 생성 → 샤드 분할</div>
+                    </div>
+                </div>
+                <div style="text-align: left; padding-left: 1.25rem; margin-bottom: 0.75rem;"><i class="ph-light ph-arrow-down" style="color: rgba(59,130,246,0.5);"></i></div>
+
+                <div class="arch-node">
+                    <div class="arch-node-icon"><i class="ph-light ph-network"></i></div>
+                    <div>
+                        <div style="color: #fff; font-weight: 600; font-size: 0.95rem;">③ P2P 분산 노드 망</div>
+                        <div style="color: var(--text-muted); font-size: 0.85rem;">N+K 중복도로 샤드를 복수의 노드에 분산 저장</div>
+                    </div>
+                </div>
+                <div style="text-align: left; padding-left: 1.25rem; margin-bottom: 0.75rem;"><i class="ph-light ph-arrow-down" style="color: rgba(59,130,246,0.5);"></i></div>
+
+                <div class="arch-node" style="border-color: rgba(16,185,129,0.2); background: rgba(16,185,129,0.03);">
+                    <div class="arch-node-icon" style="background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.3); color: #10b981;"><i class="ph-light ph-shield-check"></i></div>
+                    <div>
+                        <div style="color: #fff; font-weight: 600; font-size: 0.95rem;">④ 즉각 복원</div>
+                        <div style="color: var(--text-muted); font-size: 0.85rem;">공격/유실 감지 → 샤드 재조합 → 원본 파일 재구성</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</main>
+
+<footer class="premium-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo footer-heading" style="margin-bottom: 1rem; font-size: 1.25rem; display: flex; align-items: center; gap: 0.8rem; color: #ffffff;">
+                    <img src="assets/logo.svg" alt="KONEKSI Logo" style="height: 32px; width: auto; object-fit: contain;" loading="lazy">
+                </div>
+                <p style="font-size: 0.9rem; margin-bottom: 1.5rem; max-width: 250px; line-height: 1.6;">완전한 분산 저장 구조와 CID 기반 데이터 무결성 철학을 구현하는 차세대 스토리지 스택.</p>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/company/koneksi" class="social-icon" target="_blank" rel="noopener"><i class="ph-light ph-linkedin-logo"></i></a>
+                    <a href="https://github.com/koneksi-tech" class="social-icon" target="_blank" rel="noopener"><i class="ph-light ph-github-logo"></i></a>
+                    <a href="https://x.com/koneksi_tech" class="social-icon" target="_blank" rel="noopener"><i class="ph-light ph-x-logo"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Platform</h4>
+                <ul class="footer-list">
+                    <li><a href="product.html">DatArk 개요</a></li>
+                    <li><a href="product-filedr.html">DatArk File DR</a></li>
+                    <li><a href="product-dbdr.html">DatArk DB DR</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Resources</h4>
+                <ul class="footer-list">
+                    <li><a href="support.html">Contact Sales</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="download.html">Downloads</a></li>
+                </ul>
+            </div>
+            <div class="footer-col" style="min-width: max-content;">
+                <h4 class="footer-heading">Contact</h4>
+                <ul class="footer-list">
+                    <li style="display: flex; gap: 0.5rem; color: var(--text-muted); line-height: 1.5;">
+                        <i class="ph-light ph-map-pin" style="margin-top: 0.2rem; min-width: 16px;"></i>
+                        서울 송파구 중대로 135<br>IT벤처타워 서관 10층
+                    </li>
+                    <li style="display: flex; gap: 0.5rem; margin-top: 1rem; color: var(--text-muted);">
+                        <i class="ph-light ph-phone"></i> 070-7626-1020
+                    </li>
+                    <li style="display: flex; gap: 0.5rem; margin-top: 0.5rem; color: var(--text-muted);">
+                        <i class="ph-light ph-envelope-simple"></i> info@koneksi.co.kr
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom-flex">
+            <p>&copy; 2026 Koneksi Inc.</p>
+            <div style="display: flex; gap: 1.5rem;">
+                <a href="terms.html">Terms of Service</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+(function() {
+  // ── Mobile Navigation ──────────────────────────────────────
+  const hamburger = document.getElementById('hamburger-btn');
+  const mobilePanel = document.getElementById('mobile-nav-panel');
+  const overlay = document.getElementById('mobile-nav-overlay');
+  const mainHeader = document.getElementById('main-header');
+
+  function openMenu() {
+    hamburger.classList.add('is-open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    hamburger.setAttribute('aria-label', '메뉴 닫기');
+    mobilePanel.classList.add('is-open');
+    overlay.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    // Trap focus: move to first link in panel
+    const firstLink = mobilePanel.querySelector('a');
+    if (firstLink) firstLink.focus();
+  }
+
+  function closeMenu() {
+    hamburger.classList.remove('is-open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('aria-label', '메뉴 열기');
+    mobilePanel.classList.remove('is-open');
+    overlay.classList.remove('is-open');
+    document.body.style.overflow = '';
+    hamburger.focus();
+  }
+
+  hamburger.addEventListener('click', function() {
+    if (hamburger.classList.contains('is-open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  overlay.addEventListener('click', closeMenu);
+
+  // Close on Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && mobilePanel.classList.contains('is-open')) {
+      closeMenu();
+    }
+  });
+
+  // Close menu on link click (navigation)
+  mobilePanel.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      closeMenu();
+    });
+  });
+
+  // ── Scroll-aware Header ────────────────────────────────────
+  window.addEventListener('scroll', function() {
+    if (!mainHeader) return;
+    if (window.scrollY > 10) {
+      mainHeader.style.background = 'rgba(10, 15, 28, 0.8)';
+      mainHeader.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
+    } else {
+      mainHeader.style.background = 'rgba(10, 15, 28, 0.5)';
+      mainHeader.style.borderBottom = '1px solid rgba(255,255,255,0.06)';
+    }
+  });
+
+  // ── Intersection Observer for animations ──────────────────
+  document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-fade-up').forEach(function(el) {
+      el.style.animationPlayState = 'paused';
+      observer.observe(el);
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

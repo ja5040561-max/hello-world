@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DatArk DB DR - 데이터베이스 단위 보안 백업 및 재해복구 모듈. 분산 스토리지 기술로 DB 데이터를 안전하게 보호하고 빠르게 복구합니다.">
+    <meta name="keywords" content="DR솔루션, 데이터복구, KONEKSI, DatArk, 재해복구, 분산스토리지">
+    <meta name="author" content="KONEKSI">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / 소셜 미디어 공유 -->
+    <meta property="og:title" content="DatArk DB DR | KONEKSI">
+    <meta property="og:description" content="DB 단위 보안 백업 및 재해복구 솔루션 DatArk DB DR. KONEKSI의 분산 스토리지 기술로 데이터베이스를 완벽하게 보호합니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://koneksi-datark.netlify.app/product-dbdr">
+    <meta property="og:image" content="https://koneksi-datark.netlify.app/assets/logo.svg">
+    <meta property="og:site_name" content="KONEKSI">
+    <meta property="og:locale" content="ko_KR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@koneksi_tech">
+    <meta name="twitter:title" content="DatArk DB DR | KONEKSI">
+    <meta name="twitter:description" content="DB 단위 보안 백업 및 재해복구 솔루션 DatArk DB DR. KONEKSI의 분산 스토리지 기술로 데이터베이스를 완벽하게 보호합니다.">
+    <meta name="twitter:image" content="https://koneksi.io/assets/og-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://koneksi-datark.netlify.app/product-dbdr">
+    <title>DatArk DB DR | KONEKSI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        .feature-item {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        .feature-item:hover {
+            background: rgba(99, 102, 241, 0.04);
+            border-color: rgba(99, 102, 241, 0.2);
+            transform: translateY(-3px);
+        }
+        .feature-item-icon {
+            width: 48px; height: 48px;
+            border-radius: 14px;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem;
+            color: #818cf8;
+            margin-bottom: 1.2rem;
+        }
+        .spec-table { width: 100%; border-collapse: collapse; }
+        .spec-table tr { border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .spec-table tr:last-child { border-bottom: none; }
+        .spec-table td { padding: 1rem 1.2rem; font-size: 0.95rem; vertical-align: top; }
+        .spec-table td:first-child { color: var(--text-muted); width: 35%; font-weight: 500; }
+        .spec-table td:last-child { color: var(--text-main); }
+        .arch-node {
+            display: flex; align-items: center; gap: 1rem;
+            padding: 1rem 1.5rem;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 14px; margin-bottom: 0.75rem;
+        }
+        .arch-node-icon {
+            width: 40px; height: 40px; min-width: 40px;
+            border-radius: 10px;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.2rem; color: #818cf8;
+        }
+        @media (max-width: 1024px) { .feature-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .feature-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<a href="#main-content" class="skip-nav">본문으로 바로가기</a>
+
+<header id="main-header">
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+            <img loading="lazy" src="assets/logo.svg" alt="KONEKSI Logo" style="height: 40px; width: auto; object-fit: contain;">
+        </a>
+        <nav aria-label="주 네비게이션">
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="product.html" class="active">Products <i class="ph-light ph-caret-down" style="font-size: 0.8rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="product.html"><i class="ph-light ph-layout"></i> DatArk 개요</a></li>
+                        <li><a href="product-filedr.html"><i class="ph-light ph-files"></i> DatArk File DR</a></li>
+                        <li><a href="product-dbdr.html"><i class="ph-light ph-database"></i> DatArk DB DR</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Pricing <i class="ph-light ph-caret-down" style="font-size: 0.8rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pricing-cloud.html"><i class="ph-light ph-cloud"></i> 클라우드형</a></li>
+                        <li><a href="pricing-enterprise.html"><i class="ph-light ph-buildings"></i> 온프레미스형</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="blog.html">Blog <i class="ph-light ph-caret-down" style="font-size: 0.8rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="blog.html"><i class="ph-light ph-article"></i> 블로그 홈</a></li>
+                        <li><a href="blog-release.html"><i class="ph-light ph-rocket-launch"></i> 릴리즈 업데이트</a></li>
+                        <li><a href="blog-guide.html"><i class="ph-light ph-book-open"></i> 사용 가이드</a></li>
+                    </ul>
+                </li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="download.html">Download</a></li>
+            </ul>
+        </nav>
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-nav-panel" aria-haspopup="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="header-actions" style="display: flex; align-items: center; gap: 1rem;">
+            <div class="dropdown lang-switcher">
+                <a href="#" style="color: var(--text-muted); font-size: 0.95rem; font-weight: 500;"><i class="ph-light ph-globe" style="font-size: 1.1rem; margin-right: 0.2rem;"></i> KO <i class="ph-light ph-caret-down" style="font-size: 0.7rem; margin-left: 0.1rem;"></i></a>
+                <ul class="dropdown-menu" style="min-width: 130px; padding: 0.5rem; text-align: left;">
+                    <li><a href="#"><span style="font-size: 1.1em;">🇰🇷</span> Korean</a></li>
+                    <li><a href="#"><span style="font-size: 1.1em;">🇺🇸</span> English</a></li>
+                </ul>
+            </div>
+            <a href="support.html" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;" aria-label="도입 문의 페이지로 이동">도입 문의</a>
+        </div>
+    </div>
+</header>
+<!-- Mobile Nav Overlay -->
+<div id="mobile-nav-overlay" class="mobile-nav-overlay" aria-hidden="true"></div>
+
+<!-- Mobile Nav Panel -->
+<nav id="mobile-nav-panel" class="mobile-nav-panel" aria-label="모바일 네비게이션">
+  <p class="mobile-nav-heading">제품</p>
+  <a href="product.html"><i class="ph-light ph-layout" aria-hidden="true"></i> DatArk 개요</a>
+  <a href="product-filedr.html"><i class="ph-light ph-files" aria-hidden="true"></i> DatArk File DR</a>
+  <a href="product-dbdr.html"><i class="ph-light ph-database" aria-hidden="true"></i> DatArk DB DR</a>
+  <p class="mobile-nav-heading">가격</p>
+  <a href="pricing-cloud.html"><i class="ph-light ph-cloud" aria-hidden="true"></i> 클라우드형</a>
+  <a href="pricing-enterprise.html"><i class="ph-light ph-buildings" aria-hidden="true"></i> 온프레미스형</a>
+  <p class="mobile-nav-heading">정보</p>
+  <a href="blog.html"><i class="ph-light ph-newspaper" aria-hidden="true"></i> Blog</a>
+  <a href="support.html"><i class="ph-light ph-headset" aria-hidden="true"></i> Support</a>
+  <a href="download.html"><i class="ph-light ph-download-simple" aria-hidden="true"></i> Download</a>
+  <div class="mobile-nav-cta">
+    <a href="support.html" class="btn btn-primary">도입 문의</a>
+  </div>
+</nav>
+
+
+<main id="main-content">
+
+<!-- Hero Section -->
+<section class="section-padding container animate-fade-up">
+    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;">
+        <span class="badge" style="margin-bottom: 0; background: rgba(99,102,241,0.1); color: #818cf8; border-color: rgba(99,102,241,0.2);"><i class="ph-light ph-database"></i> DB DR Module</span>
+        <span style="color: var(--text-muted); font-size: 0.85rem;">DatArk 시리즈</span>
+    </div>
+
+    <div class="split-layout" style="direction: rtl; gap: 5rem; align-items: flex-start;">
+        <div style="direction: ltr; display:flex; align-items:center; justify-content:center; background: rgba(99,102,241,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 24px; aspect-ratio: 1; position: relative; overflow: hidden; min-width: 320px;">
+            <i class="ph-light ph-hard-drives" style="font-size: 14rem; color: rgba(255,255,255,0.02); position: absolute;"></i>
+            <div style="z-index: 1; text-align: center; padding: 2rem; direction: ltr;">
+                <div style="position: relative; width: 110px; margin: 0 auto 1.5rem;">
+                    <div style="width: 100px; height: 30px; background: rgba(99,102,241,0.2); border: 1px solid rgba(99,102,241,0.35); border-radius: 50%; margin: 0 auto 1px;"></div>
+                    <div style="width: 100px; height: 52px; background: rgba(15,23,42,0.9); border-left: 1px solid rgba(99,102,241,0.35); border-right: 1px solid rgba(99,102,241,0.35); margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+                        <div style="display: flex; flex-direction: column; gap: 6px; width: 60%;">
+                            <div style="height: 3px; background: rgba(129,140,248,0.5); border-radius: 2px;"></div>
+                            <div style="height: 3px; background: rgba(129,140,248,0.3); border-radius: 2px;"></div>
+                            <div style="height: 3px; background: rgba(129,140,248,0.2); border-radius: 2px;"></div>
+                        </div>
+                    </div>
+                    <div style="width: 100px; height: 30px; background: rgba(99,102,241,0.15); border: 1px solid rgba(99,102,241,0.3); border-radius: 0 0 50% 50% / 0 0 100% 100%; margin: 0 auto; display:flex; align-items:center; justify-content:center;">
+                        <i class="ph-light ph-shield-check" style="font-size: 0.9rem; color: #818cf8;"></i>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                    <div style="width: 8px; height: 8px; background: #10b981; border-radius: 50%; box-shadow: 0 0 8px #10b981;"></div>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 500;">Transaction Protected</span>
+                </div>
+                <p style="font-size: 0.75rem; color: rgba(255,255,255,0.25); font-weight: 500; letter-spacing: 2px;">STRUCTURED DB</p>
+            </div>
+        </div>
+
+        <div style="direction: ltr;">
+            <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">DatArk <span style="background: linear-gradient(135deg, #fff 0%, #818cf8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">DB DR</span></h1>
+            <h3 style="font-size: 1.25rem; color: var(--text-muted); font-weight: 400; letter-spacing: -0.01em; margin-bottom: 2rem;">PostgreSQL WAL 기반 실시간 DB 재해복구 모듈</h3>
+            <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.75; margin-bottom: 2rem;">
+                PostgreSQL의 WAL(Write-Ahead Log)을 실시간으로 분산 클러스터에 스트리밍하여 <strong style="color: #fff;">RPO 4~10초, RTO 15분 이내</strong>를 달성하는 DB 전용 재해복구 모듈입니다.
+                16MB Chunk 분할, AES-256 Zero-Knowledge 암호화, CID 기반 무결성 검증으로 완벽한 데이터 보호를 보장합니다.
+            </p>
+            <ul style="display: flex; flex-direction: column; gap: 1rem; color: var(--text-light);">
+                <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                    <i class="ph-light ph-check-circle" style="color: #818cf8; font-size: 1.2rem; margin-top: 0.1rem; min-width: 1.2rem;"></i>
+                    <div><strong style="color: #fff;">WAL 실시간 스트리밍:</strong> 서비스 무중단 상태에서 초 단위 변경 이력을 분산 클러스터에 전송 (RPO 4~10초)</div>
+                </li>
+                <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                    <i class="ph-light ph-check-circle" style="color: #818cf8; font-size: 1.2rem; margin-top: 0.1rem; min-width: 1.2rem;"></i>
+                    <div><strong style="color: #fff;">pg_basebackup 비차단 스냅샷:</strong> DB 서비스 중단 없이 전체 백업 실행, 19.8배 압축 효율</div>
+                </li>
+                <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                    <i class="ph-light ph-check-circle" style="color: #818cf8; font-size: 1.2rem; margin-top: 0.1rem; min-width: 1.2rem;"></i>
+                    <div><strong style="color: #fff;">PITR 시점 복구:</strong> 매니페스트 + 8채널 병렬 복구로 "어제 오후 3시 15분 10초" 상태로 정확히 복원</div>
+                </li>
+                <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                    <i class="ph-light ph-check-circle" style="color: #818cf8; font-size: 1.2rem; margin-top: 0.1rem; min-width: 1.2rem;"></i>
+                    <div><strong style="color: #fff;">Cross-Host DR:</strong> 서울 서버 장애 시 부산 등 타지역 새 서버에 즈시 복구 (NHN Cloud 검증 완료)</div>
+                </li>
+            </ul>
+            <div style="display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap;">
+                <a href="pricing-enterprise.html" class="btn btn-primary" style="background: linear-gradient(135deg, #6366f1, #4f46e5); box-shadow: 0 4px 14px rgba(99,102,241,0.3);"><i class="ph-light ph-buildings"></i> Enterprise 문의</a>
+                <a href="support.html" class="btn btn-outline"><i class="ph-light ph-chat-circle-dots"></i> 도입 문의</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Grid -->
+<section style="padding: 4rem 0; border-top: 1px solid rgba(255,255,255,0.04);">
+    <div class="container">
+        <div style="margin-bottom: 1rem;">
+            <span class="badge" style="background: rgba(99,102,241,0.1); color: #818cf8; border-color: rgba(99,102,241,0.2);"><i class="ph-light ph-star"></i> 핵심 기능</span>
+        </div>
+        <h2 style="font-size: 2.2rem; margin-bottom: 0.5rem;">DB DR 핵심 기능 상세</h2>
+        <p style="color: var(--text-muted);">PostgreSQL WAL 기반의 실시간 복제와 시점 복구를 위한 기능 모음</p>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <div class="feature-item-icon"><i class="ph-light ph-git-diff"></i></div>
+                <h4 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.05rem;">WAL 실시간 스트리밍</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">PostgreSQL의 WAL을 실시간으로 분산 클러스터에 전송. 서비스 무중단 상태에서 RPO 4~10초 달성. Durable-Ack로 유실 0%.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-item-icon"><i class="ph-light ph-camera"></i></div>
+                <h4 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.05rem;">pg_basebackup 비차단 스냅샷</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">DB 서비스 중단 없이 전체 백업 실행. 100GB 원본이 gzip 압축을 거쳐 5.23GiB로 저장 (19.8배 효율).</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-item-icon"><i class="ph-light ph-clock-counter-clockwise"></i></div>
+                <h4 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.05rem;">PITR 시점 복구</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">매니페스트 + CID 목록으로 특정 시점의 DB 상태를 정확히 재현. 8채널 병렬 복구로 RTO 15분 이내.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-item-icon"><i class="ph-light ph-map-pin-area"></i></div>
+                <h4 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.05rem;">Cross-Host DR</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">CID 기반 위치 독립성으로 서울 센터 장애 시 부산 등 타지역 새 서버에 즉시 복구. NHN Cloud 검증 완료.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-item-icon"><i class="ph-light ph-lock-key"></i></div>
+                <h4 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.05rem;">Zero-Knowledge 암호화</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">AES-256/ChaCha20으로 고객 서버에서 암호화 완료 후 전송. KONEKSI 서버에서도 데이터 내용 열람 불가.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-item-icon"><i class="ph-light ph-heartbeat"></i></div>
+                <h4 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.05rem;">자가치유 및 안전장치</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">Data Scrubbing + Re-pinning 자동 복원. Slot Pressure 3단계 경보로 디스크 풀 위험 자동 방지.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Spec + Architecture -->
+<section style="padding: 4rem 0; border-top: 1px solid rgba(255,255,255,0.04);">
+    <div class="container">
+        <div class="split-layout" style="gap: 4rem; align-items: flex-start;">
+            <div>
+                <div style="margin-bottom: 1rem;">
+                    <span class="badge" style="background: rgba(99,102,241,0.1); color: #818cf8; border-color: rgba(99,102,241,0.2);"><i class="ph-light ph-list"></i> 제품 사양</span>
+                </div>
+                <h2 style="font-size: 2rem; margin-bottom: 2rem;">기술 스펙</h2>
+                <div class="glass-card" style="padding: 0; overflow: hidden; border-radius: 20px;">
+                    <table class="spec-table">
+                        <tr><td>지원 DB 엔진</td><td>PostgreSQL (현재 주력) — MySQL, Oracle 등 확장 예정</td></tr>
+                        <tr><td>복제 방식</td><td>WAL 실시간 스트리밍 + pg_basebackup 스냅샷</td></tr>
+                        <tr><td>RPO 목표</td><td>4~10초 (실측, 사실상 실시간)</td></tr>
+                        <tr><td>RTO 목표</td><td>100GB 기준 15분 이내 (8채널 병렬 복구)</td></tr>
+                        <tr><td>암호화</td><td>AES-256 / ChaCha20 Zero-Knowledge (클라이언트 측)</td></tr>
+                        <tr><td>압축 효율</td><td>19.8배 (100GB → 5.23GiB, gzip + 중복제거)</td></tr>
+                        <tr><td>무결성 검증</td><td>SHA-256 CID 기반 콘텐츠 주소 — 1비트 변조 즉각 감지</td></tr>
+                        <tr><td>배포 형태</td><td>Cloud + IDC 하이브리드 / 온프레미스형</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <div>
+                <div style="margin-bottom: 1rem;">
+                    <span class="badge" style="background: rgba(99,102,241,0.1); color: #818cf8; border-color: rgba(99,102,241,0.2);"><i class="ph-light ph-flow-arrow"></i> 작동 구조</span>
+                </div>
+                <h2 style="font-size: 2rem; margin-bottom: 2rem;">DB DR 동작 흐름</h2>
+
+                <div class="arch-node">
+                    <div class="arch-node-icon"><i class="ph-light ph-database"></i></div>
+                    <div>
+                        <div style="color: #fff; font-weight: 600; font-size: 0.95rem;">① PostgreSQL WAL 캐처</div>
+                        <div style="color: var(--text-muted); font-size: 0.85rem;">DB의 모든 변경 이력을 WAL로 실시간 기록 → RPO 4~10초</div>
+                    </div>
+                </div>
+                <div style="text-align: left; padding-left: 1.25rem; margin-bottom: 0.75rem;"><i class="ph-light ph-arrow-down" style="color: rgba(99,102,241,0.5);"></i></div>
+
+                <div class="arch-node">
+                    <div class="arch-node-icon"><i class="ph-light ph-lock-key"></i></div>
+                    <div>
+                        <div style="color: #fff; font-weight: 600; font-size: 0.95rem;">② Zero-Knowledge 암호화</div>
+                        <div style="color: var(--text-muted); font-size: 0.85rem;">AES-256/ChaCha20 클라이언트 측 암호화 → 16MB Chunk 분할</div>
+                    </div>
+                </div>
+                <div style="text-align: left; padding-left: 1.25rem; margin-bottom: 0.75rem;"><i class="ph-light ph-arrow-down" style="color: rgba(99,102,241,0.5);"></i></div>
+
+                <div class="arch-node">
+                    <div class="arch-node-icon"><i class="ph-light ph-network"></i></div>
+                    <div>
+                        <div style="color: #fff; font-weight: 600; font-size: 0.95rem;">③ N+2 분산 클러스터 저장</div>
+                        <div style="color: var(--text-muted); font-size: 0.85rem;">CID 기반 콘텐츠 주소 → 다중 노드 분산 → Data Scrubbing 자가치유</div>
+                    </div>
+                </div>
+                <div style="text-align: left; padding-left: 1.25rem; margin-bottom: 0.75rem;"><i class="ph-light ph-arrow-down" style="color: rgba(99,102,241,0.5);"></i></div>
+
+                <div class="arch-node" style="border-color: rgba(16,185,129,0.2); background: rgba(16,185,129,0.03);">
+                    <div class="arch-node-icon" style="background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.3); color: #10b981;"><i class="ph-light ph-lightning"></i></div>
+                    <div>
+                        <div style="color: #fff; font-weight: 600; font-size: 0.95rem;">④ PITR 시점 복구</div>
+                        <div style="color: var(--text-muted); font-size: 0.85rem;">매니페스트 분석 → 8채널 병렬 다운로드 → WAL Replay → RTO 15분 이내</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Supported DB + Performance -->
+<section style="padding: 3rem 0; border-top: 1px solid rgba(255,255,255,0.04);">
+    <div class="container">
+        <div class="text-center" style="margin-bottom: 2.5rem;">
+            <p style="color: var(--text-muted); font-size: 0.85rem; font-weight: 500; letter-spacing: 2px; margin-bottom: 0.5rem;">지원 DB 엔진</p>
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 3rem;">
+            <div style="padding: 0.6rem 1.6rem; background: rgba(99,102,241,0.08); border: 1px solid rgba(99,102,241,0.25); border-radius: 10px; color: #818cf8; font-size: 0.9rem; font-weight: 600;">PostgreSQL <span style="font-size: 0.75rem; background: rgba(16,185,129,0.15); color: #10b981; padding: 0.15rem 0.5rem; border-radius: 6px; margin-left: 0.5rem;">검증 완료</span></div>
+            <div style="padding: 0.6rem 1.6rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; color: var(--text-muted); font-size: 0.9rem; font-weight: 600;">MySQL <span style="font-size: 0.7rem; opacity: 0.5;">확장 예정</span></div>
+            <div style="padding: 0.6rem 1.6rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; color: var(--text-muted); font-size: 0.9rem; font-weight: 600;">Oracle DB <span style="font-size: 0.7rem; opacity: 0.5;">확장 예정</span></div>
+            <div style="padding: 0.6rem 1.6rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; color: var(--text-muted); font-size: 0.9rem; font-weight: 600;">MariaDB <span style="font-size: 0.7rem; opacity: 0.5;">확장 예정</span></div>
+        </div>
+
+        <!-- Measured Performance -->
+        <div class="text-center" style="margin-bottom: 2rem;">
+            <span class="badge" style="background: rgba(99,102,241,0.1); color: #818cf8; border-color: rgba(99,102,241,0.2);"><i class="ph-light ph-chart-bar"></i> 실측 성능</span>
+            <h3 style="font-size: 1.5rem; margin-top: 0.75rem;">실측 복구 성능 <span class="text-gradient">(100GB 기준)</span></h3>
+        </div>
+        <div class="glass-card" style="padding: 0; overflow: hidden; border-radius: 20px; max-width: 700px; margin: 0 auto;">
+            <table class="spec-table">
+                <tr><td>데이터 다운로드 + 무결성 검증</td><td>약 <strong style="color:#fff;">12분</strong> &nbsp;<span style="font-size:0.8rem; color: var(--text-muted);">네트워크 환경에 따라 다름</span></td></tr>
+                <tr><td>WAL 로그 재실행 (Replay)</td><td>약 <strong style="color:#fff;">30초</strong> &nbsp;<span style="font-size:0.8rem; color: var(--text-muted);">최근 최적화로 10배 단축</span></td></tr>
+                <tr><td>최종 서비스 활성화 (RTO 합계)</td><td><strong style="color:#818cf8;">15분 이내</strong> &nbsp;<span style="font-size:0.8rem; color: var(--text-muted);">엔터프라이즈 표준 달성</span></td></tr>
+                <tr><td>압축 효율 (100GB 원본)</td><td><strong style="color:#818cf8;">5.23GiB</strong> 저장 &nbsp;<span style="font-size:0.8rem; color: var(--text-muted);">19.8배 압축, 94% 절감</span></td></tr>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+</main>
+
+<footer class="premium-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo footer-heading" style="margin-bottom: 1rem; font-size: 1.25rem; display: flex; align-items: center; gap: 0.8rem; color: #ffffff;">
+                    <img src="assets/logo.svg" alt="KONEKSI Logo" style="height: 32px; width: auto; object-fit: contain;" loading="lazy">
+                </div>
+                <p style="font-size: 0.9rem; margin-bottom: 1.5rem; max-width: 250px; line-height: 1.6;">완전한 분산 저장 구조와 CID 기반 데이터 무결성 철학을 구현하는 차세대 스토리지 스택.</p>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/company/koneksi" class="social-icon" target="_blank" rel="noopener"><i class="ph-light ph-linkedin-logo"></i></a>
+                    <a href="https://github.com/koneksi-tech" class="social-icon" target="_blank" rel="noopener"><i class="ph-light ph-github-logo"></i></a>
+                    <a href="https://x.com/koneksi_tech" class="social-icon" target="_blank" rel="noopener"><i class="ph-light ph-x-logo"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Platform</h4>
+                <ul class="footer-list">
+                    <li><a href="product.html">DatArk 개요</a></li>
+                    <li><a href="product-filedr.html">DatArk File DR</a></li>
+                    <li><a href="product-dbdr.html">DatArk DB DR</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Resources</h4>
+                <ul class="footer-list">
+                    <li><a href="support.html">Contact Sales</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="download.html">Downloads</a></li>
+                </ul>
+            </div>
+            <div class="footer-col" style="min-width: max-content;">
+                <h4 class="footer-heading">Contact</h4>
+                <ul class="footer-list">
+                    <li style="display: flex; gap: 0.5rem; color: var(--text-muted); line-height: 1.5;">
+                        <i class="ph-light ph-map-pin" style="margin-top: 0.2rem; min-width: 16px;"></i>
+                        서울 송파구 중대로 135<br>IT벤처타워 서관 10층
+                    </li>
+                    <li style="display: flex; gap: 0.5rem; margin-top: 1rem; color: var(--text-muted);">
+                        <i class="ph-light ph-phone"></i> 070-7626-1020
+                    </li>
+                    <li style="display: flex; gap: 0.5rem; margin-top: 0.5rem; color: var(--text-muted);">
+                        <i class="ph-light ph-envelope-simple"></i> info@koneksi.co.kr
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom-flex">
+            <p>&copy; 2026 Koneksi Inc.</p>
+            <div style="display: flex; gap: 1.5rem;">
+                <a href="terms.html">Terms of Service</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+(function() {
+  // ── Mobile Navigation ──────────────────────────────────────
+  const hamburger = document.getElementById('hamburger-btn');
+  const mobilePanel = document.getElementById('mobile-nav-panel');
+  const overlay = document.getElementById('mobile-nav-overlay');
+  const mainHeader = document.getElementById('main-header');
+
+  function openMenu() {
+    hamburger.classList.add('is-open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    hamburger.setAttribute('aria-label', '메뉴 닫기');
+    mobilePanel.classList.add('is-open');
+    overlay.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    // Trap focus: move to first link in panel
+    const firstLink = mobilePanel.querySelector('a');
+    if (firstLink) firstLink.focus();
+  }
+
+  function closeMenu() {
+    hamburger.classList.remove('is-open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('aria-label', '메뉴 열기');
+    mobilePanel.classList.remove('is-open');
+    overlay.classList.remove('is-open');
+    document.body.style.overflow = '';
+    hamburger.focus();
+  }
+
+  hamburger.addEventListener('click', function() {
+    if (hamburger.classList.contains('is-open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  overlay.addEventListener('click', closeMenu);
+
+  // Close on Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && mobilePanel.classList.contains('is-open')) {
+      closeMenu();
+    }
+  });
+
+  // Close menu on link click (navigation)
+  mobilePanel.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      closeMenu();
+    });
+  });
+
+  // ── Scroll-aware Header ────────────────────────────────────
+  window.addEventListener('scroll', function() {
+    if (!mainHeader) return;
+    if (window.scrollY > 10) {
+      mainHeader.style.background = 'rgba(10, 15, 28, 0.8)';
+      mainHeader.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
+    } else {
+      mainHeader.style.background = 'rgba(10, 15, 28, 0.5)';
+      mainHeader.style.borderBottom = '1px solid rgba(255,255,255,0.06)';
+    }
+  });
+
+  // ── Intersection Observer for animations ──────────────────
+  document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-fade-up').forEach(function(el) {
+      el.style.animationPlayState = 'paused';
+      observer.observe(el);
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

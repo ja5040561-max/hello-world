@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 370" fill="none">
+  <!-- Neon Blue & Navy Definitions -->
+  <defs>
+    <linearGradient id="cubeTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5DF6FF"/>
+      <stop offset="100%" stop-color="#00EAFF"/>
+    </linearGradient>
+    <linearGradient id="cubeFront" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00A3FF"/>
+      <stop offset="100%" stop-color="#0066FF"/>
+    </linearGradient>
+    <linearGradient id="cubeSide" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00BDFF"/>
+      <stop offset="100%" stop-color="#0088EE"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Padlock Shackle (Top - Open Gate) -->
+  <path d="M120 75 C120 30, 200 30, 200 85" 
+        stroke="#0A0067" stroke-width="18" stroke-linecap="round" fill="none" />
+  <path d="M120 75 L120 115" 
+        stroke="#0A0067" stroke-width="18" stroke-linecap="round" fill="none" />
+
+  <!-- Main Hexagon Body (Thick Outline) -->
+  <path d="M150 100 L275 160 L275 290 L150 350 L25 290 L25 160 Z" 
+        fill="white"/>
+  <path d="M150 100 L275 160 L275 290 L150 350 L25 290 L25 160 Z" 
+        stroke="#0A0067" stroke-width="16" stroke-linejoin="round"/>
+
+  <!-- Left Panel (Strong Cyan-Blue Face) -->
+  <path d="M25 160 L150 225 L150 350 L25 290 Z" fill="#0D7CFF"/>
+
+  <!-- Internal Reference Lines (Subtle) -->
+  <path d="M150 100 L150 225 M150 225 L275 160 M150 225 L25 160" 
+        stroke="#0A0067" stroke-width="2" opacity="0.15"/>
+
+  <!-- 3D Cubes Cluster (Center-Right Stack) -->
+  
+  <!-- Back Cube (Smallest) -->
+  <g transform="translate(185, 230) scale(0.65)">
+    <path d="M0 0 L30 -18 L60 0 L30 18 Z" fill="url(#cubeTop)"/>
+    <path d="M0 0 L30 18 L30 55 L0 37 Z" fill="url(#cubeFront)"/>
+    <path d="M30 18 L60 0 L60 37 L30 55 Z" fill="url(#cubeSide)"/>
+  </g>
+
+  <!-- Center Lower Cube -->
+  <g transform="translate(160, 260) scale(0.65)">
+    <path d="M0 0 L30 -18 L60 0 L30 18 Z" fill="url(#cubeTop)"/>
+    <path d="M0 0 L30 18 L30 55 L0 37 Z" fill="url(#cubeFront)"/>
+    <path d="M30 18 L60 0 L60 37 L30 55 Z" fill="url(#cubeSide)"/>
+  </g>
+
+  <!-- Center Middle Cube -->
+  <g transform="translate(180, 215) scale(0.72)">
+    <path d="M0 0 L30 -18 L60 0 L30 18 Z" fill="url(#cubeTop)"/>
+    <path d="M0 0 L30 18 L30 55 L0 37 Z" fill="url(#cubeFront)"/>
+    <path d="M30 18 L60 0 L60 37 L30 55 Z" fill="url(#cubeSide)"/>
+  </g>
+
+  <!-- Rightmost Stacked Cube -->
+  <g transform="translate(210, 245) scale(0.6)">
+    <path d="M0 0 L30 -18 L60 0 L30 18 Z" fill="url(#cubeTop)"/>
+    <path d="M0 0 L30 18 L30 55 L0 37 Z" fill="url(#cubeFront)"/>
+    <path d="M30 18 L60 0 L60 37 L30 55 Z" fill="url(#cubeSide)"/>
+  </g>
+
+  <!-- Topmost Cube -->
+  <g transform="translate(200, 185) scale(0.55)">
+    <path d="M0 0 L30 -18 L60 0 L30 18 Z" fill="url(#cubeTop)"/>
+    <path d="M0 0 L30 18 L30 55 L0 37 Z" fill="url(#cubeFront)"/>
+    <path d="M30 18 L60 0 L60 37 L30 55 Z" fill="url(#cubeSide)"/>
+  </g>
+
+</svg>

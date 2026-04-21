@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KONEKSI 블로그 - DatArk 데이터 재해복구 솔루션의 최신 뉴스, 기술 인사이트 및 제품 업데이트를 확인하세요.">
+    <meta name="keywords" content="DR솔루션, 데이터복구, KONEKSI, DatArk, 재해복구, 분산스토리지">
+    <meta name="author" content="KONEKSI">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / 소셜 미디어 공유 -->
+    <meta property="og:title" content="Blog | KONEKSI">
+    <meta property="og:description" content="DatArk DR 솔루션 최신 뉴스, 기술 인사이트 및 업데이트를 KONEKSI 블로그에서 확인하세요.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://koneksi-datark.netlify.app/blog">
+    <meta property="og:image" content="https://koneksi-datark.netlify.app/assets/logo.svg">
+    <meta property="og:site_name" content="KONEKSI">
+    <meta property="og:locale" content="ko_KR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@koneksi_tech">
+    <meta name="twitter:title" content="Blog | KONEKSI">
+    <meta name="twitter:description" content="DatArk DR 솔루션 최신 뉴스, 기술 인사이트 및 업데이트를 KONEKSI 블로그에서 확인하세요.">
+    <meta name="twitter:image" content="https://koneksi.io/assets/og-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://koneksi-datark.netlify.app/blog">
+    <title>Blog | KONEKSI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <link rel="stylesheet" href="assets/style.css">
+<style>
+    .blog-filter-btn {
+        background: rgba(255,255,255,0.05);
+        color: var(--text-muted);
+        border: 1px solid rgba(255,255,255,0.08);
+        padding: 0.4rem 1.1rem;
+        border-radius: 500px;
+        cursor: pointer;
+        font-size: 0.85rem;
+        font-weight: 600;
+        transition: all 0.2s;
+        font-family: inherit;
+    }
+    .blog-filter-btn:hover {
+        background: rgba(255,255,255,0.1);
+        color: #fff;
+    }
+    .blog-filter-btn.active-filter {
+        background: var(--text-main);
+        color: var(--bg-dark);
+        border-color: var(--text-main);
+    }
+    .cat-badge {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        padding: 0.15rem 0.6rem;
+        border-radius: 500px;
+        letter-spacing: 0.3px;
+    }
+    .cat-공지사항 { background: rgba(59,130,246,0.15); color: #60a5fa; border: 1px solid rgba(59,130,246,0.2); }
+    .cat-언론보도 { background: rgba(16,185,129,0.15); color: #34d399; border: 1px solid rgba(16,185,129,0.2); }
+    .cat-이벤트 { background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.2); }
+    article[data-category] { transition: opacity 0.3s, transform 0.3s; }
+    article.hidden-card { display: none; }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-nav">본문으로 바로가기</a>
+
+<header id="main-header">
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+            <img loading="lazy" src="assets/logo.svg" alt="KONEKSI Logo" style="height: 40px; width: auto; object-fit: contain;">
+        </a>
+        <nav aria-label="주 네비게이션">
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="product.html">Products <i class="ph-light ph-caret-down" style="font-size: 0.8rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="product.html"><i class="ph-light ph-layout"></i> DatArk 개요</a></li>
+                        <li><a href="product-filedr.html"><i class="ph-light ph-files"></i> DatArk File DR</a></li>
+                        <li><a href="product-dbdr.html"><i class="ph-light ph-database"></i> DatArk DB DR</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Pricing <i class="ph-light ph-caret-down" style="font-size: 0.8rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pricing-cloud.html"><i class="ph-light ph-cloud"></i> 클라우드형</a></li>
+                        <li><a href="pricing-enterprise.html"><i class="ph-light ph-buildings"></i> 온프레미스형</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="blog.html" class="active">Blog <i class="ph-light ph-caret-down" style="font-size: 0.8rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="blog.html"><i class="ph-light ph-article"></i> 블로그 홈</a></li>
+                        <li><a href="blog-release.html"><i class="ph-light ph-rocket-launch"></i> 릴리즈 업데이트</a></li>
+                        <li><a href="blog-guide.html"><i class="ph-light ph-book-open"></i> 사용 가이드</a></li>
+                    </ul>
+                </li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="download.html">Download</a></li>
+            </ul>
+        </nav>
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-nav-panel" aria-haspopup="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="header-actions" style="display: flex; align-items: center; gap: 1rem;">
+            <div class="dropdown lang-switcher">
+                <a href="#" style="color: var(--text-muted); font-size: 0.95rem; font-weight: 500;"><i class="ph-light ph-globe" style="font-size: 1.1rem; margin-right: 0.2rem;"></i> KO <i class="ph-light ph-caret-down" style="font-size: 0.7rem; margin-left: 0.1rem;"></i></a>
+                <ul class="dropdown-menu" style="min-width: 130px; padding: 0.5rem; text-align: left;">
+                    <li><a href="#"><span style="font-size: 1.1em;">🇰🇷</span> Korean</a></li>
+                    <li><a href="#"><span style="font-size: 1.1em;">🇺🇸</span> English</a></li>
+                </ul>
+            </div>
+            <a href="support.html" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;" aria-label="도입 문의 페이지로 이동">도입 문의</a>
+        </div>
+    </div>
+</header>
+<!-- Mobile Nav Overlay -->
+<div id="mobile-nav-overlay" class="mobile-nav-overlay" aria-hidden="true"></div>
+
+<!-- Mobile Nav Panel -->
+<nav id="mobile-nav-panel" class="mobile-nav-panel" aria-label="모바일 네비게이션">
+  <p class="mobile-nav-heading">제품</p>
+  <a href="product.html"><i class="ph-light ph-layout" aria-hidden="true"></i> DatArk 개요</a>
+  <a href="product-filedr.html"><i class="ph-light ph-files" aria-hidden="true"></i> DatArk File DR</a>
+  <a href="product-dbdr.html"><i class="ph-light ph-database" aria-hidden="true"></i> DatArk DB DR</a>
+  <p class="mobile-nav-heading">가격</p>
+  <a href="pricing-cloud.html"><i class="ph-light ph-cloud" aria-hidden="true"></i> 클라우드형</a>
+  <a href="pricing-enterprise.html"><i class="ph-light ph-buildings" aria-hidden="true"></i> 온프레미스형</a>
+  <p class="mobile-nav-heading">정보</p>
+  <a href="blog.html"><i class="ph-light ph-newspaper" aria-hidden="true"></i> Blog</a>
+  <a href="support.html"><i class="ph-light ph-headset" aria-hidden="true"></i> Support</a>
+  <a href="download.html"><i class="ph-light ph-download-simple" aria-hidden="true"></i> Download</a>
+  <div class="mobile-nav-cta">
+    <a href="support.html" class="btn btn-primary">도입 문의</a>
+  </div>
+</nav>
+
+
+<main id="main-content">
+<section class="section-padding container">
+    <div class="text-center animate-fade-up">
+        <span class="badge"><i class="ph-light ph-article"></i> 블로그</span>
+        <h1>KONEKSI <span class="text-gradient">블로그</span></h1>
+        <p style="margin-top: 1rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+            KONEKSI의 모든 소식을 공유합니다.
+        </p>
+    </div>
+    
+    <!-- 블로그 카테고리 필터 (JS 필터링) -->
+    <div class="animate-fade-up stagger-1" style="display: flex; justify-content: center; gap: 0.75rem; margin: 3rem 0; flex-wrap: wrap;" id="blog-filter">
+        <button onclick="filterBlog('all', this)" class="blog-filter-btn active-filter">전체</button>
+        <button onclick="filterBlog('공지사항', this)" class="blog-filter-btn">공지사항</button>
+        <button onclick="filterBlog('언론보도', this)" class="blog-filter-btn">언론보도</button>
+        <button onclick="filterBlog('이벤트', this)" class="blog-filter-btn">이벤트</button>
+    </div>
+
+    <!-- Blog Grid -->
+    <div class="card-grid" id="blog-grid">
+
+        <!-- Post 1: 클라우드 네이티브 환경에서의 데이터 복구 (기술) -->
+        <article class="glass-card animate-fade-up stagger-1" data-category="공지사항" style="padding: 0; cursor: pointer;">
+            <div style="height: 220px; background: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800') center/cover; border-bottom: 1px solid var(--glass-border);"></div>
+            <div style="padding: 2.5rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; font-size: 0.82rem; color: var(--text-muted); flex-wrap: wrap; gap: 0.4rem;">
+                    <span class="cat-badge cat-공지사항">공지사항</span>
+                    <div style="display:flex; gap:0.75rem;">
+                        <span><i class="ph-light ph-clock" style="margin-right:0.2rem;"></i>5분 읽기</span>
+                        <span>2026. 04. 12</span>
+                    </div>
+                </div>
+                <h3 style="font-size: 1.2rem; margin-bottom: 0.9rem; color: #fff; letter-spacing: -0.02em;">클라우드 네이티브 환경에서의 데이터 복구</h3>
+                <p style="font-size: 0.92rem; line-height: 1.65; margin-bottom: 1.5rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; color: var(--text-muted);">
+                    Kubernetes와 서버리스 환경에서 데이터 재해복구를 구현하는 최신 전략을 분석합니다. 컨테이너 오케스트레이션 레이어와 DatArk의 통합으로 무중단 복구를 실현하는 방법을 공유합니다.
+                </p>
+                <div style="display: flex; align-items: center; gap: 0.5rem; color: #fff; font-weight: 500; font-size: 0.9rem;">Read More <i class="ph-light ph-arrow-right"></i></div>
+            </div>
+        </article>
+
+        <!-- Post 2: DatArk 2.0 업데이트 (업데이트) -->
+        <article class="glass-card animate-fade-up stagger-2" data-category="언론보도" style="padding: 0; cursor: pointer;">
+            <div style="height: 220px; background: url('https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&q=80&w=800') center/cover; border-bottom: 1px solid var(--glass-border);"></div>
+            <div style="padding: 2.5rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; font-size: 0.82rem; color: var(--text-muted); flex-wrap: wrap; gap: 0.4rem;">
+                    <span class="cat-badge cat-언론보도">언론보도</span>
+                    <div style="display:flex; gap:0.75rem;">
+                        <span><i class="ph-light ph-clock" style="margin-right:0.2rem;"></i>3분 읽기</span>
+                        <span>2026. 04. 05</span>
+                    </div>
+                </div>
+                <h3 style="font-size: 1.2rem; margin-bottom: 0.9rem; color: #fff; letter-spacing: -0.02em;">DatArk 2.0 업데이트 노트</h3>
+                <p style="font-size: 0.92rem; line-height: 1.65; margin-bottom: 1.5rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; color: var(--text-muted);">
+                    DatArk 2.0의 주요 변경 사항을 정리했습니다. 신규 대시보드 UI, 향상된 노드 동기화 알고리즘, 멀티 클라우드 게이트웨이 지원 등 대대적인 개선이 이루어졌습니다.
+                </p>
+                <div style="display: flex; align-items: center; gap: 0.5rem; color: #fff; font-weight: 500; font-size: 0.9rem;">Read More <i class="ph-light ph-arrow-right"></i></div>
+            </div>
+        </article>
+
+        <!-- Post 3: 분산 스토리지 기반 DR (기술) -->
+        <article class="glass-card animate-fade-up stagger-3" data-category="공지사항" style="padding: 0; cursor: pointer;">
+            <div style="height: 220px; background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800') center/cover; border-bottom: 1px solid var(--glass-border);"></div>
+            <div style="padding: 2.5rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; font-size: 0.82rem; color: var(--text-muted); flex-wrap: wrap; gap: 0.4rem;">
+                    <span class="cat-badge cat-기술">기술</span>
+                    <div style="display:flex; gap:0.75rem;">
+                        <span><i class="ph-light ph-clock" style="margin-right:0.2rem;"></i>7분 읽기</span>
+                        <span>2026. 03. 28</span>
+                    </div>
+                </div>
+                <h3 style="font-size: 1.2rem; margin-bottom: 0.9rem; color: #fff; letter-spacing: -0.02em;">분산 스토리지 기반 DR의 미래</h3>
+                <p style="font-size: 0.92rem; line-height: 1.65; margin-bottom: 1.5rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; color: var(--text-muted);">
+                    중앙집중식 DR 인프라의 한계를 극복하는 분산 스토리지 아키텍처의 진화 방향을 탐색합니다. 글로벌 노드 분산과 CID 기반 무결성 검증이 만들어내는 새로운 패러다임.
+                </p>
+                <div style="display: flex; align-items: center; gap: 0.5rem; color: #fff; font-weight: 500; font-size: 0.9rem;">Read More <i class="ph-light ph-arrow-right"></i></div>
+            </div>
+        </article>
+
+        <!-- Post 4: RPO 0 달성하기 (기술) -->
+        <article class="glass-card animate-fade-up stagger-1" data-category="공지사항" style="padding: 0; cursor: pointer;">
+            <div style="height: 220px; background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800') center/cover; border-bottom: 1px solid var(--glass-border);"></div>
+            <div style="padding: 2.5rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; font-size: 0.82rem; color: var(--text-muted); flex-wrap: wrap; gap: 0.4rem;">
+                    <span class="cat-badge cat-기술">기술</span>
+                    <div style="display:flex; gap:0.75rem;">
+                        <span><i class="ph-light ph-clock" style="margin-right:0.2rem;"></i>8분 읽기</span>
+                        <span>2026. 03. 14</span>
+                    </div>
+                </div>
+                <h3 style="font-size: 1.2rem; margin-bottom: 0.9rem; color: #fff; letter-spacing: -0.02em;">RPO 0 달성하기: DatArk 실시간 복제 기술</h3>
+                <p style="font-size: 0.92rem; line-height: 1.65; margin-bottom: 1.5rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; color: var(--text-muted);">
+                    데이터 손실 허용치(RPO) 제로를 실현하는 DatArk의 실시간 복제 엔진을 심층 분석합니다. WAL 스트리밍과 분산 트랜잭션 로그가 결합된 아키텍처 설계를 공개합니다.
+                </p>
+                <div style="display: flex; align-items: center; gap: 0.5rem; color: #fff; font-weight: 500; font-size: 0.9rem;">Read More <i class="ph-light ph-arrow-right"></i></div>
+            </div>
+        </article>
+
+        <!-- Post 5: 금융권 가이드 (가이드) -->
+        <article class="glass-card animate-fade-up stagger-2" data-category="이벤트" style="padding: 0; cursor: pointer;">
+            <div style="height: 220px; background: url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&q=80&w=800') center/cover; border-bottom: 1px solid var(--glass-border);"></div>
+            <div style="padding: 2.5rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; font-size: 0.82rem; color: var(--text-muted); flex-wrap: wrap; gap: 0.4rem;">
+                    <span class="cat-badge cat-이벤트">이벤트</span>
+                    <div style="display:flex; gap:0.75rem;">
+                        <span><i class="ph-light ph-clock" style="margin-right:0.2rem;"></i>10분 읽기</span>
+                        <span>2026. 02. 26</span>
+                    </div>
+                </div>
+                <h3 style="font-size: 1.2rem; margin-bottom: 0.9rem; color: #fff; letter-spacing: -0.02em;">금융권 데이터 보호와 DR 솔루션 선택 가이드</h3>
+                <p style="font-size: 0.92rem; line-height: 1.65; margin-bottom: 1.5rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; color: var(--text-muted);">
+                    금융감독원 규제 요건을 충족하면서 비용 효율적인 DR 체계를 구축하는 방법을 정리했습니다. RTO/RPO 기준 설정부터 벤더 선정 체크리스트까지 실무 중심으로 안내합니다.
+                </p>
+                <div style="display: flex; align-items: center; gap: 0.5rem; color: #fff; font-weight: 500; font-size: 0.9rem;">Read More <i class="ph-light ph-arrow-right"></i></div>
+            </div>
+        </article>
+
+        <!-- Post 6: MySQL vs PostgreSQL (기술) -->
+        <article class="glass-card animate-fade-up stagger-3" data-category="공지사항" style="padding: 0; cursor: pointer;">
+            <div style="height: 220px; background: url('https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&q=80&w=800') center/cover; border-bottom: 1px solid var(--glass-border);"></div>
+            <div style="padding: 2.5rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; font-size: 0.82rem; color: var(--text-muted); flex-wrap: wrap; gap: 0.4rem;">
+                    <span class="cat-badge cat-기술">기술</span>
+                    <div style="display:flex; gap:0.75rem;">
+                        <span><i class="ph-light ph-clock" style="margin-right:0.2rem;"></i>6분 읽기</span>
+                        <span>2026. 02. 10</span>
+                    </div>
+                </div>
+                <h3 style="font-size: 1.2rem; margin-bottom: 0.9rem; color: #fff; letter-spacing: -0.02em;">MySQL vs PostgreSQL DR 전략 비교</h3>
+                <p style="font-size: 0.92rem; line-height: 1.65; margin-bottom: 1.5rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; color: var(--text-muted);">
+                    두 주요 RDBMS의 복제 메커니즘 차이를 분석하고, 각 환경에 최적화된 DatArk DB DR 구성 방법을 비교 설명합니다. 실제 벤치마크 결과를 기반으로 한 전략 선택 기준을 제시합니다.
+                </p>
+                <div style="display: flex; align-items: center; gap: 0.5rem; color: #fff; font-weight: 500; font-size: 0.9rem;">Read More <i class="ph-light ph-arrow-right"></i></div>
+            </div>
+        </article>
+
+    </div>
+    
+    <!-- Pagination -->
+    <div class="text-center mt-4" style="margin-top: 4rem;">
+        <div style="display: inline-flex; gap: 0.25rem; background: rgba(255,255,255,0.02); padding: 0.5rem; border-radius: 500px; border: 1px solid rgba(255,255,255,0.05);">
+            <a href="#" style="padding: 0.5rem 1rem; color: var(--text-muted);"><i class="ph-light ph-caret-left"></i></a>
+            <a href="#" style="padding: 0.5rem 1rem; border-radius: 500px; background: rgba(255,255,255,0.1); color: #fff; font-weight: 500;">1</a>
+            <a href="#" style="padding: 0.5rem 1rem; border-radius: 500px; color: var(--text-muted);">2</a>
+            <a href="#" style="padding: 0.5rem 1rem; border-radius: 500px; color: var(--text-muted);">3</a>
+            <a href="#" style="padding: 0.5rem 1rem; color: var(--text-muted);"><i class="ph-light ph-caret-right"></i></a>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer class="premium-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo footer-heading" style="margin-bottom: 1rem; font-size: 1.25rem; display: flex; align-items: center; gap: 0.8rem; color: #ffffff;">
+                    <img src="assets/logo.svg" alt="KONEKSI Logo" style="height: 32px; width: auto; object-fit: contain;" loading="lazy">
+                        </div>
+                <p style="font-size: 0.9rem; margin-bottom: 1.5rem; max-width: 250px; line-height: 1.6;">
+                    완전한 분산 저장 구조와 CID 기반 데이터 무결성 철학을 구현하는 차세대 스토리지 스택.
+                </p>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/company/koneksi" class="social-icon" target="_blank" rel="noopener"><i class="ph-light ph-linkedin-logo"></i></a>
+                    <a href="https://github.com/koneksi-tech" class="social-icon" target="_blank" rel="noopener"><i class="ph-light ph-github-logo"></i></a>
+                    <a href="https://x.com/koneksi_tech" class="social-icon" target="_blank" rel="noopener"><i class="ph-light ph-x-logo"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Platform</h4>
+                <ul class="footer-list">
+                    <li><a href="product.html">DatArk 개요</a></li>
+                    <li><a href="product-filedr.html">DatArk File DR</a></li>
+                    <li><a href="product-dbdr.html">DatArk DB DR</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Resources</h4>
+                <ul class="footer-list">
+                    <li><a href="support.html">Contact Sales</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="download.html">Downloads</a></li>
+                </ul>
+            </div>
+            <div class="footer-col" style="min-width: max-content;">
+                <h4 class="footer-heading">Contact</h4>
+                <ul class="footer-list">
+                    <li style="display: flex; gap: 0.5rem; color: var(--text-muted); line-height: 1.5;">
+                        <i class="ph-light ph-map-pin" style="margin-top: 0.2rem; min-width: 16px;"></i>
+                        서울 송파구 중대로 135<br>IT벤처타워 서관 10층
+                    </li>
+                    <li style="display: flex; gap: 0.5rem; margin-top: 1rem; color: var(--text-muted);">
+                        <i class="ph-light ph-phone"></i> 070-7626-1020
+                    </li>
+                    <li style="display: flex; gap: 0.5rem; margin-top: 0.5rem; color: var(--text-muted);">
+                        <i class="ph-light ph-envelope-simple"></i> info@koneksi.co.kr
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom-flex">
+            <p>&copy; 2026 Koneksi Inc.</p>
+            <div style="display: flex; gap: 1.5rem;">
+                <a href="terms.html">Terms of Service</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+(function() {
+  // ── Mobile Navigation ──────────────────────────────────────
+  const hamburger = document.getElementById('hamburger-btn');
+  const mobilePanel = document.getElementById('mobile-nav-panel');
+  const overlay = document.getElementById('mobile-nav-overlay');
+  const mainHeader = document.getElementById('main-header');
+
+  function openMenu() {
+    hamburger.classList.add('is-open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    hamburger.setAttribute('aria-label', '메뉴 닫기');
+    mobilePanel.classList.add('is-open');
+    overlay.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    // Trap focus: move to first link in panel
+    const firstLink = mobilePanel.querySelector('a');
+    if (firstLink) firstLink.focus();
+  }
+
+  function closeMenu() {
+    hamburger.classList.remove('is-open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('aria-label', '메뉴 열기');
+    mobilePanel.classList.remove('is-open');
+    overlay.classList.remove('is-open');
+    document.body.style.overflow = '';
+    hamburger.focus();
+  }
+
+  hamburger.addEventListener('click', function() {
+    if (hamburger.classList.contains('is-open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  overlay.addEventListener('click', closeMenu);
+
+  // Close on Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && mobilePanel.classList.contains('is-open')) {
+      closeMenu();
+    }
+  });
+
+  // Close menu on link click (navigation)
+  mobilePanel.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      closeMenu();
+    });
+  });
+
+  // ── Scroll-aware Header ────────────────────────────────────
+  window.addEventListener('scroll', function() {
+    if (!mainHeader) return;
+    if (window.scrollY > 10) {
+      mainHeader.style.background = 'rgba(10, 15, 28, 0.8)';
+      mainHeader.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
+    } else {
+      mainHeader.style.background = 'rgba(10, 15, 28, 0.5)';
+      mainHeader.style.borderBottom = '1px solid rgba(255,255,255,0.06)';
+    }
+  });
+
+  // ── Intersection Observer for animations ──────────────────
+  document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-fade-up').forEach(function(el) {
+      el.style.animationPlayState = 'paused';
+      observer.observe(el);
+    });
+  });
+})();
+</script>
+
+<script>
+function filterBlog(category, btn) {
+    // Update active button
+    document.querySelectorAll('.blog-filter-btn').forEach(function(b) {
+        b.classList.remove('active-filter');
+    });
+    btn.classList.add('active-filter');
+
+    // Filter cards
+    var cards = document.querySelectorAll('#blog-grid article[data-category]');
+    cards.forEach(function(card) {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+            card.classList.remove('hidden-card');
+        } else {
+            card.classList.add('hidden-card');
+        }
+    });
+}
+</script>
+</body>
+</html>

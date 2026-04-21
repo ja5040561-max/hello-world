@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ja5040561-max.github.io/hello-world/sitemap.xml

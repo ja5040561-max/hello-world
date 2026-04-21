@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용 가이드 | KONEKSI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <link rel="stylesheet" href="assets/style.css">
+<style>
+    .guide-feed {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+    .guide-card {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 20px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+    }
+    .guide-card:hover {
+        background: rgba(255, 255, 255, 0.04);
+        border-color: var(--primary-color);
+        transform: translateY(-5px);
+    }
+    .guide-img {
+        height: 180px;
+        background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(99,102,241,0.1));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        color: var(--primary-color);
+    }
+    .guide-content {
+        padding: 2rem;
+    }
+    .guide-step {
+        font-size: 0.7rem;
+        font-weight: 800;
+        color: var(--primary-color);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 0.5rem;
+    }
+    .guide-title {
+        font-size: 1.2rem;
+        color: #fff;
+        margin-bottom: 0.75rem;
+        line-height: 1.4;
+    }
+    .guide-desc {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+    .guide-footer {
+        margin-top: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .guide-btn {
+        color: #fff;
+        font-weight: 600;
+        font-size: 0.85rem;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        transition: gap 0.2s;
+    }
+    .guide-card:hover .guide-btn {
+        gap: 0.7rem;
+    }
+</style>
+</head>
+<body>
+<header id="main-header">
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+            <img loading="lazy" src="assets/logo.svg" alt="KONEKSI Logo" style="height: 40px; width: auto; object-fit: contain;">
+        </a>
+        <nav aria-label="주 네비게이션">
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="product.html">Products <i class="ph-light ph-caret-down" style="font-size: 0.8rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="product.html"><i class="ph-light ph-layout"></i> DatArk 개요</a></li>
+                        <li><a href="product-filedr.html"><i class="ph-light ph-files"></i> DatArk File DR</a></li>
+                        <li><a href="product-dbdr.html"><i class="ph-light ph-database"></i> DatArk DB DR</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Pricing <i class="ph-light ph-caret-down" style="font-size: 0.8rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pricing-cloud.html"><i class="ph-light ph-cloud"></i> 클라우드형</a></li>
+                        <li><a href="pricing-enterprise.html"><i class="ph-light ph-buildings"></i> 온프레미스형</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="blog.html" class="active">Blog <i class="ph-light ph-caret-down" style="font-size: 0.8rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="blog.html"><i class="ph-light ph-article"></i> 블로그 홈</a></li>
+                        <li><a href="blog-release.html"><i class="ph-light ph-rocket-launch"></i> 릴리즈 업데이트</a></li>
+                        <li><a href="blog-guide.html"><i class="ph-light ph-book-open"></i> 사용 가이드</a></li>
+                    </ul>
+                </li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="download.html">Download</a></li>
+            </ul>
+        </nav>
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-nav-panel" aria-haspopup="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="header-actions" style="display: flex; align-items: center; gap: 1rem;">
+            <div class="dropdown lang-switcher">
+                <a href="#" style="color: var(--text-muted); font-size: 0.95rem; font-weight: 500;"><i class="ph-light ph-globe" style="font-size: 1.1rem; margin-right: 0.2rem;"></i> KO <i class="ph-light ph-caret-down" style="font-size: 0.7rem; margin-left: 0.1rem;"></i></a>
+                <ul class="dropdown-menu" style="min-width: 130px; padding: 0.5rem; text-align: left;">
+                    <li><a href="#"><span style="font-size: 1.1em;">🇰🇷</span> Korean</a></li>
+                    <li><a href="#"><span style="font-size: 1.1em;">🇺🇸</span> English</a></li>
+                </ul>
+            </div>
+            <a href="support.html" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;" aria-label="도입 문의 페이지로 이동">도입 문의</a>
+        </div>
+    </div>
+</header>
+
+<!-- Mobile Nav Overlay -->
+<div id="mobile-nav-overlay" class="mobile-nav-overlay" aria-hidden="true"></div>
+
+<!-- Mobile Nav Panel -->
+<nav id="mobile-nav-panel" class="mobile-nav-panel" aria-label="모바일 네비게이션">
+  <p class="mobile-nav-heading">제품</p>
+  <a href="product.html"><i class="ph-light ph-layout" aria-hidden="true"></i> DatArk 개요</a>
+  <a href="product-filedr.html"><i class="ph-light ph-files" aria-hidden="true"></i> DatArk File DR</a>
+  <a href="product-dbdr.html"><i class="ph-light ph-database" aria-hidden="true"></i> DatArk DB DR</a>
+  <p class="mobile-nav-heading">가격</p>
+  <a href="pricing-cloud.html"><i class="ph-light ph-cloud" aria-hidden="true"></i> 클라우드형</a>
+  <a href="pricing-enterprise.html"><i class="ph-light ph-buildings" aria-hidden="true"></i> 온프레미스형</a>
+  <p class="mobile-nav-heading">정보</p>
+  <a href="blog.html"><i class="ph-light ph-newspaper" aria-hidden="true"></i> Blog</a>
+  <a href="support.html"><i class="ph-light ph-headset" aria-hidden="true"></i> Support</a>
+  <a href="download.html"><i class="ph-light ph-download-simple" aria-hidden="true"></i> Download</a>
+  <div class="mobile-nav-cta">
+    <a href="support.html" class="btn btn-primary">도입 문의</a>
+  </div>
+</nav>
+
+<main id="main-content">
+<section class="section-padding container">
+    <div class="text-center animate-fade-up">
+        <span class="badge"><i class="ph-light ph-book-open"></i> 사용 가이드</span>
+        <h1>쉽고 빠른 <span class="text-gradient">데이터 보호</span></h1>
+        <p style="margin-top: 1rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+            DatArk를 처음 시작하는 분들을 위한 맞춤형 단계별 가이드를 제공합니다.
+        </p>
+    </div>
+
+    <div class="guide-feed animate-fade-up stagger-1">
+        
+        <!-- Guide 1 -->
+        <div class="guide-card">
+            <div class="guide-img"><i class="ph-light ph-rocket-launch"></i></div>
+            <div class="guide-content">
+                <div class="guide-step">Guide #01</div>
+                <h3 class="guide-title">초기 설정 및 에이전트 설치</h3>
+                <p class="guide-desc">DatArk 클라우드와 로컬 서버를 연동하기 위한 에이전트 설치 및 환경 구성 방법을 안내합니다.</p>
+                <div class="guide-footer">
+                    <a href="#" class="guide-btn">자세히 보기 <i class="ph-light ph-arrow-right"></i></a>
+                    <span style="font-size: 0.75rem; color: var(--text-muted);">10 min read</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Guide 2 -->
+        <div class="guide-card">
+            <div class="guide-img"><i class="ph-light ph-files"></i></div>
+            <div class="guide-content">
+                <div class="guide-step">Guide #02</div>
+                <h3 class="guide-title">File DR 복제 정책 설정</h3>
+                <p class="guide-desc">특정 디렉토리와 파일 확장자에 대한 실시간 백업 및 복제 정책을 생성하고 관리하는 방법입니다.</p>
+                <div class="guide-footer">
+                    <a href="#" class="guide-btn">자세히 보기 <i class="ph-light ph-arrow-right"></i></a>
+                    <span style="font-size: 0.75rem; color: var(--text-muted);">15 min read</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Guide 3 -->
+        <div class="guide-card">
+            <div class="guide-img"><i class="ph-light ph-database"></i></div>
+            <div class="guide-content">
+                <div class="guide-step">Guide #03</div>
+                <h3 class="guide-title">DB DR 무중단 마이그레이션</h3>
+                <p class="guide-desc">서비스 중단 없이 기존 데이터베이스를 DatArk 분산 원장 스택으로 안전하게 이전하는 프로세스입니다.</p>
+                <div class="guide-footer">
+                    <a href="#" class="guide-btn">자세히 보기 <i class="ph-light ph-arrow-right"></i></a>
+                    <span style="font-size: 0.75rem; color: var(--text-muted);">20 min read</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+</main>
+
+<footer class="premium-footer">
+    <div class="container">
+        <div class="footer-bottom-flex">
+            <p>&copy; 2026 Koneksi Inc.</p>
+            <div style="display: flex; gap: 1.5rem;">
+                <a href="terms.html">Terms of Service</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+  // ── Mobile Navigation ──────────────────────────────────────
+  const hamburger = document.getElementById('hamburger-btn');
+  const mobilePanel = document.getElementById('mobile-nav-panel');
+  const overlay = document.getElementById('mobile-nav-overlay');
+  const mainHeader = document.getElementById('main-header');
+
+  function openMenu() {
+    hamburger.classList.add('is-open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    hamburger.setAttribute('aria-label', '메뉴 닫기');
+    mobilePanel.classList.add('is-open');
+    overlay.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    // Trap focus: move to first link in panel
+    const firstLink = mobilePanel.querySelector('a');
+    if (firstLink) firstLink.focus();
+  }
+
+  function closeMenu() {
+    hamburger.classList.remove('is-open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('aria-label', '메뉴 열기');
+    mobilePanel.classList.remove('is-open');
+    overlay.classList.remove('is-open');
+    document.body.style.overflow = '';
+    hamburger.focus();
+  }
+
+  hamburger.addEventListener('click', function() {
+    if (hamburger.classList.contains('is-open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  overlay.addEventListener('click', closeMenu);
+
+  // Close on Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && mobilePanel.classList.contains('is-open')) {
+      closeMenu();
+    }
+  });
+
+  // Close menu on link click (navigation)
+  mobilePanel.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      closeMenu();
+    });
+  });
+
+  // ── Scroll-aware Header ────────────────────────────────────
+  window.addEventListener('scroll', function() {
+    if (!mainHeader) return;
+    if (window.scrollY > 10) {
+      mainHeader.style.background = 'rgba(10, 15, 28, 0.8)';
+      mainHeader.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
+    } else {
+      mainHeader.style.background = 'rgba(10, 15, 28, 0.5)';
+      mainHeader.style.borderBottom = '1px solid rgba(255,255,255,0.06)';
+    }
+  });
+
+  // ── Intersection Observer for animations ──────────────────
+  document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-fade-up').forEach(function(el) {
+      el.style.animationPlayState = 'paused';
+      observer.observe(el);
+    });
+  });
+})();
+</script>
+</body>
+</html>

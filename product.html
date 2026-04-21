@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DatArk - KONEKSI의 분산 스토리지 기반 데이터 재해복구 솔루션. 파일 DR, DB DR 모듈로 중요 데이터를 안전하게 보호합니다.">
+    <meta name="keywords" content="DR솔루션, 데이터복구, KONEKSI, DatArk, 재해복구, 분산스토리지">
+    <meta name="author" content="KONEKSI">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / 소셜 미디어 공유 -->
+    <meta property="og:title" content="DatArk 제품 소개 | KONEKSI">
+    <meta property="og:description" content="KONEKSI DatArk - 분산 스토리지 기반 데이터 재해복구 솔루션. 파일 DR 및 DB DR 모듈로 비즈니스 연속성을 보장합니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://koneksi-datark.netlify.app/product">
+    <meta property="og:image" content="https://koneksi-datark.netlify.app/assets/logo.svg">
+    <meta property="og:site_name" content="KONEKSI">
+    <meta property="og:locale" content="ko_KR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@koneksi_tech">
+    <meta name="twitter:title" content="DatArk 제품 소개 | KONEKSI">
+    <meta name="twitter:description" content="KONEKSI DatArk - 분산 스토리지 기반 데이터 재해복구 솔루션. 파일 DR 및 DB DR 모듈로 비즈니스 연속성을 보장합니다.">
+    <meta name="twitter:image" content="https://koneksi.io/assets/og-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://koneksi-datark.netlify.app/product">
+    <title>DatArk 제품 소개 | KONEKSI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a href="#main-content" class="skip-nav">본문으로 바로가기</a>
+
+<header id="main-header">
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+            <img loading="lazy" src="assets/logo.svg" alt="KONEKSI Logo" style="height: 40px; width: auto; object-fit: contain;">
+        </a>
+        <nav aria-label="주 네비게이션">
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="product.html" class="active">Products <i class="ph-light ph-caret-down" style="font-size: 0.8rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="product.html"><i class="ph-light ph-layout"></i> DatArk 개요</a></li>
+                        <li><a href="product-filedr.html"><i class="ph-light ph-files"></i> DatArk File DR</a></li>
+                        <li><a href="product-dbdr.html"><i class="ph-light ph-database"></i> DatArk DB DR</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Pricing <i class="ph-light ph-caret-down" style="font-size: 0.8rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pricing-cloud.html"><i class="ph-light ph-cloud"></i> 클라우드형</a></li>
+                        <li><a href="pricing-enterprise.html"><i class="ph-light ph-buildings"></i> 온프레미스형</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="blog.html">Blog <i class="ph-light ph-caret-down" style="font-size: 0.8rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="blog.html"><i class="ph-light ph-article"></i> 블로그 홈</a></li>
+                        <li><a href="blog-release.html"><i class="ph-light ph-rocket-launch"></i> 릴리즈 업데이트</a></li>
+                        <li><a href="blog-guide.html"><i class="ph-light ph-book-open"></i> 사용 가이드</a></li>
+                    </ul>
+                </li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="download.html">Download</a></li>
+            </ul>
+        </nav>
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-nav-panel" aria-haspopup="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="header-actions" style="display: flex; align-items: center; gap: 1rem;">
+            <div class="dropdown lang-switcher">
+                <a href="#" style="color: var(--text-muted); font-size: 0.95rem; font-weight: 500;"><i class="ph-light ph-globe" style="font-size: 1.1rem; margin-right: 0.2rem;"></i> KO <i class="ph-light ph-caret-down" style="font-size: 0.7rem; margin-left: 0.1rem;"></i></a>
+                <ul class="dropdown-menu" style="min-width: 130px; padding: 0.5rem; text-align: left;">
+                    <li><a href="#"><span style="font-size: 1.1em;">🇰🇷</span> Korean</a></li>
+                    <li><a href="#"><span style="font-size: 1.1em;">🇺🇸</span> English</a></li>
+                </ul>
+            </div>
+            <a href="support.html" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;" aria-label="도입 문의 페이지로 이동">도입 문의</a>
+        </div>
+    </div>
+</header>
+<!-- Mobile Nav Overlay -->
+<div id="mobile-nav-overlay" class="mobile-nav-overlay" aria-hidden="true"></div>
+
+<!-- Mobile Nav Panel -->
+<nav id="mobile-nav-panel" class="mobile-nav-panel" aria-label="모바일 네비게이션">
+  <p class="mobile-nav-heading">제품</p>
+  <a href="product.html"><i class="ph-light ph-layout" aria-hidden="true"></i> DatArk 개요</a>
+  <a href="product-filedr.html"><i class="ph-light ph-files" aria-hidden="true"></i> DatArk File DR</a>
+  <a href="product-dbdr.html"><i class="ph-light ph-database" aria-hidden="true"></i> DatArk DB DR</a>
+  <p class="mobile-nav-heading">가격</p>
+  <a href="pricing-cloud.html"><i class="ph-light ph-cloud" aria-hidden="true"></i> 클라우드형</a>
+  <a href="pricing-enterprise.html"><i class="ph-light ph-buildings" aria-hidden="true"></i> 온프레미스형</a>
+  <p class="mobile-nav-heading">정보</p>
+  <a href="blog.html"><i class="ph-light ph-newspaper" aria-hidden="true"></i> Blog</a>
+  <a href="support.html"><i class="ph-light ph-headset" aria-hidden="true"></i> Support</a>
+  <a href="download.html"><i class="ph-light ph-download-simple" aria-hidden="true"></i> Download</a>
+  <div class="mobile-nav-cta">
+    <a href="support.html" class="btn btn-primary">도입 문의</a>
+  </div>
+</nav>
+
+
+<main id="main-content">
+<section class="section-padding container text-center animate-fade-up">
+    <span class="badge"><i class="ph-light ph-trophy"></i> 경쟁 우위</span>
+    <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">왜 <span class="text-gradient">DatArk</span>인가</h1>
+    <p style="max-width: 600px; margin: 0 auto; margin-top: 1rem; color: var(--text-muted);">
+        기존 솔루션이 해결하지 못한 문제를 DatArk만의 방식으로 해결합니다. 
+        가장 고도화된 기술력으로 비즈니스 연속성을 보장합니다.
+    </p>
+
+    <div class="card-grid" style="grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 4rem; text-align: left;">
+        <!-- Card 1 -->
+        <div class="glass-card" style="padding: 2rem; border-color: rgba(59,130,246,0.15);">
+            <div style="width: 48px; height: 48px; border-radius: 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.25); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #60A5FA; margin-bottom: 1.2rem;">
+                <i class="ph-light ph-shield-checkered"></i>
+            </div>
+            <h4 style="color: #fff; font-size: 1rem; margin-bottom: 0.5rem;">Zero-Knowledge 데이터 주권</h4>
+            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.65;">고객 서버에서 AES-256/ChaCha20 암호화를 완료한 뒤 전송합니다. KONEKSI 서버에 도착한 데이터는 이미 암호화 상태이므로 개발자나 관리자도 내용을 절대 열람할 수 없습니다.</p>
+            <div style="margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px solid rgba(255,255,255,0.05); font-size: 0.8rem; color: var(--text-muted);">
+                <span style="color: #94A3B8; font-weight: 500;">vs 기존 솔루션:</span> 서버 측 암호화 → 관리자가 원본 접근 가능
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="glass-card" style="padding: 2rem; border-color: rgba(16,185,129,0.15);">
+            <div style="width: 48px; height: 48px; border-radius: 14px; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.25); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #10b981; margin-bottom: 1.2rem;">
+                <i class="ph-light ph-lightning"></i>
+            </div>
+            <h4 style="color: #fff; font-size: 1rem; margin-bottom: 0.5rem;">15분 이내 전체 복구</h4>
+            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.65;">매니페스트 기반 6단계 복구와 8채널 병렬 다운로드로 100GB DB를 15분 이내에 완전 복원합니다. WAL Replay 약 30초로 최근 최적화 달성.</p>
+            <div style="margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px solid rgba(255,255,255,0.05); font-size: 0.8rem; color: var(--text-muted);">
+                <span style="color: #94A3B8; font-weight: 500;">vs 기존 DR:</span> 수동 복구 절차 → 평균 4~24시간 다운타임
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="glass-card" style="padding: 2rem; border-color: rgba(245,158,11,0.15);">
+            <div style="width: 48px; height: 48px; border-radius: 14px; background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.25); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #F59E0B; margin-bottom: 1.2rem;">
+                <i class="ph-light ph-fingerprint"></i>
+            </div>
+            <h4 style="color: #fff; font-size: 1rem; margin-bottom: 0.5rem;">법적 증빙 수준 무결성</h4>
+            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.65;">분산 해시 트리 구조로 데이터의 원본성을 수학적으로 증명. 금융·공공 규제 감사 및 법적 분쟁에서 즉시 활용 가능한 무결성 보고서를 발행합니다.</p>
+            <div style="margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px solid rgba(255,255,255,0.05); font-size: 0.8rem; color: var(--text-muted);">
+                <span style="color: #94A3B8; font-weight: 500;">vs 기존 솔루션:</span> 체크섬만 제공 → 위변조 증명 불가
+            </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="glass-card" style="padding: 2rem; border-color: rgba(99,102,241,0.15);">
+            <div style="width: 48px; height: 48px; border-radius: 14px; background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.25); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #818CF8; margin-bottom: 1.2rem;">
+                <i class="ph-light ph-network"></i>
+            </div>
+            <h4 style="color: #fff; font-size: 1rem; margin-bottom: 0.5rem;">Cross-Host 재해복구</h4>
+            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.65;">CID 기반 위치 독립적 데이터 관리로 서울 센터 장애 시 부산 등 타지역 새 서버에 즉시 복구. NHN Cloud 환경에서 Cross-Host 복구 테스트 완벽 성공.</p>
+            <div style="margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px solid rgba(255,255,255,0.05); font-size: 0.8rem; color: var(--text-muted);">
+                <span style="color: #94A3B8; font-weight: 500;">vs 중앙집중식:</span> 서버 장애 = 전체 서비스 중단
+            </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="glass-card" style="padding: 2rem; border-color: rgba(236,72,153,0.15);">
+            <div style="width: 48px; height: 48px; border-radius: 14px; background: rgba(236,72,153,0.1); border: 1px solid rgba(236,72,153,0.25); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #EC4899; margin-bottom: 1.2rem;">
+                <i class="ph-light ph-graph"></i>
+            </div>
+            <h4 style="color: #fff; font-size: 1rem; margin-bottom: 0.5rem;">19.8배 스토리지 효율</h4>
+            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.65;">gzip 압축과 Chunk 단위 중복 제거로 100GB 원본이 5.23GiB로 저장됩니다. Cloud + IDC 하이브리드 구조로 운영비 80% 절감이 가능합니다.</p>
+            <div style="margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px solid rgba(255,255,255,0.05); font-size: 0.8rem; color: var(--text-muted);">
+                <span style="color: #94A3B8; font-weight: 500;">vs 전통 백업:</span> 전체 파일 전송 → 과도한 대역폭 소모
+            </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="glass-card" style="padding: 2rem; border-color: rgba(14,165,233,0.15);">
+            <div style="width: 48px; height: 48px; border-radius: 14px; background: rgba(14,165,233,0.1); border: 1px solid rgba(14,165,233,0.25); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #0EA5E9; margin-bottom: 1.2rem;">
+                <i class="ph-light ph-buildings"></i>
+            </div>
+            <h4 style="color: #fff; font-size: 1rem; margin-bottom: 0.5rem;">엔터프라이즈 완전 통합</h4>
+            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.65;">기존 인프라 교체 없이 에이전트 설치만으로 즉시 연동. DatArk Manager의 중앙 관제 대시보드로 전사 데이터 자산을 단일 화면에서 모니터링합니다.</p>
+            <div style="margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px solid rgba(255,255,255,0.05); font-size: 0.8rem; color: var(--text-muted);">
+                <span style="color: #94A3B8; font-weight: 500;">vs 레거시 툴:</span> 교체 비용 수억 원 + 수개월 마이그레이션
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SVG Architecture Diagram -->
+<section style="padding: 5rem 0; border-top: 1px solid rgba(255,255,255,0.04);">
+    <div class="container">
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <span class="badge"><i class="ph-light ph-flow-arrow"></i> Architecture</span>
+            <h2 style="font-size: 2.5rem; margin-top: 1rem;">DatArk <span class="text-gradient">데이터 흐름</span> 아키텍처</h2>
+            <p style="color: var(--text-muted); max-width: 560px; margin: 1rem auto 0;">DatArk Core를 중심으로 File DR과 DB DR이 통합된 무결성 보호 인프라</p>
+        </div>
+        <div class="glass-card" style="padding: 3rem; overflow: hidden;">
+            <svg viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; font-family: Inter, sans-serif;">
+                <defs>
+                    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+                        <polygon points="0 0, 8 3, 0 6" fill="rgba(59,130,246,0.6)"/>
+                    </marker>
+                    <marker id="arrowhead-green" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+                        <polygon points="0 0, 8 3, 0 6" fill="rgba(16,185,129,0.7)"/>
+                    </marker>
+                    <marker id="arrowhead-purple" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+                        <polygon points="0 0, 8 3, 0 6" fill="rgba(129,140,248,0.7)"/>
+                    </marker>
+                    <linearGradient id="coreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:0.25"/>
+                        <stop offset="100%" style="stop-color:#0EA5E9;stop-opacity:0.1"/>
+                    </linearGradient>
+                    <linearGradient id="fileGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:0.2"/>
+                        <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:0.05"/>
+                    </linearGradient>
+                    <linearGradient id="dbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#6366F1;stop-opacity:0.2"/>
+                        <stop offset="100%" style="stop-color:#6366F1;stop-opacity:0.05"/>
+                    </linearGradient>
+                    <filter id="glow">
+                        <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                        <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                    </filter>
+                </defs>
+
+                <!-- Client Sources - Left -->
+                <!-- File Sources Box -->
+                <rect x="20" y="40" width="140" height="110" rx="14" fill="url(#fileGrad)" stroke="rgba(59,130,246,0.3)" stroke-width="1"/>
+                <text x="90" y="65" text-anchor="middle" fill="#60A5FA" font-size="10" font-weight="600" letter-spacing="1">FILE SOURCES</text>
+                <rect x="36" y="78" width="108" height="22" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+                <text x="90" y="93" text-anchor="middle" fill="#94A3B8" font-size="9.5">문서 / 이미지 / 영상</text>
+                <rect x="36" y="108" width="108" height="22" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+                <text x="90" y="123" text-anchor="middle" fill="#94A3B8" font-size="9.5">CAD / 로그 / 기타</text>
+
+                <!-- DB Sources Box -->
+                <rect x="20" y="260" width="140" height="110" rx="14" fill="url(#dbGrad)" stroke="rgba(99,102,241,0.3)" stroke-width="1"/>
+                <text x="90" y="285" text-anchor="middle" fill="#818CF8" font-size="10" font-weight="600" letter-spacing="1">DB SOURCES</text>
+                <rect x="36" y="298" width="108" height="22" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+                <text x="90" y="313" text-anchor="middle" fill="#94A3B8" font-size="9.5">Oracle / MySQL / PG</text>
+                <rect x="36" y="328" width="108" height="22" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+                <text x="90" y="343" text-anchor="middle" fill="#94A3B8" font-size="9.5">MS-SQL / MariaDB</text>
+
+                <!-- Arrows: Sources → Modules -->
+                <line x1="160" y1="95" x2="258" y2="138" stroke="rgba(59,130,246,0.5)" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead)"/>
+                <line x1="160" y1="315" x2="258" y2="272" stroke="rgba(99,102,241,0.5)" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead-purple)"/>
+
+                <!-- File DR Module -->
+                <rect x="260" y="110" width="155" height="90" rx="14" fill="url(#fileGrad)" stroke="rgba(59,130,246,0.4)" stroke-width="1.5"/>
+                <text x="337" y="140" text-anchor="middle" fill="#60A5FA" font-size="11" font-weight="700">File DR</text>
+                <text x="337" y="158" text-anchor="middle" fill="#94A3B8" font-size="9">블록 증분 동기화</text>
+                <text x="337" y="174" text-anchor="middle" fill="#94A3B8" font-size="9">랜섬웨어 자동 차단</text>
+                <text x="337" y="190" text-anchor="middle" fill="#94A3B8" font-size="9">무결성 증명</text>
+
+                <!-- DB DR Module -->
+                <rect x="260" y="220" width="155" height="90" rx="14" fill="url(#dbGrad)" stroke="rgba(99,102,241,0.4)" stroke-width="1.5"/>
+                <text x="337" y="250" text-anchor="middle" fill="#818CF8" font-size="11" font-weight="700">DB DR</text>
+                <text x="337" y="268" text-anchor="middle" fill="#94A3B8" font-size="9">CDC 실시간 복제</text>
+                <text x="337" y="284" text-anchor="middle" fill="#94A3B8" font-size="9">트랜잭션 롤백</text>
+                <text x="337" y="300" text-anchor="middle" fill="#94A3B8" font-size="9">자동 Failover</text>
+
+                <!-- Arrows: Modules → Core -->
+                <line x1="415" y1="155" x2="488" y2="185" stroke="rgba(59,130,246,0.5)" stroke-width="2" marker-end="url(#arrowhead)"/>
+                <line x1="415" y1="265" x2="488" y2="215" stroke="rgba(99,102,241,0.5)" stroke-width="2" marker-end="url(#arrowhead-purple)"/>
+
+                <!-- DatArk Core - Center -->
+                <rect x="490" y="150" width="160" height="100" rx="16" fill="url(#coreGrad)" stroke="rgba(59,130,246,0.6)" stroke-width="2" filter="url(#glow)"/>
+                <text x="570" y="186" text-anchor="middle" fill="white" font-size="13" font-weight="700">DatArk Core</text>
+                <text x="570" y="204" text-anchor="middle" fill="#94A3B8" font-size="9">암호화 + 분산 해시</text>
+                <text x="570" y="220" text-anchor="middle" fill="#94A3B8" font-size="9">샤드 분할 + P2P 배포</text>
+                <text x="570" y="236" text-anchor="middle" fill="#94A3B8" font-size="9">무결성 검증 엔진</text>
+
+                <!-- Arrow: Core → P2P Node Network -->
+                <line x1="650" y1="200" x2="728" y2="200" stroke="rgba(59,130,246,0.5)" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+                <!-- P2P Node Network -->
+                <rect x="730" y="60" width="148" height="280" rx="16" fill="rgba(255,255,255,0.015)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+                <text x="804" y="95" text-anchor="middle" fill="#94A3B8" font-size="10" font-weight="600" letter-spacing="1">P2P NODE NETWORK</text>
+                <!-- Node circles -->
+                <circle cx="780" cy="140" r="22" fill="rgba(59,130,246,0.1)" stroke="rgba(59,130,246,0.3)" stroke-width="1"/>
+                <text x="780" y="145" text-anchor="middle" fill="#60A5FA" font-size="9" font-weight="600">Node A</text>
+                <circle cx="830" cy="185" r="22" fill="rgba(59,130,246,0.1)" stroke="rgba(59,130,246,0.3)" stroke-width="1"/>
+                <text x="830" y="190" text-anchor="middle" fill="#60A5FA" font-size="9" font-weight="600">Node B</text>
+                <circle cx="775" cy="235" r="22" fill="rgba(59,130,246,0.1)" stroke="rgba(59,130,246,0.3)" stroke-width="1"/>
+                <text x="775" y="240" text-anchor="middle" fill="#60A5FA" font-size="9" font-weight="600">Node C</text>
+                <circle cx="832" cy="280" r="22" fill="rgba(59,130,246,0.1)" stroke="rgba(59,130,246,0.3)" stroke-width="1"/>
+                <text x="832" y="285" text-anchor="middle" fill="#60A5FA" font-size="9" font-weight="600">Node D</text>
+                <!-- Node connecting lines -->
+                <line x1="780" y1="162" x2="810" y2="165" stroke="rgba(59,130,246,0.2)" stroke-width="1" stroke-dasharray="3,2"/>
+                <line x1="797" y1="185" x2="797" y2="235" stroke="rgba(59,130,246,0.15)" stroke-width="1" stroke-dasharray="3,2"/>
+                <line x1="796" y1="236" x2="810" y2="260" stroke="rgba(59,130,246,0.15)" stroke-width="1" stroke-dasharray="3,2"/>
+                <text x="804" y="335" text-anchor="middle" fill="#94A3B8" font-size="9">N+K 이중화 샤드 저장</text>
+
+                <!-- Recovery Arrow -->
+                <path d="M 730 320 Q 640 360 500 340 Q 440 330 420 305" fill="none" stroke="rgba(16,185,129,0.5)" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arrowhead-green)"/>
+                <text x="620" y="365" text-anchor="middle" fill="rgba(16,185,129,0.7)" font-size="9" font-weight="600">즉각 복원</text>
+
+                <!-- Labels at top -->
+                <text x="90" y="25" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="9">① 데이터 소스</text>
+                <text x="337" y="25" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="9">② DR 모듈</text>
+                <text x="570" y="25" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="9">③ 코어 엔진</text>
+                <text x="804" y="45" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="9">④ 분산 저장</text>
+            </svg>
+        </div>
+    </div>
+</section>
+
+<!-- Product Comparison Table -->
+<section style="padding: 5rem 0; border-top: 1px solid rgba(255,255,255,0.04);">
+    <div class="container">
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <span class="badge"><i class="ph-light ph-scales"></i> 제품 비교</span>
+            <h2 style="font-size: 2.5rem; margin-top: 1rem;">File DR <span class="text-gradient">vs</span> DB DR</h2>
+            <p style="color: var(--text-muted); max-width: 500px; margin: 1rem auto 0;">데이터 유형과 서비스 요구에 맞는 최적의 모듈을 선택하세요</p>
+        </div>
+        <div class="glass-card" style="padding: 0; overflow: hidden; border-radius: 24px;">
+            <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                <thead>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                        <th style="padding: 1.5rem 2rem; color: var(--text-muted); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; width: 30%;">항목</th>
+                        <th style="padding: 1.5rem 2rem; color: #60A5FA; font-size: 1rem; font-weight: 700; background: rgba(59,130,246,0.03);">
+                            <i class="ph-light ph-files" style="margin-right: 0.5rem;"></i>File DR
+                        </th>
+                        <th style="padding: 1.5rem 2rem; color: #818CF8; font-size: 1rem; font-weight: 700; background: rgba(99,102,241,0.03);">
+                            <i class="ph-light ph-database" style="margin-right: 0.5rem;"></i>DB DR
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+                        <td style="padding: 1.25rem 2rem; color: var(--text-muted); font-size: 0.9rem; font-weight: 500;">보호 대상</td>
+                        <td style="padding: 1.25rem 2rem; color: var(--text-main); background: rgba(59,130,246,0.02);">비정형 파일 (문서, 이미지, 영상, CAD 등)</td>
+                        <td style="padding: 1.25rem 2rem; color: var(--text-main); background: rgba(99,102,241,0.02);">PostgreSQL DB (트랜잭션 데이터)</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+                        <td style="padding: 1.25rem 2rem; color: var(--text-muted); font-size: 0.9rem; font-weight: 500;">동기화 방식</td>
+                        <td style="padding: 1.25rem 2rem; color: var(--text-main); background: rgba(59,130,246,0.02);">블록 단위 증분 동기화 (Rsync)</td>
+                        <td style="padding: 1.25rem 2rem; color: var(--text-main); background: rgba(99,102,241,0.02);">WAL 실시간 스트리밍 + pg_basebackup</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+                        <td style="padding: 1.25rem 2rem; color: var(--text-muted); font-size: 0.9rem; font-weight: 500;">RPO 목표</td>
+                        <td style="padding: 1.25rem 2rem; background: rgba(59,130,246,0.02);">
+                            <span style="color: #60A5FA; font-weight: 700;">≤ 1분</span>
+                        </td>
+                        <td style="padding: 1.25rem 2rem; background: rgba(99,102,241,0.02);">
+                            <span style="color: #818CF8; font-weight: 700;">4~10초</span> (WAL 실시간)
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+                        <td style="padding: 1.25rem 2rem; color: var(--text-muted); font-size: 0.9rem; font-weight: 500;">RTO 목표</td>
+                        <td style="padding: 1.25rem 2rem; color: var(--text-main); background: rgba(59,130,246,0.02);">단일 파일 수초 / 전체 환경 의존</td>
+                        <td style="padding: 1.25rem 2rem; background: rgba(99,102,241,0.02);">
+                            <span style="color: #818CF8; font-weight: 700;">15분 이내</span> (100GB 기준)
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+                        <td style="padding: 1.25rem 2rem; color: var(--text-muted); font-size: 0.9rem; font-weight: 500;">주요 위협 방어</td>
+                        <td style="padding: 1.25rem 2rem; color: var(--text-main); background: rgba(59,130,246,0.02);">랜섬웨어, 파일 유실, 위변조</td>
+                        <td style="padding: 1.25rem 2rem; color: var(--text-main); background: rgba(99,102,241,0.02);">DB 장애, 휴먼 에러, 데이터센터 재해</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+                        <td style="padding: 1.25rem 2rem; color: var(--text-muted); font-size: 0.9rem; font-weight: 500;">배포 형태</td>
+                        <td style="padding: 1.25rem 2rem; color: var(--text-main); background: rgba(59,130,246,0.02);">클라우드형 / 온프레미스형</td>
+                        <td style="padding: 1.25rem 2rem; color: var(--text-main); background: rgba(99,102,241,0.02);">Cloud + IDC 하이브리드 / 온프레미스형</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+                        <td style="padding: 1.25rem 2rem; color: var(--text-muted); font-size: 0.9rem; font-weight: 500;">권장 대상</td>
+                        <td style="padding: 1.25rem 2rem; color: var(--text-main); background: rgba(59,130,246,0.02);">전 산업군 문서 중앙화 환경</td>
+                        <td style="padding: 1.25rem 2rem; color: var(--text-main); background: rgba(99,102,241,0.02);">금융, 공공, 미션 크리티컬 + 타지역 DR</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1.5rem 2rem;"></td>
+                        <td style="padding: 1.5rem 2rem; background: rgba(59,130,246,0.02);">
+                            <a href="product-filedr.html" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.5rem 1.2rem;">File DR 자세히 보기</a>
+                        </td>
+                        <td style="padding: 1.5rem 2rem; background: rgba(99,102,241,0.02);">
+                            <a href="product-dbdr.html" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.5rem 1.2rem; background: linear-gradient(135deg,#6366f1,#4f46e5); box-shadow: 0 4px 14px rgba(99,102,241,0.3);">DB DR 자세히 보기</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer class="premium-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo footer-heading" style="margin-bottom: 1rem; font-size: 1.25rem; display: flex; align-items: center; gap: 0.8rem; color: #ffffff;">
+                    <img src="assets/logo.svg" alt="KONEKSI Logo" style="height: 32px; width: auto; object-fit: contain;" loading="lazy">
+                        </div>
+                <p style="font-size: 0.9rem; margin-bottom: 1.5rem; max-width: 250px; line-height: 1.6;">
+                    완전한 분산 저장 구조와 CID 기반 데이터 무결성 철학을 구현하는 차세대 스토리지 스택.
+                </p>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/company/koneksi" class="social-icon" target="_blank" rel="noopener"><i class="ph-light ph-linkedin-logo"></i></a>
+                    <a href="https://github.com/koneksi-tech" class="social-icon" target="_blank" rel="noopener"><i class="ph-light ph-github-logo"></i></a>
+                    <a href="https://x.com/koneksi_tech" class="social-icon" target="_blank" rel="noopener"><i class="ph-light ph-x-logo"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Platform</h4>
+                <ul class="footer-list">
+                    <li><a href="product.html">DatArk 개요</a></li>
+                    <li><a href="product-filedr.html">DatArk File DR</a></li>
+                    <li><a href="product-dbdr.html">DatArk DB DR</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Resources</h4>
+                <ul class="footer-list">
+                    <li><a href="support.html">Contact Sales</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="download.html">Downloads</a></li>
+                </ul>
+            </div>
+            <div class="footer-col" style="min-width: max-content;">
+                <h4 class="footer-heading">Contact</h4>
+                <ul class="footer-list">
+                    <li style="display: flex; gap: 0.5rem; color: var(--text-muted); line-height: 1.5;">
+                        <i class="ph-light ph-map-pin" style="margin-top: 0.2rem; min-width: 16px;"></i>
+                        서울 송파구 중대로 135<br>IT벤처타워 서관 10층
+                    </li>
+                    <li style="display: flex; gap: 0.5rem; margin-top: 1rem; color: var(--text-muted);">
+                        <i class="ph-light ph-phone"></i> 070-7626-1020
+                    </li>
+                    <li style="display: flex; gap: 0.5rem; margin-top: 0.5rem; color: var(--text-muted);">
+                        <i class="ph-light ph-envelope-simple"></i> info@koneksi.co.kr
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom-flex">
+            <p>&copy; 2026 Koneksi Inc.</p>
+            <div style="display: flex; gap: 1.5rem;">
+                <a href="terms.html">Terms of Service</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+(function() {
+  // ── Mobile Navigation ──────────────────────────────────────
+  const hamburger = document.getElementById('hamburger-btn');
+  const mobilePanel = document.getElementById('mobile-nav-panel');
+  const overlay = document.getElementById('mobile-nav-overlay');
+  const mainHeader = document.getElementById('main-header');
+
+  function openMenu() {
+    hamburger.classList.add('is-open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    hamburger.setAttribute('aria-label', '메뉴 닫기');
+    mobilePanel.classList.add('is-open');
+    overlay.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    // Trap focus: move to first link in panel
+    const firstLink = mobilePanel.querySelector('a');
+    if (firstLink) firstLink.focus();
+  }
+
+  function closeMenu() {
+    hamburger.classList.remove('is-open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('aria-label', '메뉴 열기');
+    mobilePanel.classList.remove('is-open');
+    overlay.classList.remove('is-open');
+    document.body.style.overflow = '';
+    hamburger.focus();
+  }
+
+  hamburger.addEventListener('click', function() {
+    if (hamburger.classList.contains('is-open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  overlay.addEventListener('click', closeMenu);
+
+  // Close on Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && mobilePanel.classList.contains('is-open')) {
+      closeMenu();
+    }
+  });
+
+  // Close menu on link click (navigation)
+  mobilePanel.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      closeMenu();
+    });
+  });
+
+  // ── Scroll-aware Header ────────────────────────────────────
+  window.addEventListener('scroll', function() {
+    if (!mainHeader) return;
+    if (window.scrollY > 10) {
+      mainHeader.style.background = 'rgba(10, 15, 28, 0.8)';
+      mainHeader.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
+    } else {
+      mainHeader.style.background = 'rgba(10, 15, 28, 0.5)';
+      mainHeader.style.borderBottom = '1px solid rgba(255,255,255,0.06)';
+    }
+  });
+
+  // ── Intersection Observer for animations ──────────────────
+  document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-fade-up').forEach(function(el) {
+      el.style.animationPlayState = 'paused';
+      observer.observe(el);
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

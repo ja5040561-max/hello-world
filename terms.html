@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KONEKSI DatArk 서비스 이용약관 - 서비스 이용 조건, 권리와 의무, 책임 범위를 확인하세요.">
+    <meta name="keywords" content="DR솔루션, 데이터복구, KONEKSI, DatArk, 재해복구, 분산스토리지">
+    <meta name="author" content="KONEKSI">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph -->
+    <meta property="og:title" content="이용약관 | KONEKSI DatArk">
+    <meta property="og:description" content="KONEKSI DatArk 서비스 이용약관 - 서비스 이용 조건, 권리와 의무, 책임 범위를 확인하세요.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://koneksi-datark.netlify.app/terms">
+    <meta property="og:image" content="https://koneksi-datark.netlify.app/assets/logo.svg">
+    <meta property="og:site_name" content="KONEKSI">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@koneksi_tech">
+    <!-- Canonical -->
+    <link rel="canonical" href="https://koneksi-datark.netlify.app/terms">
+    <title>KONEKSI | 이용약관</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+        .legal-hero {
+            padding: 10rem 0 4rem;
+            text-align: center;
+            position: relative;
+        }
+        .legal-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at top, rgba(59,130,246,0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .legal-hero .badge {
+            margin-bottom: 1.5rem;
+        }
+        .legal-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .legal-hero p {
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+        .legal-container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 2rem 6rem;
+        }
+        .toc-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 2rem 2.5rem;
+            margin-bottom: 3rem;
+            backdrop-filter: var(--glass-blur);
+        }
+        .toc-card h3 {
+            font-size: 1rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        .toc-card ol {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem 2rem;
+            padding: 0;
+        }
+        .toc-card ol li a {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+        .toc-card ol li a:hover {
+            color: var(--primary-color);
+        }
+        .toc-card ol li a::before {
+            content: attr(data-num);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            background: rgba(59,130,246,0.12);
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            flex-shrink: 0;
+        }
+        .legal-section {
+            margin-bottom: 3.5rem;
+        }
+        .legal-section h2 {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .legal-section h2 .section-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: rgba(59,130,246,0.15);
+            border: 1px solid rgba(59,130,246,0.3);
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            flex-shrink: 0;
+        }
+        .legal-section p {
+            font-size: 0.97rem;
+            color: var(--text-muted);
+            line-height: 1.85;
+            margin-bottom: 1rem;
+        }
+        .legal-section ul, .legal-section ol {
+            padding-left: 0;
+            list-style: none;
+            margin-bottom: 1rem;
+        }
+        .legal-section ul li, .legal-section ol li {
+            font-size: 0.97rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            padding: 0.3rem 0 0.3rem 1.5rem;
+            position: relative;
+        }
+        .legal-section ul li::before {
+            content: '';
+            position: absolute;
+            left: 0.25rem;
+            top: 0.75rem;
+            width: 5px;
+            height: 5px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            opacity: 0.7;
+        }
+        .legal-section ol {
+            counter-reset: item;
+        }
+        .legal-section ol li {
+            counter-increment: item;
+        }
+        .legal-section ol li::before {
+            content: counter(item) '.';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .legal-section h3 {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            font-weight: 600;
+            margin: 1.5rem 0 0.75rem;
+            letter-spacing: -0.01em;
+        }
+        .highlight-box {
+            background: rgba(59,130,246,0.06);
+            border: 1px solid rgba(59,130,246,0.15);
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            margin: 1.25rem 0;
+        }
+        .highlight-box p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        .warn-box {
+            background: rgba(245,158,11,0.06);
+            border: 1px solid rgba(245,158,11,0.2);
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            margin: 1.25rem 0;
+            display: flex;
+            gap: 0.75rem;
+        }
+        .warn-box i {
+            color: #F59E0B;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+        .warn-box p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        .update-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(59,130,246,0.1);
+            border: 1px solid rgba(59,130,246,0.2);
+            border-radius: 50px;
+            padding: 0.3rem 0.9rem;
+            font-size: 0.85rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        @media (max-width: 640px) {
+            .toc-card ol { grid-template-columns: 1fr; }
+            .legal-hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+<a href="#main-content" class="skip-nav">본문으로 바로가기</a>
+
+<header id="main-header">
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+            <img loading="lazy" src="assets/logo.svg" alt="KONEKSI Logo" style="height: 40px; width: auto; object-fit: contain;">
+        </a>
+        <nav aria-label="주 네비게이션">
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="product.html">Products <i class="ph-light ph-caret-down" style="font-size: 0.8rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="product.html"><i class="ph-light ph-layout"></i> DatArk 개요</a></li>
+                        <li><a href="product-filedr.html"><i class="ph-light ph-files"></i> DatArk File DR</a></li>
+                        <li><a href="product-dbdr.html"><i class="ph-light ph-database"></i> DatArk DB DR</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Pricing <i class="ph-light ph-caret-down" style="font-size: 0.8rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pricing-cloud.html"><i class="ph-light ph-cloud"></i> 클라우드형</a></li>
+                        <li><a href="pricing-enterprise.html"><i class="ph-light ph-buildings"></i> 온프레미스형</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="blog.html">Blog <i class="ph-light ph-caret-down" style="font-size: 0.8rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="blog.html"><i class="ph-light ph-article"></i> 블로그 홈</a></li>
+                        <li><a href="blog-release.html"><i class="ph-light ph-rocket-launch"></i> 릴리즈 업데이트</a></li>
+                        <li><a href="blog-guide.html"><i class="ph-light ph-book-open"></i> 사용 가이드</a></li>
+                    </ul>
+                </li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="download.html">Download</a></li>
+            </ul>
+        </nav>
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-nav-panel" aria-haspopup="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="header-actions" style="display: flex; align-items: center; gap: 1rem;">
+            <div class="dropdown lang-switcher">
+                <a href="#" style="color: var(--text-muted); font-size: 0.95rem; font-weight: 500;"><i class="ph-light ph-globe" style="font-size: 1.1rem; margin-right: 0.2rem;"></i> KO <i class="ph-light ph-caret-down" style="font-size: 0.7rem; margin-left: 0.1rem;"></i></a>
+                <ul class="dropdown-menu" style="min-width: 130px; padding: 0.5rem; text-align: left;">
+                    <li><a href="#"><span style="font-size: 1.1em;">🇰🇷</span> Korean</a></li>
+                    <li><a href="#"><span style="font-size: 1.1em;">🇺🇸</span> English</a></li>
+                </ul>
+            </div>
+            <a href="support.html" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;" aria-label="도입 문의 페이지로 이동">도입 문의</a>
+        </div>
+    </div>
+</header>
+<!-- Mobile Nav Overlay -->
+<div id="mobile-nav-overlay" class="mobile-nav-overlay" aria-hidden="true"></div>
+
+<!-- Mobile Nav Panel -->
+<nav id="mobile-nav-panel" class="mobile-nav-panel" aria-label="모바일 네비게이션">
+  <p class="mobile-nav-heading">제품</p>
+  <a href="product.html"><i class="ph-light ph-layout" aria-hidden="true"></i> DatArk 개요</a>
+  <a href="product-filedr.html"><i class="ph-light ph-files" aria-hidden="true"></i> DatArk File DR</a>
+  <a href="product-dbdr.html"><i class="ph-light ph-database" aria-hidden="true"></i> DatArk DB DR</a>
+  <p class="mobile-nav-heading">가격</p>
+  <a href="pricing-cloud.html"><i class="ph-light ph-cloud" aria-hidden="true"></i> 클라우드형</a>
+  <a href="pricing-enterprise.html"><i class="ph-light ph-buildings" aria-hidden="true"></i> 온프레미스형</a>
+  <p class="mobile-nav-heading">정보</p>
+  <a href="blog.html"><i class="ph-light ph-newspaper" aria-hidden="true"></i> Blog</a>
+  <a href="support.html"><i class="ph-light ph-headset" aria-hidden="true"></i> Support</a>
+  <a href="download.html"><i class="ph-light ph-download-simple" aria-hidden="true"></i> Download</a>
+  <div class="mobile-nav-cta">
+    <a href="support.html" class="btn btn-primary">도입 문의</a>
+  </div>
+</nav>
+
+
+<main id="main-content">
+    <!-- Hero -->
+    <section class="legal-hero">
+        <div class="container">
+            <div class="update-badge"><i class="ph-light ph-calendar-blank"></i> 최종 업데이트: 2026년 4월 18일</div>
+            <span class="badge"><i class="ph-light ph-file-text"></i> Legal</span>
+            <h1>이용약관</h1>
+            <p>KONEKSI DatArk 서비스를 이용하기 전에 아래 약관을 주의 깊게 읽어 주시기 바랍니다.</p>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <div class="legal-container">
+        <!-- Table of Contents -->
+        <div class="toc-card">
+            <h3><i class="ph-light ph-list" style="margin-right:0.4rem;"></i> 목차</h3>
+            <ol>
+                <li><a href="#article1" data-num="1">총칙 및 정의</a></li>
+                <li><a href="#article2" data-num="2">서비스 이용 계약</a></li>
+                <li><a href="#article3" data-num="3">계정 및 접근 관리</a></li>
+                <li><a href="#article4" data-num="4">서비스 이용 규칙</a></li>
+                <li><a href="#article5" data-num="5">요금 및 결제</a></li>
+                <li><a href="#article6" data-num="6">지적재산권</a></li>
+                <li><a href="#article7" data-num="7">데이터 및 보안</a></li>
+                <li><a href="#article8" data-num="8">면책 및 책임 제한</a></li>
+                <li><a href="#article9" data-num="9">서비스 변경 및 중단</a></li>
+                <li><a href="#article10" data-num="10">계약 해지</a></li>
+                <li><a href="#article11" data-num="11">분쟁 해결</a></li>
+                <li><a href="#article12" data-num="12">기타</a></li>
+            </ol>
+        </div>
+
+        <!-- Article 1 -->
+        <section class="legal-section" id="article1">
+            <h2><span class="section-num">1</span> 총칙 및 정의</h2>
+            <p>본 이용약관(이하 "약관")은 주식회사 코넥시(이하 "회사")가 제공하는 KONEKSI DatArk 서비스(이하 "서비스")의 이용과 관련하여 회사와 이용자 간의 권리·의무 및 책임사항을 규정하는 것을 목적으로 합니다.</p>
+            <h3>주요 용어 정의</h3>
+            <ul>
+                <li><strong style="color:var(--text-light);">"서비스"</strong>란 회사가 제공하는 DatArk File DR, DatArk DB DR을 포함한 일체의 데이터 재해복구(DR) 및 분산 스토리지 솔루션을 의미합니다.</li>
+                <li><strong style="color:var(--text-light);">"이용자"</strong>란 본 약관에 동의하고 서비스를 이용하는 개인 또는 법인을 의미합니다.</li>
+                <li><strong style="color:var(--text-light);">"계정"</strong>이란 이용자가 서비스를 이용하기 위해 설정한 고유 식별자 및 비밀번호를 의미합니다.</li>
+                <li><strong style="color:var(--text-light);">"콘텐츠"</strong>란 이용자가 서비스를 통해 저장, 전송, 처리하는 일체의 데이터, 파일, 정보를 의미합니다.</li>
+                <li><strong style="color:var(--text-light);">"플랜"</strong>이란 서비스 이용을 위해 이용자가 선택하는 구독 유형(클라우드형, 온프레미스형 등)을 의미합니다.</li>
+            </ul>
+            <div class="highlight-box">
+                <p><i class="ph-light ph-info" style="color:var(--primary-color); margin-right:0.5rem;"></i> 본 약관에 동의함으로써 이용자는 만 14세 이상이거나, 법인 이용자의 경우 적법한 권한을 가진 대표자 또는 수권자임을 확인합니다.</p>
+            </div>
+        </section>
+
+        <!-- Article 2 -->
+        <section class="legal-section" id="article2">
+            <h2><span class="section-num">2</span> 서비스 이용 계약</h2>
+            <p>서비스 이용 계약은 이용자가 회사의 가입 절차에 따라 약관에 동의하고, 회사가 이를 승낙함으로써 성립합니다.</p>
+            <h3>계약 성립 절차</h3>
+            <ol>
+                <li>이용자는 회사가 정한 양식에 따라 필수 정보를 입력하고 약관에 동의합니다.</li>
+                <li>회사는 이용 신청을 검토하고 승인 여부를 이용자에게 통지합니다.</li>
+                <li>승인 완료 후 이용자는 서비스에 접근하고 이용할 수 있습니다.</li>
+            </ol>
+            <h3>이용 신청 거절 사유</h3>
+            <p>다음에 해당하는 경우 회사는 이용 신청을 거절하거나 승인을 취소할 수 있습니다.</p>
+            <ul>
+                <li>타인의 명의 또는 허위 정보를 사용한 경우</li>
+                <li>관련 법령 또는 본 약관을 위반할 목적으로 신청한 경우</li>
+                <li>기술적·운영적 사유로 서비스 제공이 불가한 경우</li>
+                <li>이전에 서비스 이용이 제한된 이력이 있는 경우</li>
+            </ul>
+        </section>
+
+        <!-- Article 3 -->
+        <section class="legal-section" id="article3">
+            <h2><span class="section-num">3</span> 계정 및 접근 관리</h2>
+            <p>이용자는 서비스 이용을 위해 계정을 생성하며, 계정의 보안 관리에 대한 책임은 이용자에게 있습니다.</p>
+            <h3>계정 보안 의무</h3>
+            <ul>
+                <li>이용자는 계정 정보(ID, 비밀번호, API 키 등)를 안전하게 관리하여야 합니다.</li>
+                <li>계정 정보를 제3자에게 공유, 양도, 대여하는 행위는 금지됩니다.</li>
+                <li>계정의 무단 사용 또는 보안 침해 발생 시 즉시 회사에 신고하여야 합니다.</li>
+                <li>이용자의 관리 소홀로 인한 계정 도용 피해에 대해 회사는 책임을 지지 않습니다.</li>
+            </ul>
+            <h3>기업 계정 관리</h3>
+            <p>법인 또는 기업 이용자는 관리자 계정을 통해 하위 계정을 생성·관리할 수 있으며, 관리자는 하위 계정의 서비스 이용에 대한 연대책임을 집니다.</p>
+            <div class="warn-box">
+                <i class="ph-light ph-warning"></i>
+                <p>계정 비밀번호를 정기적으로 변경하고, 추측하기 어려운 조합으로 설정하십시오. 회사는 어떠한 경우에도 이메일, 전화 등을 통해 비밀번호를 요청하지 않습니다.</p>
+            </div>
+        </section>
+
+        <!-- Article 4 -->
+        <section class="legal-section" id="article4">
+            <h2><span class="section-num">4</span> 서비스 이용 규칙</h2>
+            <p>이용자는 서비스를 적법하고 올바른 방법으로 이용하여야 하며, 다음과 같은 행위를 해서는 안 됩니다.</p>
+            <h3>금지 행위</h3>
+            <ul>
+                <li>관련 법령 및 규정에 위반되는 행위</li>
+                <li>서비스의 정상적인 운영을 방해하는 일체의 행위(해킹, DDoS, 악성코드 배포 등)</li>
+                <li>타인의 개인정보, 저작권, 지적재산권을 침해하는 콘텐츠 저장·전송</li>
+                <li>불법 콘텐츠(아동 착취물, 테러 조장 자료 등) 업로드 및 배포</li>
+                <li>서비스를 이용한 스팸, 피싱, 사기 행위</li>
+                <li>회사의 사전 승인 없이 서비스를 제3자에게 재판매·재배포하는 행위</li>
+                <li>서비스의 소스 코드 역분석, 디컴파일, 무단 복제하는 행위</li>
+                <li>합리적인 사용 범위를 초과하는 시스템 자원의 과도한 사용</li>
+            </ul>
+            <p>위반 시 회사는 사전 통보 없이 서비스 이용을 제한하거나 계약을 해지할 수 있으며, 관련 법령에 따라 법적 조치를 취할 수 있습니다.</p>
+        </section>
+
+        <!-- Article 5 -->
+        <section class="legal-section" id="article5">
+            <h2><span class="section-num">5</span> 요금 및 결제</h2>
+            <p>서비스 이용 요금은 이용자가 선택한 플랜에 따라 책정되며, 회사는 언제든지 요금 정책을 변경할 수 있습니다. 요금 변경 시 최소 30일 전에 이용자에게 통지합니다.</p>
+            <h3>결제 조건</h3>
+            <ul>
+                <li>클라우드형 플랜: 월별 또는 연간 구독 방식으로 선불 청구됩니다.</li>
+                <li>온프레미스형 플랜: 계약서에 따른 별도 결제 조건이 적용됩니다.</li>
+                <li>결제는 신용카드, 계좌이체, 세금계산서 발행 등 회사가 정한 방법으로 이루어집니다.</li>
+                <li>납부 기한을 초과한 경우 회사는 서비스 이용을 제한할 수 있습니다.</li>
+            </ul>
+            <h3>환불 정책</h3>
+            <ul>
+                <li>결제 후 7일 이내 미사용 상태에서 해지 요청 시 전액 환불됩니다.</li>
+                <li>결제 후 7일 경과 또는 서비스 사용이 개시된 경우 잔여 기간에 대한 환불은 원칙적으로 제공되지 않습니다.</li>
+                <li>회사의 귀책 사유로 인한 서비스 장애(SLA 기준 초과)의 경우 크레딧 또는 환불이 제공될 수 있습니다.</li>
+            </ul>
+        </section>
+
+        <!-- Article 6 -->
+        <section class="legal-section" id="article6">
+            <h2><span class="section-num">6</span> 지적재산권</h2>
+            <h3>회사의 권리</h3>
+            <p>서비스와 관련된 소프트웨어, 알고리즘, UI/UX 디자인, 상표, 로고, 기술문서 등 일체의 지적재산권은 회사에 귀속됩니다. 이용자는 서비스를 이용하더라도 이에 대한 소유권을 취득하지 않습니다.</p>
+            <h3>이용자 콘텐츠</h3>
+            <p>이용자가 서비스를 통해 저장·처리하는 콘텐츠에 대한 소유권은 이용자에게 귀속됩니다. 이용자는 회사가 서비스 제공 목적에 한하여 해당 콘텐츠를 처리·저장·전송할 수 있는 비독점적 라이선스를 회사에 부여합니다.</p>
+            <div class="highlight-box">
+                <p><i class="ph-light ph-shield-check" style="color:var(--primary-color); margin-right:0.5rem;"></i> 회사는 이용자의 사전 동의 없이 이용자 콘텐츠를 마케팅, 광고, 제3자 공유 등의 목적으로 사용하지 않습니다.</p>
+            </div>
+            <h3>오픈소스 구성요소</h3>
+            <p>서비스 일부 구성요소는 오픈소스 라이선스를 기반으로 할 수 있으며, 해당 구성요소의 라이선스 조건은 별도로 고지됩니다.</p>
+        </section>
+
+        <!-- Article 7 -->
+        <section class="legal-section" id="article7">
+            <h2><span class="section-num">7</span> 데이터 및 보안</h2>
+            <p>회사는 이용자의 데이터 보호를 최우선으로 하며, 업계 표준 수준의 보안 조치를 유지합니다.</p>
+            <h3>데이터 처리</h3>
+            <ul>
+                <li>이용자의 데이터는 CID(Content Identifier) 기반 무결성 검증 및 분산 암호화 저장 방식으로 보호됩니다.</li>
+                <li>데이터 전송 시 TLS 1.2 이상의 암호화 프로토콜이 적용됩니다.</li>
+                <li>저장 데이터에는 AES-256 암호화가 적용됩니다.</li>
+            </ul>
+            <h3>백업 및 복구</h3>
+            <ul>
+                <li>회사는 서비스 안정성을 위해 내부 시스템 데이터를 주기적으로 백업합니다.</li>
+                <li>이용자 데이터의 손실에 대비한 백업 책임은 원칙적으로 이용자에게 있습니다.</li>
+                <li>DatArk DR 서비스 구독자는 계약 SLA에 따른 복구 지원을 받을 수 있습니다.</li>
+            </ul>
+            <h3>보안 사고 대응</h3>
+            <p>개인정보 유출 또는 보안 사고 발생 시 회사는 관련 법령(개인정보 보호법 제34조)에 따라 72시간 이내에 이용자에게 통지하고 필요한 조치를 취합니다.</p>
+        </section>
+
+        <!-- Article 8 -->
+        <section class="legal-section" id="article8">
+            <h2><span class="section-num">8</span> 면책 및 책임 제한</h2>
+            <div class="warn-box">
+                <i class="ph-light ph-warning-circle"></i>
+                <p>이 조항은 회사의 법적 책임 범위를 규정합니다. 주의 깊게 읽어 주시기 바랍니다.</p>
+            </div>
+            <h3>서비스 "있는 그대로" 제공</h3>
+            <p>서비스는 상업적으로 합리적인 노력으로 제공되며, 회사는 서비스의 완전한 무결성, 무중단 운영, 특정 목적에의 적합성을 명시적 또는 묵시적으로 보증하지 않습니다.</p>
+            <h3>책임 제한</h3>
+            <p>관련 법령이 허용하는 최대 범위 내에서, 회사의 서비스 이용으로 발생하는 간접 손해, 특별 손해, 결과적 손해, 일실이익, 데이터 손실에 대한 배상 책임은 제한됩니다. 단, 회사의 고의 또는 중과실로 인한 손해는 예외입니다.</p>
+            <h3>면책 사유</h3>
+            <ul>
+                <li>천재지변, 전쟁, 테러, 대규모 정전 등 불가항력적 사유</li>
+                <li>이용자의 귀책 사유로 인한 서비스 장애</li>
+                <li>제3자(ISP, 클라우드 인프라 제공자 등)의 서비스 장애</li>
+                <li>이용자가 제공한 부정확한 정보로 인한 문제</li>
+                <li>예측 불가능한 보안 취약점에 의한 데이터 손상</li>
+            </ul>
+        </section>
+
+        <!-- Article 9 -->
+        <section class="legal-section" id="article9">
+            <h2><span class="section-num">9</span> 서비스 변경 및 중단</h2>
+            <p>회사는 서비스 개선, 기술적 필요, 법령 준수 등의 사유로 서비스의 내용, 기능, 인터페이스를 변경할 수 있습니다.</p>
+            <h3>서비스 변경 고지</h3>
+            <ul>
+                <li>중요한 기능 변경 또는 요금 변경 시 최소 30일 전에 이메일 또는 서비스 내 공지를 통해 안내합니다.</li>
+                <li>긴급한 보안 패치 또는 법령 준수를 위한 변경은 즉시 적용될 수 있습니다.</li>
+            </ul>
+            <h3>서비스 중단</h3>
+            <p>정기 점검, 시스템 업그레이드, 불가항력 등의 사유로 서비스가 일시 중단될 수 있습니다. 사전에 알 수 있는 중단은 최소 24시간 전에 고지하며, 긴급 중단의 경우 사후 고지합니다.</p>
+            <p>서비스 영구 종료 시 최소 60일 전에 통지하며, 이용자가 데이터를 내보낼 수 있는 충분한 시간을 제공합니다.</p>
+        </section>
+
+        <!-- Article 10 -->
+        <section class="legal-section" id="article10">
+            <h2><span class="section-num">10</span> 계약 해지</h2>
+            <h3>이용자의 해지</h3>
+            <p>이용자는 언제든지 서비스 내 설정 메뉴 또는 이메일(info@koneksi.co.kr)을 통해 서비스 해지를 요청할 수 있습니다. 해지 요청 후 현재 구독 기간이 종료되는 시점에 계약이 종료됩니다.</p>
+            <h3>회사의 해지</h3>
+            <p>다음의 경우 회사는 사전 통보 후 또는 즉시 계약을 해지할 수 있습니다.</p>
+            <ul>
+                <li>이용자가 본 약관을 중대하게 위반한 경우</li>
+                <li>요금을 연속 2회 이상 납부하지 않은 경우</li>
+                <li>이용자가 제공한 정보가 허위임이 확인된 경우</li>
+                <li>법령 또는 규제 당국의 요청에 의한 경우</li>
+            </ul>
+            <h3>해지 후 데이터 처리</h3>
+            <p>계약 해지 후 이용자 데이터는 30일간 보관되며, 이 기간 내에 데이터 다운로드가 가능합니다. 30일 경과 후 이용자 데이터는 복구 불가능한 방식으로 삭제됩니다.</p>
+        </section>
+
+        <!-- Article 11 -->
+        <section class="legal-section" id="article11">
+            <h2><span class="section-num">11</span> 분쟁 해결</h2>
+            <h3>준거법</h3>
+            <p>본 약관 및 서비스 이용과 관련된 분쟁에는 대한민국 법률이 적용됩니다.</p>
+            <h3>분쟁 해결 절차</h3>
+            <ol>
+                <li><strong style="color:var(--text-light);">협의:</strong> 분쟁 발생 시 이용자와 회사는 우선 상호 협의를 통한 원만한 해결을 시도합니다.</li>
+                <li><strong style="color:var(--text-light);">조정:</strong> 협의가 이루어지지 않는 경우, 한국인터넷진흥원(KISA) 또는 개인정보 분쟁조정위원회에 조정을 신청할 수 있습니다.</li>
+                <li><strong style="color:var(--text-light);">소송:</strong> 조정이 불성립되는 경우, 서울중앙지방법원을 제1심 전속 관할법원으로 합니다.</li>
+            </ol>
+            <h3>고객 지원</h3>
+            <p>서비스 이용 관련 문의 및 불만 접수는 아래 채널을 통해 가능합니다.</p>
+            <ul>
+                <li>이메일: info@koneksi.co.kr</li>
+                <li>전화: 070-7626-1020 (평일 09:00 ~ 18:00)</li>
+                <li>주소: 서울 송파구 중대로 135 IT벤처타워 서관 10층</li>
+            </ul>
+        </section>
+
+        <!-- Article 12 -->
+        <section class="legal-section" id="article12">
+            <h2><span class="section-num">12</span> 기타</h2>
+            <h3>약관의 변경</h3>
+            <p>회사는 관련 법령의 변경, 서비스 정책 변경 등의 사유로 본 약관을 개정할 수 있습니다. 개정 시 적용 일자 및 개정 내용을 서비스 내 공지사항 또는 이메일을 통해 개정 일자 최소 7일 전에 고지합니다. 단, 이용자에게 불리한 변경의 경우 30일 이전에 고지합니다.</p>
+            <h3>분리 가능성</h3>
+            <p>본 약관의 일부 조항이 무효 또는 집행 불가능한 것으로 판단되더라도 나머지 조항의 효력에는 영향을 미치지 않습니다.</p>
+            <h3>전체 합의</h3>
+            <p>본 약관과 회사의 개인정보처리방침은 서비스 이용에 관한 이용자와 회사 간의 완전한 합의를 구성하며, 이전의 모든 합의, 제안, 표현을 대체합니다.</p>
+            <div class="highlight-box">
+                <p><strong style="color:var(--text-light);">시행일:</strong> 2026년 4월 18일<br>
+                <strong style="color:var(--text-light);">회사명:</strong> 주식회사 코넥시 (Koneksi Inc.)<br>
+                <strong style="color:var(--text-light);">대표자:</strong> [대표이사 성명]<br>
+                <strong style="color:var(--text-light);">사업자등록번호:</strong> [사업자번호]<br>
+                <strong style="color:var(--text-light);">주소:</strong> 서울 송파구 중대로 135 IT벤처타워 서관 10층</p>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer class="premium-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo footer-heading" style="margin-bottom: 1rem; font-size: 1.25rem; display: flex; align-items: center; gap: 0.8rem; color: #ffffff;">
+                    <img loading="lazy" src="assets/logo.svg" alt="KONEKSI Logo" style="height: 32px; width: auto; object-fit: contain;">
+                </div>
+                <p style="font-size: 0.9rem; margin-bottom: 1.5rem; max-width: 250px; line-height: 1.6;">
+                    완전한 분산 저장 구조와 CID 기반 데이터 무결성 철학을 구현하는 차세대 스토리지 스택.
+                </p>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/company/koneksi" class="social-icon" target="_blank" rel="noopener"><i class="ph-light ph-linkedin-logo"></i></a>
+                    <a href="https://github.com/koneksi-tech" class="social-icon" target="_blank" rel="noopener"><i class="ph-light ph-github-logo"></i></a>
+                    <a href="https://x.com/koneksi_tech" class="social-icon" target="_blank" rel="noopener"><i class="ph-light ph-x-logo"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Platform</h4>
+                <ul class="footer-list">
+                    <li><a href="product.html">DatArk 개요</a></li>
+                    <li><a href="product-filedr.html">DatArk File DR</a></li>
+                    <li><a href="product-dbdr.html">DatArk DB DR</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Resources</h4>
+                <ul class="footer-list">
+                    <li><a href="support.html">Contact Sales</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="download.html">Downloads</a></li>
+                </ul>
+            </div>
+            <div class="footer-col" style="min-width: max-content;">
+                <h4 class="footer-heading">Contact</h4>
+                <ul class="footer-list">
+                    <li style="display: flex; gap: 0.5rem; color: var(--text-muted); line-height: 1.5;">
+                        <i class="ph-light ph-map-pin" style="margin-top: 0.2rem; min-width: 16px;"></i>
+                        서울 송파구 중대로 135<br>IT벤처타워 서관 10층
+                    </li>
+                    <li style="display: flex; gap: 0.5rem; margin-top: 1rem; color: var(--text-muted);">
+                        <i class="ph-light ph-phone"></i> 070-7626-1020
+                    </li>
+                    <li style="display: flex; gap: 0.5rem; margin-top: 0.5rem; color: var(--text-muted);">
+                        <i class="ph-light ph-envelope-simple"></i> info@koneksi.co.kr
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom-flex">
+            <p>&copy; 2026 Koneksi Inc.</p>
+            <div style="display: flex; gap: 1.5rem;">
+                <a href="terms.html">Terms of Service</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Sticky header scroll effect
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.style.background = 'rgba(10, 15, 28, 0.95)';
+        } else {
+            header.style.background = 'rgba(10, 15, 28, 0.5)';
+        }
+    });
+
+    // Dropdown hover
+    document.querySelectorAll('.dropdown').forEach(dropdown => {
+        dropdown.addEventListener('mouseenter', () => {
+            const menu = dropdown.querySelector('.dropdown-menu');
+            if (menu) { menu.style.opacity = '1'; menu.style.visibility = 'visible'; menu.style.transform = 'translateX(-50%) translateY(0)'; }
+        });
+        dropdown.addEventListener('mouseleave', () => {
+            const menu = dropdown.querySelector('.dropdown-menu');
+            if (menu) { menu.style.opacity = '0'; menu.style.visibility = 'hidden'; menu.style.transform = 'translateX(-50%) translateY(10px)'; }
+        });
+    });
+
+    // Smooth scroll for TOC links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                window.scrollTo({ top: target.offsetTop - 100, behavior: 'smooth' });
+            }
+        });
+    });
+</script>
+
+<script>
+(function() {
+  // ── Mobile Navigation ──────────────────────────────────────
+  const hamburger = document.getElementById('hamburger-btn');
+  const mobilePanel = document.getElementById('mobile-nav-panel');
+  const overlay = document.getElementById('mobile-nav-overlay');
+  const mainHeader = document.getElementById('main-header');
+
+  function openMenu() {
+    hamburger.classList.add('is-open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    hamburger.setAttribute('aria-label', '메뉴 닫기');
+    mobilePanel.classList.add('is-open');
+    overlay.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    // Trap focus: move to first link in panel
+    const firstLink = mobilePanel.querySelector('a');
+    if (firstLink) firstLink.focus();
+  }
+
+  function closeMenu() {
+    hamburger.classList.remove('is-open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('aria-label', '메뉴 열기');
+    mobilePanel.classList.remove('is-open');
+    overlay.classList.remove('is-open');
+    document.body.style.overflow = '';
+    hamburger.focus();
+  }
+
+  hamburger.addEventListener('click', function() {
+    if (hamburger.classList.contains('is-open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  overlay.addEventListener('click', closeMenu);
+
+  // Close on Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && mobilePanel.classList.contains('is-open')) {
+      closeMenu();
+    }
+  });
+
+  // Close menu on link click (navigation)
+  mobilePanel.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      closeMenu();
+    });
+  });
+
+  // ── Scroll-aware Header ────────────────────────────────────
+  window.addEventListener('scroll', function() {
+    if (!mainHeader) return;
+    if (window.scrollY > 10) {
+      mainHeader.style.background = 'rgba(10, 15, 28, 0.8)';
+      mainHeader.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
+    } else {
+      mainHeader.style.background = 'rgba(10, 15, 28, 0.5)';
+      mainHeader.style.borderBottom = '1px solid rgba(255,255,255,0.06)';
+    }
+  });
+
+  // ── Intersection Observer for animations ──────────────────
+  document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-fade-up').forEach(function(el) {
+      el.style.animationPlayState = 'paused';
+      observer.observe(el);
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
